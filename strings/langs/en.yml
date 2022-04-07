@@ -36,7 +36,7 @@ auth_7 : "**Authorised Users List[AUL]:**\n\n"
 auth_8 : "┗ Added By:-"
 
 # PLUGINS - Admins
-admin_1 : "🙄🙄 Music already pause la thaan irukku {}!"
+admin_1 : "🙄🙄 Music already pause la thaan irukku!"
 admin_2 : "😞😞 Music play pannitu irundha enna ipdi pause pannitingale {}!"
 admin_3 : "Music is already resumed."
 admin_4 : "🎧 Voicechat Resumed by {}!"
@@ -142,7 +142,7 @@ cplay_5 : "Only Channels are supported."
 cplay_6 : "You need to be the **Owner** of the channel[{0}] to connect it with this group.\n**Channel's Owner:** @{1}\n\nAlternatively you can link your group to that channel and then try connnecting with `/channelplay linked`"
 
 #Play
-play_1 : "🔄 Unga paatu process aagitu irukku.. Dho vandhudum!🥰"
+play_1 : "🔄 Unga paatu process aagitu irukku..\nDho vandhudum!🥰"
 play_2 : "**🏷Channel Play Mode**\n\n🔄 Processing Query... Please Wait!\n**Linked Channel:** {0}"
 play_3 : "Failed to Process Query!"
 play_4 : "🖇 **Admins Only Play**\nOnly Admins and Auth Users can play music in this group.\n\nChange mode via /playmode and if you're already admin, reload admincache via /admincache"
@@ -200,7 +200,7 @@ tracks_2 : "**Error**\n\nThere's no **{0} Top 10 Playlist** on bot's servers. Pl
 #Lyrics
 lyrics_1 : "**Usage:**\n\n/lyrics [ Music Name]"
 lyrics_2 : "Searching Lyrics"
-lyrics_3 : "❌ Failed to fetch lyrics😭.\n\n✨**Tried Searching For:** {0}"
+lyrics_3 : "❌ Failed to fetch lyrics😞\n\n✨**Tried Searching For:** {0}"
 lyrics_4 : "Click on the button below and get searched lyrics to avoid long spam types lyrics search."
 
 #Ping
