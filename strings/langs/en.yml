@@ -76,7 +76,7 @@ admin_34 : "Failed to seek the current stream."
 # Start
 start_1 : "{0} group la ena add pannathuku nandri 🥰\n{1} is alive.\n\nEthaavathu help venumna ennoda support group ku vaanga!🙌"
 start_2 : "Vanakkam 😇, naan {0}✨.\n\nUnga 👥 group la enna add pannunga🤩 eppozhuthum 🎵 paatu kelunga!\n\nUnga vaazhkai la inbam peruga 🥳 ennoda vaazhthukkal❤️✨"
-start_3 : "Hiii!✨\n\nMake me as admin and start to enjoy your music 🤩\n\nAssistant Username:- @{1}"
+start_3 : "Hiii!✨ I am {0}\n\nMake me as admin and start to enjoy your music 🤩\n\nAssistant Username:- @{1}"
 start_4 : "{0}'s Owner[{1}] has just joined your chat."
 start_5 : "A member of {0}'s Sudo User[{1}] has just joined your chat."
 start_6 : "❗️ **Supergroup Needed** ❗️\n\nPlease convert your **group** to **supergroup** and then add me back.\n\n**How to make supergroup?**\n✅ Make your group's chat history **visible** once."
