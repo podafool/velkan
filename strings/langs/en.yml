@@ -75,7 +75,7 @@ admin_34 : "Failed to seek the current stream."
 
 # Start
 start_1 : "{0} group la enna add pannathuku nandri! 🥰\n{1} is alive.Promote me to admin and enjoy your music!"
-start_2 : "Vanakkam 😇, naan {0}✨.\n\nUnga 👥group la enna add pannunga 🤩 eppozhuthum 🎵 paatu kelunga!\nUnga vaazhkai sandhosama 🥳 irukka ennoda vaazhthukkal ❤️✨\nNyabagama enna admin promote pannidunga!"
+start_2 : "Vanakkam 😇, naan {0}✨.\n\nUnga 👥 group la enna add pannunga 🤩 eppozhuthum 🎵 paatu kelunga!\nUnga vaazhkai sandhosama 🥳 irukka ennoda vaazhthukkal ❤️✨\nNyabagama enakku admin promote pannidunga!💙"
 start_3 : "Hiii!✨\n\nPromote me to admin and enjoy your music!🥰"
 start_4 : "{0}'s Owner[{1}] has just joined your chat."
 start_5 : "A member of {0}'s Sudo User[{1}] has just joined your chat."
@@ -83,7 +83,7 @@ start_6 : "❗️ **Supergroup Needed** ❗️\n\nPlease convert your **group** 
 start_7 : "**Blacklisted Chat**\n\nYou're chat has been blacklisted by the Bot. Please ask any SudoUser to whitelist chat first. Check [Sudolist from here]({0})"
 
 # Help
-help_1 : "Click on the buttons below for more information. If you're facing any problem in command you can contact my bot owner or ask in support chat.\n\nAll commands can be used with: /"
+help_1 : "Click on the buttons below for more information. If you're facing any problem in command you can contact my bot owner in support chat.\n\nAll commands can be used with: /"
 help_2 : "Contact me in PM for help."
 
 # Settings
@@ -252,7 +252,7 @@ S_B_3 : "🤝 Support"
 S_B_4 : "🙌 Channel"
 S_B_5 : "↗️ Add me to your Group ↗️"
 S_B_6 : "⚙️ Git Repo"
-S_B_7 : "😇 My Mother"
+S_B_7 : "❤️ My Mother"
 S_B_8 : "❔ Commands List"
 
 #Help 
