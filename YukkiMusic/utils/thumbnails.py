@@ -74,12 +74,12 @@ async def gen_thumb(videoid):
         background = enhancer.enhance(0.8)
         Xcenter = youtube.width / 2
         Ycenter = youtube.height / 2
-        x1 = Xcenter - 350
-        y1 = Ycenter - 350
-        x2 = Xcenter + 350
-        y2 = Ycenter + 350
+        x1 = Xcenter - 400
+        y1 = Ycenter - 400
+        x2 = Xcenter + 400
+        y2 = Ycenter + 400
         logo = youtube.crop((x1, y1, x2, y2))
-        logo.thumbnail((500, 300), Image.ANTIALIAS)
+        logo.thumbnail((400, 400), Image.ANTIALIAS)
         logo = ImageOps.expand(logo, border=15, fill="black")
         background.paste(logo, (800, 100))
         draw = ImageDraw.Draw(background)
@@ -94,7 +94,7 @@ async def gen_thumb(videoid):
         )
         draw.text(
             (800, 500),
-            "Enjoy!",
+            "Enjoy the song!",
             fill="white",
             stroke_width=2,
             stroke_fill="black",
@@ -135,18 +135,24 @@ async def gen_thumb(videoid):
             f"Views : {views[:23]}",
             (255, 255, 255),
             font=jokerman,
+            stroke_width=1,
+            stroke_fill="black",
         )
         draw.text(
             (100, 500),
             f"Duration : {duration[:23]} Mins",
             (255, 255, 255),
             font=jokerman,
+            stroke_width=1,
+            stroke_fill="black",
         )
         draw.text(
             (100, 550),
             f"Channel : {channel}",
             (255, 255, 255),
             font=jokerman,
+            stroke_width=1,
+            stroke_fill="black",
         )
         try:
             os.remove(f"cache/thumb{videoid}.png")
