@@ -83,15 +83,15 @@ async def gen_thumb(videoid):
         logo = ImageOps.expand(logo, border=10, fill="navy")
         background.paste(logo, (750, 50))
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("assets/font.ttf", 70)
-        font2 = ImageFont.truetype("assets/font2.ttf", 70)
+        font = ImageFont.truetype("assets/font3.ttf", 10)
+        font2 = ImageFont.truetype("assets/font2.ttf", 40)
         font3 = ImageFont.truetype("assets/font3.ttf", 70)
         jokerman = ImageFont.truetype("assets/font2.ttf", 30)
         name_font = ImageFont.truetype("assets/font.ttf", 35)
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (5, 15), f"{MUSIC_BOT_NAME}", fill="white", font=font3
+            (5, 15), f"{MUSIC_BOT_NAME}", fill="white", font=font
         )
         draw.text(
             (700, 550),
