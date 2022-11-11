@@ -72,7 +72,7 @@ async def gen_thumb(videoid):
         background = image2.filter(filter=ImageFilter.BoxBlur(35))
         enhancer = ImageEnhance.Brightness(background)
         background = enhancer.enhance(0.8)
-        Xcenter = youtube.width / 3
+        Xcenter = youtube.width / 2
         Ycenter = youtube.height / 2
         x1 = Xcenter - 250
         y1 = Ycenter - 250
@@ -90,7 +90,7 @@ async def gen_thumb(videoid):
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (5, 10), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
+            (5, 15), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
         )
         draw.text(
             (650, 150),
