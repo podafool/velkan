@@ -109,7 +109,7 @@ async def gen_thumb(videoid):
                     fill="white",
                     stroke_width=1,
                     stroke_fill="black",
-                    font=font,
+                    font=name_font,
                 )
             if j == 0:
                 j += 1
@@ -119,7 +119,7 @@ async def gen_thumb(videoid):
                     fill="white",
                     stroke_width=1,
                     stroke_fill="black",
-                    font=font,
+                    font=name_font,
                 )
 
         draw.text(
