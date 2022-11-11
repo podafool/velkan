@@ -93,7 +93,7 @@ async def gen_thumb(videoid):
             (5, 15), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
         )
         draw.text(
-            (650, 150),
+            (600, 150),
             "PLAYING NOW!",
             fill="white",
             stroke_width=2,
@@ -104,7 +104,7 @@ async def gen_thumb(videoid):
             if j == 1:
                 j += 1
                 draw.text(
-                    (700, 340),
+                    (600, 340),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
@@ -114,7 +114,7 @@ async def gen_thumb(videoid):
             if j == 0:
                 j += 1
                 draw.text(
-                    (700, 280),
+                    (600, 280),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
