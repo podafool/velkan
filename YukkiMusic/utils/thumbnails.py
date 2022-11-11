@@ -69,14 +69,14 @@ async def gen_thumb(videoid):
         youtube = Image.open(f"cache/thumb{videoid}.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
-        background = image2.filter(filter=ImageFilter.BoxBlur(30))
+        background = image2.filter(filter=ImageFilter.BoxBlur(35))
         enhancer = ImageEnhance.Brightness(background)
-        background = enhancer.enhance(0.6)
+        background = enhancer.enhance(0.8)
         Xcenter = youtube.width / 2
         Ycenter = youtube.height / 2
-        x1 = Xcenter - 250
+        x1 = Xcenter - 300
         y1 = Ycenter - 250
-        x2 = Xcenter + 250
+        x2 = Xcenter + 300
         y2 = Ycenter + 250
         logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((520, 520), Image.ANTIALIAS)
@@ -90,11 +90,11 @@ async def gen_thumb(videoid):
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (5, 5), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
+            (5, 10), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
         )
         draw.text(
-            (600, 150),
-            "PLAYING NOW",
+            (700, 150),
+            "PLAYING NOW!",
             fill="white",
             stroke_width=2,
             stroke_fill="black",
@@ -104,7 +104,7 @@ async def gen_thumb(videoid):
             if j == 1:
                 j += 1
                 draw.text(
-                    (600, 340),
+                    (700, 340),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
@@ -114,7 +114,7 @@ async def gen_thumb(videoid):
             if j == 0:
                 j += 1
                 draw.text(
-                    (600, 280),
+                    (700, 280),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
@@ -123,22 +123,22 @@ async def gen_thumb(videoid):
                 )
 
         draw.text(
-            (600, 450),
+            (700, 450),
             f"Views : {views[:23]}",
             (255, 255, 255),
-            font=arial,
+            font=jokerman,
         )
         draw.text(
-            (600, 500),
+            (700, 500),
             f"Duration : {duration[:23]} Mins",
             (255, 255, 255),
-            font=arial,
+            font=jokerman,
         )
         draw.text(
-            (600, 550),
+            (700, 550),
             f"Channel : {channel}",
             (255, 255, 255),
-            font=arial,
+            font=jokerman,
         )
         try:
             os.remove(f"cache/thumb{videoid}.png")
