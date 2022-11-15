@@ -1,7 +1,7 @@
 name : 🏴󠁧󠁢󠁥󠁮󠁧󠁿 English
 
 # My own strings
-divu_1 : "Ḋöṅ'ẗ ċḷïċḳ 🙊"
+divu_1 : "𝓓𝓸 𝓷𝓸𝓽 𝓬𝓵𝓲𝓬𝓴 🙊"
 
 # General Strings
 general_1 : "Reply to a user's message or give username/user_id."
@@ -9,7 +9,7 @@ general_2 : "Error! Wrong Usage of Command."
 general_3 : "Some **exception occured** while processing your query.\n\nException Type:- {0}"
 general_4 : "You're an anonymous admin in this chat group!\nRevert back to User Account From Admin Rights."
 general_5 : "You need to be admin with manage voice chat rights to perform this action."
-general_6 : "😂😂 Aaley illaatha kadai la, yaaruku tea aathuringa😂"
+general_6 : "🙊🙊 𝘚𝘶𝘮𝘮𝘢 𝘬𝘦𝘥𝘢𝘯𝘵𝘩𝘢 𝘴𝘢𝘯𝘨𝘢𝘪 𝘰𝘰𝘥𝘩𝘪 𝘬𝘦𝘥𝘶𝘵𝘩𝘢𝘯𝘢𝘢𝘮 𝘢𝘢𝘯𝘥𝘪 😂😂😂"
 
 # Classes - Telegram.py
 tg_1 : "Bot is **overloaded** with downloads right now.\n\n**Try After:** {0} (__expected time__)"
@@ -39,7 +39,7 @@ auth_7 : "**Authorised Users List[AUL]:**\n\n"
 auth_8 : "┗ Added By:-"
 
 # PLUGINS - Admins
-admin_1 : "🙄🙄 Music already pause la thaan irukku!"
+admin_1 : "🙄🙄 𝘔𝘶𝘴𝘪𝘤 𝘢𝘭𝘳𝘦𝘢𝘥𝘺 𝘱𝘢𝘶𝘴𝘦 𝘭𝘢 𝘵𝘩𝘢𝘢𝘯 𝘪𝘳𝘶𝘬𝘬𝘶!"
 admin_2 : "😞😞 Music play pannitu irundha enna ippdi pause pannitingale {}!"
 admin_3 : "Music is already resumed."
 admin_4 : "🥳 Resume pannadhuku nandri 🥰\nLove you {}❤️"
@@ -240,8 +240,8 @@ stream_4 : "💃 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!
 # Inline Buttons
 
 #General Buttons
-CLOSE_BUTTON  : "Ċḷöṡë ❌"
-CLOSEMENU_BUTTON  : "Ċḷöṡë Ṁëṅü ❌"
+CLOSE_BUTTON  : "𝓒𝓵𝓸𝓼𝓮 ❌"
+CLOSEMENU_BUTTON  : "𝓒𝓵𝓸𝓼𝓮 𝓜𝓮𝓷𝓾 ❌"
 BACK_BUTTON : "◀️Back 🚶‍♀️"
 UNBAN_BUTTON : "🗑 Unban Assistant"
 
@@ -279,8 +279,8 @@ P_B_4 : "🎵 Play Playlist"
 
 #Playlist
 PL_B_1 : "🚀 Play Playlist"
-PL_B_2 : "Äḋḋ ẗö ṗḷäÿḷïṡẗ📋"
-PL_B_3 : "🕹 Ċöṅẗṛöḷṡ"
+PL_B_2 : "𝓐𝓭𝓭 𝓽𝓸 𝓹𝓵𝓪𝔂𝓵𝓲𝓼𝓽 📋"
+PL_B_3 : "🕹 𝓒𝓸𝓷𝓽𝓻𝓸𝓵𝓼"
 PL_B_4 : "📡 Play Mode"
 PL_B_5 : "🔄 Del Whole Playlist"
 PL_B_6 : "↗️ Delete Playlist"
