@@ -34,11 +34,11 @@ DELETEPLAYLIST_COMMAND : ["deleteplaylist"]
 # Tools
 QUEUE_COMMAND : ["queue","cqueue", "player", "cplayer", "playing", "cplaying"]
 SONG_COMMAND : ["song", "video"]
-LYRICS_COMMAND : ["lyrics"]
+LYRICS_COMMAND : ["lyrics", "lyric"]
 
 
 # Admin Commands
-AUTH_COMMAND : ["auth"]
+AUTH_COMMAND : ["autho"]
 UNAUTH_COMMAND : ["unauth"]
 AUTHUSERS_COMMAND : ["authusers"]
 PAUSE_COMMAND : ["pause", "cpause"]
