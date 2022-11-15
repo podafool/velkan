@@ -10,7 +10,7 @@
 import random
 
 from pyrogram.types import InlineKeyboardButton
-from config import SUPPORT_GROUP
+from config import SUPPORT_GROUP, SUPPORT_CHANNEL
 
 selections = [
     "▄▀▀▄▀▀▄▀▀▄▀▀▄▀▀▄▀▀▄",
