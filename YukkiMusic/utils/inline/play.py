@@ -13,18 +13,18 @@ from pyrogram.types import InlineKeyboardButton
 from config import SUPPORT_GROUP
 
 selections = [
-    "▄▀▀▄▀▀▄▀▀▄▀▀▄▀▀▄▀▄",
-    "▄▄▀▄▄▀▄▄▀▄▄▀▄▄▀▄▄▀▄",
-    "▄▀▀▄▄▀▄▄▀▀▄▄▀▄▄▀▄▄",
-    "▅█▅▀▅█▆▀▅█▅▀▅█▅",
-    "▆▀▆▀▆▀▆▀▆▀▆▀▆▀▄",
+    "▄▀▀▄▀▀▄▀▀▄▀▀▄▀▀▄▀▀▄",
+    "▄▄▀▄▄▀▄▄▀▄▄▀▄▄▀▄▄▀▄▄",
+    "▄▄▀▀▄▄▀▄▄▀▀▄▄▀▄▄▀▄▄",
+    "▄█▅▀▅█▄▀▅█▄▀▅█▄▀▅",
+    "▆▀▆▀▆▀▆▀▆▀▆▀▆▀▆",
     "▄▀▄█▄▀▄█▄▀▄█▄▀▄█▄▀▄",
-    "▄▀▄▀▄▄▀▄▀▄▄▀▄▀▄▄▀▄",
-    "▄▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▄▄",
-    "▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄",
-    "█▄▀█▄▀█▄▀█▄▀█▄▀█▄▀█",
-    "█▄█▄█▄█▄█▄█▄█▄█▄█▄█",
-    "█▀█▀█▀█▀█▀█▀█▀█▀█▀█",
+    "▄▀▄▀▄▄▀▄▀▄▄▀▄▀▄▄▀▄▀▄",
+    "▄▄▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▄▄",
+    "▄▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▄",
+    "▇▄▀▇▄▀▇▄▀▇▄▀▇▄▀▇",
+    "█▁█▄█▁█▄█▁█▄█▁█▄█",
+    "█▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄█
 ]
 
 
@@ -52,7 +52,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text=_["S_B_3"], url=f"{SUPPORT_GROUP}"
+                text=_["Follow"], url="{https://www.instagram.com/paatu_eppozhuthum}"
             ),
         ],
         [
@@ -81,7 +81,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text=_["S_B_3"], url=f"{SUPPORT_GROUP}"
+                text=_["Follow"], url="{https://www.instagram.com/paatu_eppozhuthum}"
             ),
         ],
         [
@@ -110,7 +110,7 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text=_["S_B_3"], url=f"{SUPPORT_GROUP}"
+                text=_["Follow"], url="{https://www.instagram.com/paatu_eppozhuthum}"
             ),
         ],
         [
@@ -132,7 +132,7 @@ def telegram_markup(_, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text=_["S_B_3"], url=f"{SUPPORT_GROUP}"
+                text=_["Follow"], url="{https://www.instagram.com/paatu_eppozhuthum}"
             ),
         ],
         [
