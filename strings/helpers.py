@@ -125,7 +125,7 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 🤖**<u>BOT COMMANDS:</u>**
 /reboot - Reboot your Bot. 
 /update - Update Bot.
-/speedtest - Check server speeds
+/testspeed - Check server speeds
 /maintenance [enable / disable] 
 /logger [enable / disable] - Bot logs the searched queries in logger group.
 /get_log [Number of Lines] - Get log of your bot from heroku or vps. Works for both.
