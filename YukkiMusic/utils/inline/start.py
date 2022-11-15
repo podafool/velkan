@@ -65,7 +65,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             )
         ]    
     ]
-    if SUPPORT_CHANNEL and SUPPORT_GROUP:
+    if SUPPORT_CHANNEL and SUPPORT_GROUP :
         buttons.append(
             [
                 InlineKeyboardButton(
