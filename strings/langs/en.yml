@@ -237,8 +237,8 @@ stream_4 : "🥰 **Started Streaming** ✨\n\n**🔎Title:** [{0}]({1})\n⏱**Du
 # Inline Buttons
 
 #General Buttons
-CLOSE_BUTTON  : "Close ❌"
-CLOSEMENU_BUTTON  : "Close Menu ❌"
+CLOSE_BUTTON  : "Close❌"
+CLOSEMENU_BUTTON  : "Close Menu❌"
 BACK_BUTTON : "◀️ Back 🚶‍♀️"
 UNBAN_BUTTON : "🗑 Unban Assistant"
 
@@ -357,7 +357,7 @@ block_7 : "**Blocked Users:**\n\n"
 
 #Blacklist Chats
 black_1 : "**Usage:**\n/blacklistchat [CHAT_ID]"
-black_2 : "Chat is already blacklisted."
+black_2 : "Chat is already in blacklist."
 black_3 : "Chat has been successfully blacklisted"
 black_4 : "**Usage:**\n/whitelistchat [CHAT_ID]"
 black_5 : "Chat is already whitelisted."
