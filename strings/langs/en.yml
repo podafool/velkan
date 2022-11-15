@@ -1,5 +1,8 @@
 name : 🏴󠁧󠁢󠁥󠁮󠁧󠁿 English
 
+# My own strings
+divu_1 : "Follow"
+
 # General Strings
 general_1 : "Reply to a user's message or give username/user_id."
 general_2 : "Error! Wrong Usage of Command."
