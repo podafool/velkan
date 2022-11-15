@@ -240,8 +240,8 @@ stream_4 : "💃 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!
 # Inline Buttons
 
 #General Buttons
-CLOSE_BUTTON  : "Close❌"
-CLOSEMENU_BUTTON  : "Close Menu❌"
+CLOSE_BUTTON  : "Ċḷöṡë ❌"
+CLOSEMENU_BUTTON  : "Ċḷöṡë Ṁëṅü ❌"
 BACK_BUTTON : "◀️Back 🚶‍♀️"
 UNBAN_BUTTON : "🗑 Unban Assistant"
 
@@ -279,8 +279,8 @@ P_B_4 : "🎵 Play Playlist"
 
 #Playlist
 PL_B_1 : "🚀 Play Playlist"
-PL_B_2 : "Add to playlist📋"
-PL_B_3 : "🕹 Controls"
+PL_B_2 : "Äḋḋ ẗö ṗḷäÿḷïṡẗ📋"
+PL_B_3 : "🕹 Ċöṅẗṛöḷṡ"
 PL_B_4 : "📡 Play Mode"
 PL_B_5 : "🔄 Del Whole Playlist"
 PL_B_6 : "↗️ Delete Playlist"
