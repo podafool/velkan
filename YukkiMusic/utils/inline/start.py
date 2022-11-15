@@ -65,6 +65,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 text=_["S_B_8"], callback_data="settings_back_helper"
             )
         ]    
+    ]
     if SUPPORT_CHANNEL and SUPPORT_GROUP:
         buttons.append(
             [
@@ -92,8 +93,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                         text=_["S_B_3"], url=f"{SUPPORT_GROUP}"
                     )
                 ]
-            )
-    ] 
+            )     
     buttons.append(
         [
             InlineKeyboardButton(
