@@ -83,7 +83,7 @@ start_6 : "❗️ **Supergroup Needed** ❗️\n\nPlease convert your **group** 
 start_7 : "**Blacklisted Chat**\n\nYou're chat has been blacklisted by the Bot. Please ask any SudoUser to whitelist chat first. Check [Sudolist from here]({0})"
 
 # Help
-help_1 : " Click on the buttons ⏹ below for more information! If you're facing any problem in command you can contact my bot owner @TaeDi_3015 in support chat @anbhusamrajiyam \n\nAll commands can be used with: /"
+help_1 : "Click on the buttons ⏹ below for more information! If you're facing any problem in command you can contact my bot owner @TaeDi_3015 in support chat @anbhusamrajiyam \n\nAll commands can be used with: /"
 help_2 : "Contact me in PM for help."
 
 # Settings
@@ -239,7 +239,7 @@ stream_4 : "🥰 **Started Streaming** ✨\n\n**🔎Title:** [{0}]({1})\n⏱**Du
 #General Buttons
 CLOSE_BUTTON  : "Close❌"
 CLOSEMENU_BUTTON  : "Close Menu❌"
-BACK_BUTTON : "◀️ Back 🚶‍♀️"
+BACK_BUTTON : "◀️Back 🚶‍♀️"
 UNBAN_BUTTON : "🗑 Unban Assistant"
 
 #Lyrics
@@ -256,7 +256,7 @@ S_B_7 : "❤️ My Mother"
 S_B_8 : "☠️ Help"
 
 #Help 
-H_B_1 : "Admin Commands"
+H_B_1 : "Admins Only"
 H_B_2 : "Play Commands"
 H_B_3 : "Bot Commands"
 H_B_4 : "Extra Commands"
