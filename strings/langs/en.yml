@@ -22,7 +22,7 @@ call_6 : "Assistant Account[{0}] Joined Successfully.\n\nStarting Music Now"
 call_7 : "**Harmful Admin Right Given **\n\nPlease remove **ADD NEW ADMINS** rights from the bot."
 call_8 : "**Harmful Admin Right Given **\n\nPlease remove **ADD NEW ADMINS** rights from the bot."
 call_9 : "**Failed to switch Stream**\nPlease use /skip to change track again."
-call_10 : "Downloading Next Track from Playlist"
+call_10 : "Adutha song download aagitu irukku 🥳"
 call_11 : "Please add @{0} to your channel[ ID: {1}].\n\nBot is not able to get channel details."
 
 # PLUGINS - Auth.py
@@ -74,7 +74,7 @@ admin_34 : "Failed to seek the current stream."
 # Bot 
 
 # Start
-start_1 : "{0} group la enna add pannathuku nandri! 🥰\n{1} is alive.Promote me to admin and enjoy your music!"
+start_1 : " {0} group la enna add pannathuku nandri! 🥰\n\n{1} is alive! Promote me to admin and enjoy your music!"
 start_2 : "Vanakkam 😇, naan {0}✨.\n\nUnga 👥 group la enna add pannunga 🤩 eppozhuthum 🎵 paatu kelunga!\nUnga vaazhkai sandhosama 🥳 irukka ennoda vaazhthukkal ❤️✨\nNyabagama enakku admin promote pannidunga!💙"
 start_3 : "Hiii!✨\n\nPromote me to admin and enjoy your music!🥰"
 start_4 : "{0}'s Owner[{1}] has just joined your chat."
@@ -83,7 +83,7 @@ start_6 : "❗️ **Supergroup Needed** ❗️\n\nPlease convert your **group** 
 start_7 : "**Blacklisted Chat**\n\nYou're chat has been blacklisted by the Bot. Please ask any SudoUser to whitelist chat first. Check [Sudolist from here]({0})"
 
 # Help
-help_1 : "Click on the buttons below for more information. If you're facing any problem in command you can contact my bot owner in support chat.\n\nAll commands can be used with: /"
+help_1 : " Click on the buttons ⏹ below for more information! If you're facing any problem in command you can contact my bot owner @TaeDi_3015 in support chat @anbhusamrajiyam \n\nAll commands can be used with: /"
 help_2 : "Contact me in PM for help."
 
 # Settings
@@ -237,13 +237,13 @@ stream_4 : "🥰 **Started Streaming** ✨\n\n**🔎Title:** [{0}]({1})\n⏱**Du
 # Inline Buttons
 
 #General Buttons
-CLOSE_BUTTON  : "🗑 Close"
-CLOSEMENU_BUTTON  : "🗑 Close Menu"
-BACK_BUTTON : "⬅ Back"
+CLOSE_BUTTON  : "Close ❌"
+CLOSEMENU_BUTTON  : "Close Menu ❌"
+BACK_BUTTON : "◀️ Back 🚶‍♀️"
 UNBAN_BUTTON : "🗑 Unban Assistant"
 
 #Lyrics
-L_B_1 : "🚀 Checkout Lyrics Now"
+L_B_1 : "See your lyrics here 🏃‍♀️"
 
 # Start
 S_B_1 : "🗒 Commands"
@@ -253,7 +253,7 @@ S_B_4 : "🙌 Channel"
 S_B_5 : "↗️ Add me to your Group ↗️"
 S_B_6 : "⚙️ Git Repo"
 S_B_7 : "❤️ My Mother"
-S_B_8 : "❔ Commands List"
+S_B_8 : "☠️ Help"
 
 #Help 
 H_B_1 : "Admin Commands"
@@ -276,8 +276,8 @@ P_B_4 : "🎵 Play Playlist"
 
 #Playlist
 PL_B_1 : "🚀 Play Playlist"
-PL_B_2 : "✚ Playlists"
-PL_B_3 : "✚ CPanel"
+PL_B_2 : "Add to playlist📋"
+PL_B_3 : "🕹 Controls"
 PL_B_4 : "📡 Play Mode"
 PL_B_5 : "🔄 Del Whole Playlist"
 PL_B_6 : "↗️ Delete Playlist"
