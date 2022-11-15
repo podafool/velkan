@@ -38,7 +38,7 @@ LYRICS_COMMAND : ["lyrics", "lyric"]
 
 
 # Admin Commands
-AUTH_COMMAND : ["autho"]
+AUTH_COMMAND : ["auth"]
 UNAUTH_COMMAND : ["unauth"]
 AUTHUSERS_COMMAND : ["authusers"]
 PAUSE_COMMAND : ["pause", "cpause"]
@@ -100,7 +100,7 @@ UNBLOCK_COMMAND : ["unblock"]
 BLOCKED_COMMAND : ["blockedusers"]
 
 #sPEEDTEST
-SPEEDTEST_COMMAND : ["speedtest"]
+SPEEDTEST_COMMAND : ["testspeed"]
 
 #Voice chat commands
 ACTIVEVC_COMMAND : ["activevoice"]
