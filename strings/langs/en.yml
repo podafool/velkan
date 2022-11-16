@@ -212,59 +212,59 @@ ping_2 : "{0} is working good with a ping of `{1}` ms.\n\nBot's uptime is {2} an
 
 
 # Song
-song_1 : "You can download Music or Video from YouTube only in private chat. Please start me in private chat."
+song_1 : "𝒴𝑜𝓊 𝒸𝒶𝓃 𝒹𝑜𝓌𝓃𝓁𝑜𝒶𝒹 𝑀𝓊𝓈𝒾𝒸 𝑜𝓇 𝒱𝒾𝒹𝑒𝑜 𝒻𝓇𝑜𝓂 𝒴𝑜𝓊𝒯𝓊𝒷𝑒 𝑜𝓃𝓁𝓎 𝒾𝓃 𝓅𝓇𝒾𝓋𝒶𝓉𝑒 𝒸𝒽𝒶𝓉. 𝒫𝓁𝑒𝒶𝓈𝑒 𝓈𝓉𝒶𝓇𝓉 𝓂𝑒 𝒾𝓃 𝓅𝓇𝒾𝓋𝒶𝓉𝑒 𝒸𝒽𝒶𝓉."
 song_2 : "**Usage:**\n\n/song [Music Name] or [Youtube Link]"
 song_3 : "Live Link Detected. I am not able to download live youtube videos. "
 song_4 : "**🔗Title:**- {0}\n\nSelect the type in which you want to download."
 song_5 : "Not a valid Youtube Link"
 song_6 : "Getting Formats.. \n\nPlease Wait.."
 song_7 : "Failed to get available formats for the video. Please try any other track."
-song_8 : "Download Started\n\nDownloading speed could be slow. Please hold on.."
+song_8 : "𝒟𝑜𝓌𝓃𝓁𝑜𝒶𝒹 𝒮𝓉𝒶𝓇𝓉𝑒𝒹\n\n𝒫𝓁𝑒𝒶𝓈𝑒 𝒽𝑜𝓁𝒹 𝑜𝓃.."
 song_9 : "Failed to download song from Youtube-DL\n\n**Reason:** {0}"
 song_10 : "Failed to upload on telegram from servers."
-song_11 : "Uploading Started\n\nUploading speed could be slow. Please hold on.."
+song_11 : "Uploading Started\n\nPlease hold on.."
 
 # Tools - Queue
-queue_1 : "Please Wait..Fetching Queue.."
+queue_1 : "𝒫𝓁𝑒𝒶𝓈𝑒 𝒲𝒶𝒾𝓉..𝐹𝑒𝓉𝒸𝒽𝒾𝓃𝑔 𝒬𝓊𝑒𝓊𝑒.."
 queue_2 : "Queued List is empty. No tracks found"
 queue_3 : "<u>**Queued Tracks:</u>**  [Checkout More Queued Tracks From Here]({0})"
-queue_4 : "🙌 Added to Queue at **#{0}\n\n✨Title:** {1}\n**⏱Duration:** {2}\n👥**Added By:** {3}"
-queue_5 : "Only one track inside queue, Please add some more to check list"
+queue_4 : "💃 𝓐𝓭𝓭𝓮𝓭 𝓽𝓸 𝓠𝓾𝓮𝓾𝓮 𝓪𝓽 **#**{0}\n\n💙 𝓣𝓲𝓽𝓵𝓮: {1}\n⏰ 𝓓𝓾𝓻𝓪𝓽𝓲𝓸𝓷: {2}\n👥𝓐𝓭𝓭𝓮𝓭 𝓑𝔂: {3}"
+queue_5 : "𝒪𝓃𝓁𝓎 𝑜𝓃𝑒 𝓉𝓇𝒶𝒸𝓀 𝒾𝓃𝓈𝒾𝒹𝑒 𝓆𝓊𝑒𝓊𝑒, 𝒫𝓁𝑒𝒶𝓈𝑒 𝒶𝒹𝒹 𝓈𝑜𝓂𝑒 𝓂𝑜𝓇𝑒 𝓉𝑜 𝒸𝒽𝑒𝒸𝓀 𝓁𝒾𝓈𝓉."
 
 # All Streaming Lines
-stream_1 : "💃 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n💕 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {0}\n\nℹ️ 𝑰𝒏𝒇𝒐𝒓𝒎𝒂𝒕𝒊𝒐𝒏: [Click Here]({1})"
-stream_2 : "💃 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈 𝒗𝒊𝒂 𝒖𝒓𝒍!\n\n💕 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {0}"
-stream_3 : "💃 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n🔎 𝑻𝒊𝒕𝒍𝒆: {0}\n⏱ 𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏: {1}\n💕 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {2}"
-stream_4 : "💃 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n🔎 𝑻𝒊𝒕𝒍𝒆: [{0}]({1})\n⏱ 𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏: {2}\n💕 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {3}"
+stream_1 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {0}\n\nℹ️ 𝑰𝒏𝒇𝒐𝒓𝒎𝒂𝒕𝒊𝒐𝒏: [Click Here]({1})"
+stream_2 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈 𝒗𝒊𝒂 𝒖𝒓𝒍!\n\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {0}"
+stream_3 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n🔎 𝑻𝒊𝒕𝒍𝒆: {0}\n⏱ 𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏: {1}\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {2}"
+stream_4 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n🔎 𝑻𝒊𝒕𝒍𝒆: [{0}]({1})\n⏱ 𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏: {2}\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {3}"
 
 # Inline Buttons
 
 #General Buttons
 CLOSE_BUTTON  : "𝓒𝓵𝓸𝓼𝓮 ❌"
 CLOSEMENU_BUTTON  : "𝓒𝓵𝓸𝓼𝓮 𝓜𝓮𝓷𝓾 ❌"
-BACK_BUTTON : "◀️Back 🚶‍♀️"
+BACK_BUTTON : "◀️𝓑𝓪𝓬𝓴 🚶‍♀️"
 UNBAN_BUTTON : "🗑 Unban Assistant"
 
 #Lyrics
-L_B_1 : "See your lyrics here 🏃‍♀️"
+L_B_1 : "𝒮𝑒𝑒 𝓎𝑜𝓊𝓇 𝓁𝓎𝓇𝒾𝒸𝓈 𝒽𝑒𝓇𝑒 🏃‍♀️"
 
 # Start
-S_B_1 : "🗒 Commands"
-S_B_2 : "🔧 Settings"
-S_B_3 : "🤝 Support"
-S_B_4 : "🙌 Channel"
-S_B_5 : "↗️ Add me to your Group ↗️"
+S_B_1 : "🗒 𝓒𝓸𝓶𝓶𝓪𝓷𝓭𝓼"
+S_B_2 : "🔧 𝓢𝓮𝓽𝓽𝓲𝓷𝓰𝓼"
+S_B_3 : "𝓢𝓾𝓹𝓹𝓸𝓻𝓽 🤝"
+S_B_4 : "🙌 𝓒𝓱𝓪𝓷𝓷𝓮𝓵"
+S_B_5 : "↗️ 𝓐𝓭𝓭 𝓶𝓮 𝓽𝓸 𝔂𝓸𝓾𝓻 𝓖𝓻𝓸𝓾𝓹 ↗️"
 S_B_6 : "⚙️ Git Repo"
-S_B_7 : "❤️ My Mother"
-S_B_8 : "☠️ Help"
+S_B_7 : "❤️ 𝐌𝐲 𝐌𝐨𝐭𝐡𝐞𝐫"
+S_B_8 : "☠️ 𝓗𝓮𝓵𝓹"
 
 #Help 
-H_B_1 : "Admins Only"
-H_B_2 : "Play Commands"
-H_B_3 : "Bot Commands"
-H_B_4 : "Extra Commands"
-H_B_5 : "Close Menu"
-H_B_6 : "SudoUser Commands"
+H_B_1 : "ᴀᴅᴍɪɴꜱ ᴏɴʟʏ"
+H_B_2 : "ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅꜱ"
+H_B_3 : "ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ"
+H_B_4 : "ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ"
+H_B_5 : "ᴄʟᴏꜱᴇ ᴍᴇɴᴜ"
+H_B_6 : "ꜱᴜᴅᴏ ᴜꜱᴇʀ ᴄᴏᴍᴍᴀɴᴅꜱ"
 
 #PlayMode
 PM_B_1 : "DirectPlay"
@@ -278,17 +278,17 @@ P_B_3 : "🏮 Start Live Stream"
 P_B_4 : "🎵 Play Playlist"
 
 #Playlist
-PL_B_1 : "🚀 Play Playlist"
+PL_B_1 : "🚀 𝓟𝓵𝓪𝔂 𝓟𝓵𝓪𝔂𝓵𝓲𝓼𝓽"
 PL_B_2 : "𝓐𝓭𝓭 𝓽𝓸 𝓹𝓵𝓪𝔂𝓵𝓲𝓼𝓽 📋"
 PL_B_3 : "🕹 𝓒𝓸𝓷𝓽𝓻𝓸𝓵𝓼"
-PL_B_4 : "📡 Play Mode"
+PL_B_4 : "📡 𝓟𝓵𝓪𝔂 𝓜𝓸𝓭𝓮"
 PL_B_5 : "🔄 Del Whole Playlist"
 PL_B_6 : "↗️ Delete Playlist"
 PL_B_7 : "❗️ Yes, I'm sure. Delete it"
-PL_B_8 : "🔢 Play Top 10"
-PL_B_9 : "🤖 Play Global Top 10 Tracks"
-PL_B_10 : "🏘 Play Group's Top 10 Tracks"
-PL_B_11 : "👤 Play Personal Top 10 Tracks"
+PL_B_8 : "🔢 𝓟𝓵𝓪𝔂 𝓣𝓸𝓹 10"
+PL_B_9 : "🤖 𝒫𝓁𝒶𝓎 𝒢𝓁𝑜𝒷𝒶𝓁 𝒯𝑜𝓅 10 𝒯𝓇𝒶𝒸𝓀𝓈"
+PL_B_10 : "🏘 𝒫𝓁𝒶𝓎 𝒢𝓇𝑜𝓊𝓅'𝓈 𝒯𝑜𝓅 10 𝒯𝓇𝒶𝒸𝓀𝓈"
+PL_B_11 : "👤 𝒫𝓁𝒶𝓎 𝒫𝑒𝓇𝓈𝑜𝓃𝒶𝓁 𝒯𝑜𝓅 10 𝒯𝓇𝒶𝒸𝓀𝓈"
 
 #Settings
 ST_B_1 : "🔊 Aud Quality"
