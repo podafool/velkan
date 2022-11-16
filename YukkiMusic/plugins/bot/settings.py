@@ -473,7 +473,7 @@ async def authusers_mar(client, CallbackQuery, _):
             except MessageNotModified:
                 return
     try:
-        await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
+        await CallbackQuery.answer(_["set_cb_6"], show_alert=False)
     except:
         pass
     if command == "AUTH":
@@ -507,7 +507,7 @@ async def authusers_mar(client, CallbackQuery, _):
 async def cleanmode_mark(client, CallbackQuery, _):
     command = CallbackQuery.matches[0].group(1)
     try:
-        await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
+        await CallbackQuery.answer(_["set_cb_6"], show_alert=False)
     except:
         pass
     if command == "CLEANMODE":
