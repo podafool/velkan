@@ -142,7 +142,7 @@ async def song_helper_cb(client, CallbackQuery, _):
     callback_request = callback_data.split(None, 1)[1]
     stype, vidid = callback_request.split("|")
     try:
-        await CallbackQuery.answer(_["song_6"], show_alert=True)
+        await CallbackQuery.answer(_["song_6"], show_alert=False)
     except:
         pass
     if stype == "audio":
