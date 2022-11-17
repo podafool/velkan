@@ -86,7 +86,7 @@ start_6 : "❗️ **Supergroup Needed** ❗️\n\nPlease convert your **group** 
 start_7 : "**Blacklisted Chat**\n\nYou're chat has been blacklisted by the Bot. Please ask any SudoUser to whitelist chat first."
 
 # Help
-help_1 : "Click on the buttons ⏹ below for more information! If you're facing any problem in command you can contact my bot owner @TaeDi_3015 in support chat @anbhusamrajiyam \n\nAll commands can be used with: /"
+help_1 : "Click on the buttons ⏹ below for more information! If you're facing any problem you can contact my bot owner @TaeDi_3015 in support chat @anbhusamrajiyam \n\nAll commands can be used with: /"
 help_2 : "Contact me in PM for help."
 
 # Settings
@@ -228,14 +228,14 @@ song_11 : "Uploading Started\n\nPlease hold on.."
 queue_1 : "𝒫𝓁𝑒𝒶𝓈𝑒 𝒲𝒶𝒾𝓉..𝐹𝑒𝓉𝒸𝒽𝒾𝓃𝑔 𝒬𝓊𝑒𝓊𝑒.."
 queue_2 : "Queued List is empty. No tracks found"
 queue_3 : "<u>**Queued Tracks:</u>**  [Checkout More Queued Tracks From Here]({0})"
-queue_4 : "💃 𝓐𝓭𝓭𝓮𝓭 𝓽𝓸 𝓠𝓾𝓮𝓾𝓮 𝓪𝓽 **#**{0}\n\n💙 𝓣𝓲𝓽𝓵𝓮: {1}\n⏰ 𝓓𝓾𝓻𝓪𝓽𝓲𝓸𝓷: {2}\n👥 𝓐𝓭𝓭𝓮𝓭 𝓑𝔂: {3}\n\n🥳🥳You can also use /divu 'song name' instead of /play 🙈❤️✨"
+queue_4 : "💃 𝓐𝓭𝓭𝓮𝓭 𝓽𝓸 𝓠𝓾𝓮𝓾𝓮 𝓪𝓽 **#**{0}\n\n💙 𝓣𝓲𝓽𝓵𝓮: {1}\n⏰ 𝓓𝓾𝓻𝓪𝓽𝓲𝓸𝓷: {2}\n👥 𝓐𝓭𝓭𝓮𝓭 𝓑𝔂: {3}\n\n🥳🥳You can also use /divu [song name] instead of /play 🙈❤️✨"
 queue_5 : "𝒪𝓃𝓁𝓎 𝑜𝓃𝑒 𝓉𝓇𝒶𝒸𝓀 𝒾𝓃𝓈𝒾𝒹𝑒 𝓆𝓊𝑒𝓊𝑒, 𝒫𝓁𝑒𝒶𝓈𝑒 𝒶𝒹𝒹 𝓈𝑜𝓂𝑒 𝓂𝑜𝓇𝑒 𝓉𝑜 𝒸𝒽𝑒𝒸𝓀 𝓁𝒾𝓈𝓉."
 
 # All Streaming Lines
-stream_1 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {0}\n\nℹ️ 𝑰𝒏𝒇𝒐𝒓𝒎𝒂𝒕𝒊𝒐𝒏: [Click Here]({1})\n\n🥳🥳You can also use /divu (song name) instead of /play 🙈❤️✨"
-stream_2 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈 𝒗𝒊𝒂 𝒖𝒓𝒍!\n\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {0}\n\n🥳🥳You can also use /divu 'song name' instead of /play 🙈❤️✨"
-stream_3 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n🔎 𝑻𝒊𝒕𝒍𝒆: {0}\n⏱ 𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏: {1}\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {2}\n\n🥳🥳You can also use /divu 'song name' instead of /play 🙈❤️✨"
-stream_4 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n🔎 𝑻𝒊𝒕𝒍𝒆: [{0}]({1})\n⏱ 𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏: {2}\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {3}\n\n🥳🥳You can also use /divu 'song name' instead of /play 🙈❤️✨"
+stream_1 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {0}\n\nℹ️ 𝑰𝒏𝒇𝒐𝒓𝒎𝒂𝒕𝒊𝒐𝒏: [Click Here]({1})\n\n🥳🥳You can also use /divu [song name] instead of /play 🙈❤️✨"
+stream_2 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈 𝒗𝒊𝒂 𝒖𝒓𝒍!\n\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {0}\n\n🥳🥳You can also use /divu [song name] instead of /play 🙈❤️✨"
+stream_3 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n🔎 𝑻𝒊𝒕𝒍𝒆: {0}\n⏱ 𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏: {1}\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {2}\n\n🥳🥳You can also use /divu [song name] instead of /play 🙈❤️✨"
+stream_4 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n🔎 𝑻𝒊𝒕𝒍𝒆: [{0}]({1})\n⏱ 𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏: {2}\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {3}\n\n🥳🥳You can also use /divu [song name] instead of /play 🙈❤️✨"
 
 # Inline Buttons
 
@@ -279,7 +279,7 @@ P_B_4 : "🎵 Play Playlist"
 
 #Playlist
 PL_B_1 : "🚀 𝓟𝓵𝓪𝔂 𝓟𝓵𝓪𝔂𝓵𝓲𝓼𝓽"
-PL_B_2 : "𝓐𝓭𝓭 𝓽𝓸 𝓹𝓵𝓪𝔂𝓵𝓲𝓼𝓽 📋"
+PL_B_2 : "𝓟𝓵𝓪𝔂𝓵𝓲𝓼𝓽 📋"
 PL_B_3 : "🕹 𝓒𝓸𝓷𝓽𝓻𝓸𝓵𝓼"
 PL_B_4 : "📡 𝓟𝓵𝓪𝔂 𝓜𝓸𝓭𝓮"
 PL_B_5 : "🔄 Del Whole Playlist"
@@ -469,7 +469,7 @@ sug_20 : "You can get a complete list of my commands that i accept.\n\nCommand: 
 sug_21 : "Bot has server-sided playlist option.\n\nYou can add music in your playlist and play them all together via /play"
 sug_22 : "You can now shuffle the queued musics on the bot.\n\nCommand: /shuffle"
 sug_23 : "You can check the queue of the musics.\n\nCommand: /queue"
-sug_24 : "You can also use /divu 'song name' instead of /play 🙈❤️✨"
+sug_24 : "You can also use /divu [song name] instead of /play 🙈❤️✨"
 sug_25 : "Bot has a feature called **Commands Delete Mode**. It deletes its executed commands automatically.\n\nEnable or disable deletemode from /settings [__Enabled by default__]"
 sug_26 : "You can change language of the bot to available languages for easy understanding.\n\nCommand: /language"
 sug_27 : "Bot has a feature called **Force Play**.\n\n**Force Play** stops the playing track on voice chat and starts playing the searched track instantly without disturbing/clearing queue.\n\nCommand: /playforce"
