@@ -26,8 +26,8 @@ def changeImageSize(maxWidth, maxHeight, image):
     newWidth = int(widthRatio * image.size[0])
     newHeight = int(heightRatio * image.size[1])
     newImage = image.resize((newHeight, newWidth))
-    newImg = ImageOps.expand(newImage, border=10, fill="green")
-    return newImage
+    newImg = ImageOps.expand(newImage, border=10, fill="yellow")
+    return newImg
 
 
 async def gen_thumb(videoid):
