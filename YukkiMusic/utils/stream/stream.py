@@ -8,12 +8,21 @@
 # All rights reserved.
 
 import os
+import re
+import textwrap
 from random import randint
 from typing import Union
+
+import aiofiles
+import aiohttp
+
+from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
+                 ImageFont, ImageOps)
 
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
+from config import QUEUE_IMG_URL, YOUTUBE_IMG_URL, MUSIC_BOT_NAME
 from YukkiMusic import Carbon, YouTube, app
 from YukkiMusic.core.call import Yukki
 from YukkiMusic.misc import db
@@ -29,6 +38,7 @@ from YukkiMusic.utils.pastebin import Yukkibin
 from YukkiMusic.utils.stream.queue import put_queue, put_queue_index
 from YukkiMusic.utils.thumbnails import gen_thumb
 
+from youtubesearchpython.__future__ import VideosSearch
 
 async def stream(
     _,
@@ -170,9 +180,10 @@ async def stream(
                 "video" if video else "audio",
             )
             position = len(db.get(chat_id)) - 1
-            await app.send_message(
+            await app.send_photo(
                 original_chat_id,
-                _["queue_4"].format(
+                photo=QUEUE_IMG_URL,
+                caption=_["queue_4"].format(
                     position, title[:30], duration_min, user_name
                 ),
             )
