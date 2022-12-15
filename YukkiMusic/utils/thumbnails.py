@@ -68,7 +68,7 @@ async def gen_thumb(videoid):
                     await f.close()
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
-        image1 = changeImageSize(1280, 720, youtube)
+        image1 = changeImageSize(720, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(35))
         enhancer = ImageEnhance.Brightness(background)
@@ -79,7 +79,7 @@ async def gen_thumb(videoid):
         y1 = Ycenter - 400
         x2 = Xcenter + 400
         y2 = Ycenter + 400
-        logo = youtube.crop((x1, y1, x2, y2))
+        logo = youtube.crop((250, 10 ,1150, 700))
         logo.thumbnail((400, 400), Image.ANTIALIAS)
         logo = ImageOps.expand(logo, border=10, fill="orange")
         background.paste(logo, (170, 100))
@@ -95,18 +95,18 @@ async def gen_thumb(videoid):
             (10, 10), f"{MUSIC_BOT_NAME}", fill="white", font=font
         )
         draw.text(
-            (110, 1000),
+            (110, 460),
             "Enjoy the song!",
-            fill="white",
+            fill="black",
             stroke_width=2,
-            stroke_fill="black",
+            stroke_fill="white",
             font=font2,
         )        
         for line in para:
             if j == 1:
                 j += 1
                 draw.text(
-                    (50, 690),
+                    (50, 650),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
@@ -116,7 +116,7 @@ async def gen_thumb(videoid):
             if j == 0:
                 j += 1
                 draw.text(
-                    (50, 630),
+                    (50, 610),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
