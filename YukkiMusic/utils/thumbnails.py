@@ -6,7 +6,7 @@ import aiofiles
 import aiohttp
 import numpy as np
 
-from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 import PIL
 from youtubesearchpython.__future__ import VideosSearch
 
@@ -112,7 +112,7 @@ async def gen_thumb(videoid, user_id):
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
         logo.thumbnail((600, 600), Image.LANCZOS)
-        logo = ImageOps.expand(logo, border=10, fill="orange")
+        logo = ImageChops.expand(logo, border=10, fill="orange")
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (210, 250), mask=logo)
         background.paste(x, (965, 120), mask=x)        
