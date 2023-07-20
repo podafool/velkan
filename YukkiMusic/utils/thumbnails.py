@@ -101,7 +101,7 @@ async def gen_thumb(videoid, user_id):
         y1 = Ycenter - 300
         x2 = Xcenter + 300
         y2 = Ycenter + 300
-        logo = youtube.crop((280,50,1000,720))
+        logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((400, 400), Image.LANCZOS)
         logo.save(f"cache/chop{videoid}.png")
         if not os.path.isfile(f"cache/cropped{videoid}.png"):
