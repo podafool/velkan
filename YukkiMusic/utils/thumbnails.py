@@ -81,7 +81,7 @@ async def gen_thumb(videoid, user_id):
         d = np.array(a)
         e = np.dstack((c, d))
         f = Image.fromarray(e)
-        x = f.resize((220, 220))        
+        x = f.resize((240, 240))        
         
         youtube = Image.open(f"cache/thumb{videoid}.png")        
         image1 = changeImageSize(1280, 720, youtube)
@@ -139,7 +139,7 @@ async def gen_thumb(videoid, user_id):
             if j == 1:
                 j += 1
                 draw.text(
-                    (520, 500),
+                    (550, 500),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
@@ -149,7 +149,7 @@ async def gen_thumb(videoid, user_id):
             if j == 0:
                 j += 1
                 draw.text(
-                    (520, 550),
+                    (550, 550),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
