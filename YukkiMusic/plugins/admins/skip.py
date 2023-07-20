@@ -124,7 +124,7 @@ async def skip(cli, message: Message, _, chat_id):
         except Exception:
             return await message.reply_text(_["call_9"])
         button = telegram_markup(_, chat_id)
-        img = await gen_thumb(videoid)
+        img = await gen_thumb(videoid, user_id)
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
@@ -153,7 +153,7 @@ async def skip(cli, message: Message, _, chat_id):
         except Exception:
             return await mystic.edit_text(_["call_9"])
         button = stream_markup(_, videoid, chat_id)
-        img = await gen_thumb(videoid)
+        img = await gen_thumb(videoid, user_id)
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
@@ -211,7 +211,7 @@ async def skip(cli, message: Message, _, chat_id):
             db[chat_id][0]["markup"] = "tg"
         else:
             button = stream_markup(_, videoid, chat_id)
-            img = await gen_thumb(videoid)
+            img = await gen_thumb(videoid, user_id)
             run = await message.reply_photo(
                 photo=img,
                 caption=_["stream_1"].format(
