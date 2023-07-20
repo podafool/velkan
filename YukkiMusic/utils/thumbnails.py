@@ -118,7 +118,7 @@ async def gen_thumb(videoid, user_id):
         background.paste(x, (947, 119), mask=x)        
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("assets/font.ttf", 30)
+        font = ImageFont.truetype("assets/font.ttf", 40)
         font2 = ImageFont.truetype("assets/font2.ttf", 70)
         arial = ImageFont.truetype("assets/font2.ttf", 30)
         name_font = ImageFont.truetype("assets/font.ttf", 30)
@@ -128,7 +128,7 @@ async def gen_thumb(videoid, user_id):
             (25, 20), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
         )
         draw.text(
-            (550, 500),
+            (600, 400),
             "Enjoy",
             fill="white",
             stroke_width=2,
@@ -136,7 +136,7 @@ async def gen_thumb(videoid, user_id):
             font=font2,
         )
         draw.text(
-            (600, 550),
+            (800, 550),
             "the",
             fill="white",
             stroke_width=2,
@@ -144,7 +144,7 @@ async def gen_thumb(videoid, user_id):
             font=font2,
         )
         draw.text(
-            (630, 600),
+            (830, 600),
             "song",
             fill="white",
             stroke_width=2,
@@ -165,7 +165,7 @@ async def gen_thumb(videoid, user_id):
             if j == 0:
                 j += 1
                 draw.text(
-                    (100, 130),
+                    (150, 130),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
