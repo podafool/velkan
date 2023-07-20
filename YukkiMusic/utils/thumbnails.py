@@ -19,9 +19,8 @@ def changeImageSize(maxWidth, maxHeight, image):
     heightRatio = maxHeight / image.size[1]
     newWidth = int(widthRatio * image.size[0])
     newHeight = int(heightRatio * image.size[1])
-    newImage = image.resize((newWidth, newHeight))
-    newImg = ImageOps.expand(newImage, border=10, fill="black")
-    return newImg
+    newImage = image.resize((newWidth, newHeight))    
+    return newImage
 
 
 def add_corners(im):
@@ -98,12 +97,12 @@ async def gen_thumb(videoid, user_id):
 
         Xcenter = youtube.width / 2
         Ycenter = youtube.height / 2
-        x1 = Xcenter - 400
-        y1 = Ycenter - 400
-        x2 = Xcenter + 400
-        y2 = Ycenter + 380
+        x1 = Xcenter - 300
+        y1 = Ycenter - 300
+        x2 = Xcenter + 300
+        y2 = Ycenter + 300
         logo = youtube.crop((280,0,1000,720))
-        logo.thumbnail((600, 600), Image.LANCZOS)
+        logo.thumbnail((400, 400), Image.LANCZOS)
         logo.save(f"cache/chop{videoid}.png")
         if not os.path.isfile(f"cache/cropped{videoid}.png"):
             im = Image.open(f"cache/chop{videoid}.png").convert("RGBA")
