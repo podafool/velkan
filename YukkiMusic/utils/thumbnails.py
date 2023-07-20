@@ -114,7 +114,7 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((400, 400), Image.LANCZOS)
         logo1 = ImageOps.expand(logo, border=8, fill="orange")
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo1, (210, 250), mask=logo1)
+        background.paste(logo1, (210, 250))
         background.paste(x, (955, 125), mask=x)        
 
         draw = ImageDraw.Draw(background)
