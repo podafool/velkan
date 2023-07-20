@@ -11,7 +11,7 @@ import PIL
 from youtubesearchpython.__future__ import VideosSearch
 
 from config import YOUTUBE_IMG_URL, MUSIC_BOT_NAME
-from InsaneMusic import app
+from YukkiMusic import app
 
 
 def changeImageSize(maxWidth, maxHeight, image):
@@ -85,14 +85,14 @@ async def gen_thumb(videoid, user_id):
         y = f.resize((90,90))
         
         youtube = Image.open(f"cache/thumb{videoid}.png")        
-        image1 = changeImageSize(950, 750, youtube)
+        image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         #background = image2.filter(filter=ImageFilter.BoxBlur(30))
         enhancer = ImageEnhance.Brightness(image2)
         background = enhancer.enhance(1)
 
-        bg = Image.open(f"assets/SVDFINAL.png")
-        image3 = changeImageSize(950, 750, bg)
+        bg = Image.open(f"assets/rose.png")
+        image3 = changeImageSize(1280, 720, bg)
         image5 = image3.convert("RGBA")
         Image.alpha_composite(background, image5).save(f"cache/temp{videoid}.png")
 
@@ -102,7 +102,7 @@ async def gen_thumb(videoid, user_id):
         y1 = Ycenter - 400
         x2 = Xcenter + 400
         y2 = Ycenter + 400
-        logo = youtube.crop((0, 0, 1280, 720))
+        logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((600, 400), Image.LANCZOS)
         logo.save(f"cache/chop{videoid}.png")
         if not os.path.isfile(f"cache/cropped{videoid}.png"):
