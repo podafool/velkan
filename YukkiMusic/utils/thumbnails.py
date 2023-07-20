@@ -114,8 +114,8 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((400, 400), Image.LANCZOS)
         #logo = ImageOps.expand(logo, border=10, fill="orange")
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (160, 290), mask=logo)
-        background.paste(x, (953, 122), mask=x)        
+        background.paste(logo, (110, 270), mask=logo)
+        background.paste(x, (952, 121), mask=x)        
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("assets/font.ttf", 30)
