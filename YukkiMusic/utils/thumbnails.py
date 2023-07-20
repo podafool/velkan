@@ -101,7 +101,7 @@ async def gen_thumb(videoid, user_id):
         y1 = Ycenter - 400
         x2 = Xcenter + 400
         y2 = Ycenter + 380
-        logo = youtube.crop((x1, y1, x2, y2))
+        logo = youtube.crop((280,0,1000,720))
         logo.thumbnail((600, 400), Image.LANCZOS)
         logo.save(f"cache/chop{videoid}.png")
         if not os.path.isfile(f"cache/cropped{videoid}.png"):
@@ -115,7 +115,7 @@ async def gen_thumb(videoid, user_id):
         logo = ImageOps.expand(logo, border=10, fill="orange")
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (210, 250), mask=logo)
-        background.paste(x, (965, 120), mask=x)        
+        background.paste(x, (955, 120), mask=x)        
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("assets/font.ttf", 30)
