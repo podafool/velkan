@@ -114,22 +114,38 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((400, 400), Image.LANCZOS)
         #logo = ImageOps.expand(logo, border=10, fill="orange")
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (110, 270), mask=logo)
-        background.paste(x, (947, 121), mask=x)        
+        background.paste(logo, (110, 265), mask=logo)
+        background.paste(x, (947, 119), mask=x)        
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("assets/font.ttf", 30)
-        font2 = ImageFont.truetype("assets/font2.ttf", 60)
+        font2 = ImageFont.truetype("assets/font2.ttf", 70)
         arial = ImageFont.truetype("assets/font2.ttf", 30)
         name_font = ImageFont.truetype("assets/font.ttf", 30)
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (20, 13), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
+            (25, 20), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
         )
         draw.text(
-            (100, 100),
-            "Enjoy the song",
+            (550, 500),
+            "Enjoy",
+            fill="white",
+            stroke_width=2,
+            stroke_fill="white",
+            font=font2,
+        )
+        draw.text(
+            (600, 550),
+            "the",
+            fill="white",
+            stroke_width=2,
+            stroke_fill="white",
+            font=font2,
+        )
+        draw.text(
+            (630, 600),
+            "song",
             fill="white",
             stroke_width=2,
             stroke_fill="white",
@@ -139,7 +155,7 @@ async def gen_thumb(videoid, user_id):
             if j == 1:
                 j += 1
                 draw.text(
-                    (550, 500),
+                    (100, 80),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
@@ -149,7 +165,7 @@ async def gen_thumb(videoid, user_id):
             if j == 0:
                 j += 1
                 draw.text(
-                    (550, 550),
+                    (100, 130),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
