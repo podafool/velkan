@@ -90,7 +90,7 @@ async def gen_thumb(videoid, user_id):
         enhancer = ImageEnhance.Brightness(image2)
         background = enhancer.enhance(1)
 
-        bg = Image.open(f"assets/rose1.png")
+        bg = Image.open(f"assets/love.png")
         image3 = changeImageSize(1280, 720, bg)
         image5 = image3.convert("RGBA")
         Image.alpha_composite(background, image5).save(f"cache/temp{videoid}.png")
@@ -114,18 +114,18 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((600, 600), Image.LANCZOS)      
         #width = int((1280 - 600) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (10, 300), mask=logo)
-        background.paste(x, (1000, 10), mask=x)        
+        background.paste(logo, (210, 250), mask=logo)
+        background.paste(x, (960, 110), mask=x)        
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("assets/font2.ttf", 30)
+        font = ImageFont.truetype("assets/font.ttf", 30)
         font2 = ImageFont.truetype("assets/font2.ttf", 60)
         arial = ImageFont.truetype("assets/font2.ttf", 30)
         name_font = ImageFont.truetype("assets/font.ttf", 30)
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (10, 10), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
+            (20, 13), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
         )
         draw.text(
             (100, 100),
@@ -139,7 +139,7 @@ async def gen_thumb(videoid, user_id):
             if j == 1:
                 j += 1
                 draw.text(
-                    (500, 500),
+                    (520, 500),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
@@ -149,7 +149,7 @@ async def gen_thumb(videoid, user_id):
             if j == 0:
                 j += 1
                 draw.text(
-                    (500, 550),
+                    (520, 550),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
