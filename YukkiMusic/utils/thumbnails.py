@@ -81,8 +81,7 @@ async def gen_thumb(videoid, user_id):
         d = np.array(a)
         e = np.dstack((c, d))
         f = Image.fromarray(e)
-        x = f.resize((190, 190))
-        y = f.resize((90,90))
+        x = f.resize((200, 200))        
         
         youtube = Image.open(f"cache/thumb{videoid}.png")        
         image1 = changeImageSize(1280, 720, youtube)
@@ -91,7 +90,7 @@ async def gen_thumb(videoid, user_id):
         enhancer = ImageEnhance.Brightness(image2)
         background = enhancer.enhance(1)
 
-        bg = Image.open(f"assets/rose.png")
+        bg = Image.open(f"assets/love.png")
         image3 = changeImageSize(1280, 720, bg)
         image5 = image3.convert("RGBA")
         Image.alpha_composite(background, image5).save(f"cache/temp{videoid}.png")
@@ -112,13 +111,11 @@ async def gen_thumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((1000, 800), Image.LANCZOS)      
+        logo.thumbnail((600, 600), Image.LANCZOS)      
         #width = int((1280 - 600) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (300, 240), mask=logo)
-        background.paste(x, (205, 40), mask=x)
-        background.paste(y, (125, 15), mask=y)
-
+        background.paste(logo, (10, 300), mask=logo)
+        background.paste(x, (1000, 10), mask=x)        
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("assets/font2.ttf", 30)
@@ -128,11 +125,11 @@ async def gen_thumb(videoid, user_id):
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (700, 700), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
+            (10, 10), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
         )
         draw.text(
-            (400, 200),
-            "Song Vibing",
+            (100, 100),
+            "Enjoy the song",
             fill="white",
             stroke_width=2,
             stroke_fill="white",
@@ -142,7 +139,7 @@ async def gen_thumb(videoid, user_id):
             if j == 1:
                 j += 1
                 draw.text(
-                    (400, 50),
+                    (500, 500),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
@@ -152,7 +149,7 @@ async def gen_thumb(videoid, user_id):
             if j == 0:
                 j += 1
                 draw.text(
-                    (400, 80),
+                    (500, 550),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
