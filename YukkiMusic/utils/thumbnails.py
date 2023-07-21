@@ -135,9 +135,9 @@ async def gen_thumb(videoid, user_id):
         draw.text(
             (650, 400),
             "Enjoyie",
-            fill="pink",
+            fill="white",
             stroke_width=2,
-            stroke_fill="black",
+            stroke_fill="yellow",
             font=font2,
         )
         draw.text(
@@ -153,7 +153,7 @@ async def gen_thumb(videoid, user_id):
             "song!",
             fill="white",
             stroke_width=2,
-            stroke_fill="red",
+            stroke_fill="orange",
             font=font2,
         )
         for line in para:
@@ -163,7 +163,7 @@ async def gen_thumb(videoid, user_id):
                     (100, 30),
                     f"{line}",
                     fill="white",
-                    stroke_width=2,
+                    stroke_width=1,
                     stroke_fill="yellow",
                     font=font,
                 )
