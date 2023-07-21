@@ -14,5 +14,5 @@ async def on_new_chat_members(client: Client, message: Message):
         added_by = message.from_user.mention if message.from_user else "Unknown User"
         title = message.chat.title
         chat_id = message.chat.id
-        Insane = f"#New_Group 😍\n\n🧡 Chat ID : {chat_id}\n💛 Chat Title : {title}\n💚 Username : {added_by}\n💙User ID : {message.from_user.id}"
+        Insane = f"✨ #New_Group 😍\n\n🧡✨ Chat ID : {chat_id}\n✨💛 Chat Title : {title}\n💚✨ Username : {added_by}\n✨💙 User ID : {message.from_user.id}"
         await new_message(LOG_GROUP_ID, Insane)
