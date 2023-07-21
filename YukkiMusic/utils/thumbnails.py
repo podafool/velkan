@@ -115,7 +115,7 @@ async def gen_thumb(videoid, user_id):
         #logo = ImageOps.expand(logo, border=10, fill="orange")
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (110, 265), mask=logo)
-        background.paste(x, (947, 119), mask=x)        
+        background.paste(x, (947, 118), mask=x)        
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("assets/font.ttf", 40)
@@ -125,10 +125,10 @@ async def gen_thumb(videoid, user_id):
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (25, 20), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
+            (30, 20), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
         )
         draw.text(
-            (600, 400),
+            (650, 400),
             "Enjoy",
             fill="white",
             stroke_width=2,
@@ -136,7 +136,7 @@ async def gen_thumb(videoid, user_id):
             font=font2,
         )
         draw.text(
-            (800, 480),
+            (850, 480),
             "the",
             fill="white",
             stroke_width=2,
@@ -144,7 +144,7 @@ async def gen_thumb(videoid, user_id):
             font=font2,
         )
         draw.text(
-            (920, 550),
+            (970, 545),
             "song",
             fill="white",
             stroke_width=2,
