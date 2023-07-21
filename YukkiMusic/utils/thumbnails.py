@@ -133,7 +133,7 @@ async def gen_thumb(videoid, user_id):
             font=name_font
         )
         draw.text(
-            (650, 400),
+            (630, 390),
             "Enjoyie",
             fill="white",
             stroke_width=2,
@@ -149,7 +149,7 @@ async def gen_thumb(videoid, user_id):
             font=font2,
         )
         draw.text(
-            (970, 500),
+            (965, 450),
             "song!",
             fill="white",
             stroke_width=2,
