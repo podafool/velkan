@@ -170,7 +170,7 @@ async def gen_thumb(videoid, user_id):
             if j == 0:
                 j += 1
                 draw.text(
-                    (200, 110),
+                    (150, 110),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
