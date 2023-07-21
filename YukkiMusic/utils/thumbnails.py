@@ -98,9 +98,9 @@ async def gen_thumb(videoid, user_id):
         Xcenter = youtube.width / 2
         Ycenter = youtube.height / 2
         x1 = Xcenter - 640
-        y1 = Ycenter - 730
+        y1 = Ycenter - 720
         x2 = Xcenter + 640
-        y2 = Ycenter + 550
+        y2 = Ycenter + 560
         logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((342, 342), Image.LANCZOS)
         logo.save(f"cache/chop{videoid}.png")
@@ -129,7 +129,7 @@ async def gen_thumb(videoid, user_id):
             f"with {MUSIC_BOT_NAME}", 
             fill="black",
             stroke_width=1,
-            stroke_fill="orange", 
+            stroke_fill="yellow", 
             font=name_font
         )
         draw.text(
@@ -164,7 +164,7 @@ async def gen_thumb(videoid, user_id):
                     f"{line}",
                     fill="white",
                     stroke_width=1,
-                    stroke_fill="orange",
+                    stroke_fill="red",
                     font=font,
                 )
             if j == 0:
@@ -174,7 +174,7 @@ async def gen_thumb(videoid, user_id):
                     f"{line}",
                     fill="white",
                     stroke_width=1,
-                    stroke_fill="pink",
+                    stroke_fill="orange",
                     font=font,
                 )
         
