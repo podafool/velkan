@@ -121,7 +121,7 @@ async def gen_thumb(videoid, user_id):
         font = ImageFont.truetype("assets/font.ttf", 40)
         font2 = ImageFont.truetype("assets/font2.ttf", 70)
         arial = ImageFont.truetype("assets/font2.ttf", 30)
-        name_font = ImageFont.truetype("assets/font.ttf", 30)
+        name_font = ImageFont.truetype("assets/font2.ttf", 25)
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
@@ -145,7 +145,7 @@ async def gen_thumb(videoid, user_id):
         )
         draw.text(
             (970, 545),
-            "song",
+            "song!",
             fill="white",
             stroke_width=2,
             stroke_fill="black",
