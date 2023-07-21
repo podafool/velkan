@@ -119,13 +119,13 @@ async def gen_thumb(videoid, user_id):
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("assets/Hawaii.otf", 65)
-        font2 = ImageFont.truetype("assets/Hungline.ttf", 70)
+        font2 = ImageFont.truetype("assets/Nice-Honey.ttf", 70)
         arial = ImageFont.truetype("assets/font2.ttf", 30)
         name_font = ImageFont.truetype("assets/font2.ttf", 30)
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (900, 650), 
+            (950, 650), 
             f"with {MUSIC_BOT_NAME}", 
             fill="black",
             stroke_width=1,
@@ -137,7 +137,7 @@ async def gen_thumb(videoid, user_id):
             "Enjoyie",
             fill="white",
             stroke_width=2,
-            stroke_fill="yellow",
+            stroke_fill="black",
             font=font2,
         )
         draw.text(
@@ -153,7 +153,7 @@ async def gen_thumb(videoid, user_id):
             "song!",
             fill="white",
             stroke_width=2,
-            stroke_fill="orange",
+            stroke_fill="black",
             font=font2,
         )
         for line in para:
