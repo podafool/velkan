@@ -118,8 +118,8 @@ async def gen_thumb(videoid, user_id):
         background.paste(x, (947, 118), mask=x)        
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("assets/Hungline.ttf", 40)
-        font2 = ImageFont.truetype("assets/Hawaii.otf", 200)
+        font = ImageFont.truetype("assets/Hungline.ttf", 45)
+        font2 = ImageFont.truetype("assets/Hawaii.otf", 150)
         arial = ImageFont.truetype("assets/font2.ttf", 30)
         name_font = ImageFont.truetype("assets/font2.ttf", 30)
         para = textwrap.wrap(title, width=32)
@@ -160,7 +160,7 @@ async def gen_thumb(videoid, user_id):
             if j == 1:
                 j += 1
                 draw.text(
-                    (100, 80),
+                    (100, 75),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
@@ -170,7 +170,7 @@ async def gen_thumb(videoid, user_id):
             if j == 0:
                 j += 1
                 draw.text(
-                    (150, 110),
+                    (150, 115),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
