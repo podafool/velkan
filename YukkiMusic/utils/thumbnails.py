@@ -132,7 +132,7 @@ async def gen_thumb(videoid, user_id):
             "Enjoy",
             fill="white",
             stroke_width=2,
-            stroke_fill="white",
+            stroke_fill="black",
             font=font2,
         )
         draw.text(
@@ -140,15 +140,15 @@ async def gen_thumb(videoid, user_id):
             "the",
             fill="white",
             stroke_width=2,
-            stroke_fill="white",
+            stroke_fill="black",
             font=font2,
         )
         draw.text(
-            (900, 550),
+            (920, 550),
             "song",
             fill="white",
             stroke_width=2,
-            stroke_fill="white",
+            stroke_fill="black",
             font=font2,
         )
         for line in para:
