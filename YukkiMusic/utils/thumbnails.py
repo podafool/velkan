@@ -98,9 +98,9 @@ async def gen_thumb(videoid, user_id):
         Xcenter = youtube.width / 2
         Ycenter = youtube.height / 2
         x1 = Xcenter - 640
-        y1 = Ycenter - 720
+        y1 = Ycenter - 725
         x2 = Xcenter + 640
-        y2 = Ycenter + 560
+        y2 = Ycenter + 555
         logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((342, 342), Image.LANCZOS)
         logo.save(f"cache/chop{videoid}.png")
@@ -135,7 +135,7 @@ async def gen_thumb(videoid, user_id):
         draw.text(
             (650, 400),
             "Enjoyie",
-            fill="white",
+            fill="pink",
             stroke_width=2,
             stroke_fill="black",
             font=font2,
@@ -153,7 +153,7 @@ async def gen_thumb(videoid, user_id):
             "song!",
             fill="white",
             stroke_width=2,
-            stroke_fill="black",
+            stroke_fill="red",
             font=font2,
         )
         for line in para:
@@ -163,8 +163,8 @@ async def gen_thumb(videoid, user_id):
                     (100, 30),
                     f"{line}",
                     fill="white",
-                    stroke_width=1,
-                    stroke_fill="red",
+                    stroke_width=2,
+                    stroke_fill="yellow",
                     font=font,
                 )
             if j == 0:
