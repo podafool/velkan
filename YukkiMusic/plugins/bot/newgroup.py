@@ -19,5 +19,5 @@ async def on_new_chat_members(client: Client, message: Message):
         username = message.from_user.username
         title = message.chat.title
         chat_id = message.chat.id
-        Insane = f"✨ **#New_Group** 😍\n\n🧡✨ **Chat ID :** {chat_id}\n✨💛 **Chat Title :** {title}\n💚✨ **User :** {user}\n✨💗 **Username :** @{username}\n💙✨ **User ID :** {message.from_user.id}\n✨💜 **Chat link :** {chatusername}"
+        Insane = f"✨ **#New_Group** 😍\n\n🧡✨ **Chat ID :** `{chat_id}`\n✨💛 **Chat Title :** {title}\n💚✨ **User :** {user}\n✨💗 **Username :** @{username}\n💙✨ **User ID :** {message.from_user.id}\n✨💜 **Chat link :** {chatusername}"
         await new_message(LOG_GROUP_ID, Insane)
