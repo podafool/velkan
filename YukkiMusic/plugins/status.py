@@ -23,7 +23,7 @@ def time_formatter(milliseconds):
     return tmp
 
 
-@Client.on_message(filters.command("RocksStatusBot"))
+@Client.on_message(filters.command("help"))
 async def activevc(_, message: Message):
     uptime = time_formatter((time.time() - start_time) * 1000)
     cpu = psutil.cpu_percent()
