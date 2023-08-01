@@ -236,7 +236,7 @@ async def start_comm(client, message: Message, _):
                     reply_markup=InlineKeyboardMarkup(out),
                 )
         else:
-            lol = await update.effective_message.reply_text(
+                lol = await update.effective_message.reply_text(
                 Hiii
                 )
                 await asyncio.sleep(0.4)
@@ -250,10 +250,10 @@ async def start_comm(client, message: Message, _):
                 await update.effective_message.reply_sticker(
                 "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
                 )
-            await update.effective_message.reply_text(
+                await update.effective_message.reply_text(
                 _["start_2"].format(config.MUSIC_BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(out),
-            )
+                )
         if await is_on_off(config.LOG):
             sender_id = message.from_user.id
             sender_name = message.from_user.first_name
