@@ -195,7 +195,21 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                await message.reply_photo(
+                lol = await update.effective_message.reply_text(
+                Hiii
+                )
+                await asyncio.sleep(0.4)
+                await lol.edit_text("🦋")
+                await asyncio.sleep(0.5)
+                await lol.edit_text("⚡️")
+                await asyncio.sleep(0.3)
+                await lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
+                await asyncio.sleep(0.4)
+                await lol.delete()
+                await update.effective_message.reply_sticker(
+                "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
+                )
+                await update.effective_message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
                         config.MUSIC_BOT_NAME
