@@ -11,7 +11,7 @@ import asyncio
 
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,
-                            InlineKeyboardMarkup, Message)
+                            InlineKeyboardMarkup, Message, Update)
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
