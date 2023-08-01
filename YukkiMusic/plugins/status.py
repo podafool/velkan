@@ -3,6 +3,7 @@ import time
 from pyrogram import Client
 from pyrogram import filters 
 from pyrogram.types import Message
+From YukkiMusic import app
 
 start_time = time.time()
 
@@ -23,7 +24,13 @@ def time_formatter(milliseconds):
     return tmp
 
 
-@Client.on_message(filters.command("help"))
+#@Client.on_message(filters.command("status"))
+@app.on_message(
+    filters.command("uyir")
+    & filters.private
+    & ~filters.edited
+    & ~BANNED_USERS
+)
 async def activevc(_, message: Message):
     uptime = time_formatter((time.time() - start_time) * 1000)
     cpu = psutil.cpu_percent()
