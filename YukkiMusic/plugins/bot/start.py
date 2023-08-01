@@ -195,7 +195,7 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                msg = await message.reply_text(f"Hello, {first_name}!")
+                msg = await message.reply_text(f"Hello!")
                 await asyncio.sleep(0.4)
                 await msg.edit_text("🦋")
                 await asyncio.sleep(0.5)
@@ -215,7 +215,7 @@ async def start_comm(client, message: Message, _):
                     reply_markup=InlineKeyboardMarkup(out),
                 )
             except:
-                lol = await message.reply_text(f"Hello, {first_name}!")
+                lol = await message.reply_text(f"Hello!")
                 await asyncio.sleep(0.4)
                 await lol.edit_text("🦋")
                 await asyncio.sleep(0.5)
@@ -232,7 +232,7 @@ async def start_comm(client, message: Message, _):
                     reply_markup=InlineKeyboardMarkup(out),
                 )
         else:
-                lol = await message.reply_text(f"Hello, {first_name}!")
+                lol = await message.reply_text(f"Hello!")
                 await asyncio.sleep(0.4)
                 await lol.edit_text("🦋")
                 await asyncio.sleep(0.5)
