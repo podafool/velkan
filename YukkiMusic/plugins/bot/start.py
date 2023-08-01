@@ -217,12 +217,40 @@ async def start_comm(client, message: Message, _):
                     reply_markup=InlineKeyboardMarkup(out),
                 )
             except:
-                await message.reply_text(
+                lol = await update.effective_message.reply_text(
+                Hiii
+                )
+                await asyncio.sleep(0.4)
+                await lol.edit_text("🦋")
+                await asyncio.sleep(0.5)
+                await lol.edit_text("⚡️")
+                await asyncio.sleep(0.3)
+                await lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
+                await asyncio.sleep(0.4)
+                await lol.delete()
+                await update.effective_message.reply_sticker(
+                "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
+                )
+                await update.effective_message.reply_text(
                     _["start_2"].format(config.MUSIC_BOT_NAME),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
         else:
-            await message.reply_text(
+            lol = await update.effective_message.reply_text(
+                Hiii
+                )
+                await asyncio.sleep(0.4)
+                await lol.edit_text("🦋")
+                await asyncio.sleep(0.5)
+                await lol.edit_text("⚡️")
+                await asyncio.sleep(0.3)
+                await lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
+                await asyncio.sleep(0.4)
+                await lol.delete()
+                await update.effective_message.reply_sticker(
+                "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
+                )
+            await update.effective_message.reply_text(
                 _["start_2"].format(config.MUSIC_BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(out),
             )
