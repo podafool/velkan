@@ -196,13 +196,13 @@ async def start_comm(client, message: Message, _):
         if config.START_IMG_URL:
             try:
                 msg = await message.reply_text(f"Hello!")
-                await asyncio.sleep(0.9)
+                await asyncio.sleep(2)
                 await msg.edit_text("🦋")
-                await asyncio.sleep(0.9)
+                await asyncio.sleep(2)
                 await msg.edit_text("⚡️")
-                await asyncio.sleep(0.9)
+                await asyncio.sleep(2)
                 await msg.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
-                await asyncio.sleep(0.9)
+                await asyncio.sleep(2)
                 await msg.delete()
                 await message.reply_sticker(
                 "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
