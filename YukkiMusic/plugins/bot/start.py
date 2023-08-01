@@ -9,7 +9,7 @@
 
 import asyncio
 
-from pyrogram import filters
+from pyrogram import Client, filters
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message, Update)
 from youtubesearchpython.__future__ import VideosSearch
@@ -195,21 +195,19 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                lol = await update.effective_message.reply_text(
-                Hiii
-                )
+                msg = await message.reply_text(f"Hello, {first_name}!")
                 await asyncio.sleep(0.4)
-                await lol.edit_text("🦋")
+                await msg.edit_text("🦋")
                 await asyncio.sleep(0.5)
-                await lol.edit_text("⚡️")
+                await msg.edit_text("⚡️")
                 await asyncio.sleep(0.3)
-                await lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
+                await msg.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
                 await asyncio.sleep(0.4)
-                await lol.delete()
-                await update.effective_message.reply_sticker(
+                await msg.delete()
+                await message.reply_sticker(
                 "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
                 )
-                await update.effective_message.reply_photo(
+                await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
                         config.MUSIC_BOT_NAME
@@ -217,9 +215,7 @@ async def start_comm(client, message: Message, _):
                     reply_markup=InlineKeyboardMarkup(out),
                 )
             except:
-                lol = await update.effective_message.reply_text(
-                Hiii
-                )
+                lol = await message.reply_text(f"Hello, {first_name}!")
                 await asyncio.sleep(0.4)
                 await lol.edit_text("🦋")
                 await asyncio.sleep(0.5)
@@ -228,17 +224,15 @@ async def start_comm(client, message: Message, _):
                 await lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
                 await asyncio.sleep(0.4)
                 await lol.delete()
-                await update.effective_message.reply_sticker(
+                await message.reply_sticker(
                 "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
                 )
-                await update.effective_message.reply_text(
+                await message.reply_text(
                     _["start_2"].format(config.MUSIC_BOT_NAME),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
         else:
-                lol = await update.effective_message.reply_text(
-                Hiii
-                )
+                lol = await message.reply_text(f"Hello, {first_name}!")
                 await asyncio.sleep(0.4)
                 await lol.edit_text("🦋")
                 await asyncio.sleep(0.5)
@@ -247,10 +241,10 @@ async def start_comm(client, message: Message, _):
                 await lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
                 await asyncio.sleep(0.4)
                 await lol.delete()
-                await update.effective_message.reply_sticker(
+                await message.reply_sticker(
                 "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
                 )
-                await update.effective_message.reply_text(
+                await message.reply_text(
                 _["start_2"].format(config.MUSIC_BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(out),
                 )
