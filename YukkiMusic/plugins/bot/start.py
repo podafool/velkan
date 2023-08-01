@@ -195,7 +195,21 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                await message.reply_photo(
+                lol = await update.effective_message.reply_text(
+                Hiii
+                )
+                await asyncio.sleep(0.4)
+                await lol.edit_text("🦋")
+                await asyncio.sleep(0.5)
+                await lol.edit_text("⚡️")
+                await asyncio.sleep(0.3)
+                await lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
+                await asyncio.sleep(0.4)
+                await lol.delete()
+                await update.effective_message.reply_sticker(
+                "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
+                )
+                await update.effective_message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
                         config.MUSIC_BOT_NAME
@@ -259,7 +273,9 @@ async def welcome(client, message: Message):
             if member.id == app.id:
                 chat_type = message.chat.type
                 if chat_type != "supergroup":
-                    await message.reply_text(_["start_6"])
+                    await message.reply_photo(
+                      photo="https://telegra.ph/file/7fe3e103fa1ecd151b7a5.jpg",
+                      caption=_["start_6"])
                     return await app.leave_chat(message.chat.id)
                 if chat_id in await blacklisted_chats():
                     await message.reply_text(
