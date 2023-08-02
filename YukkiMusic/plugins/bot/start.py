@@ -195,15 +195,14 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                msg = await message.reply_text(f"Hiii!❤️✨")
-                await asyncio.sleep(1)
-                await msg.edit_text("💃")
+                await message.reply_text(f"Hiii! ❤️✨")                                
+                msg = await msg.edit_text("💃")
                 await asyncio.sleep(1)
                 await msg.edit_text("🎶")
                 await asyncio.sleep(1)
                 await msg.edit_text("❣️")
-                await asyncio.sleep(1.3)
-                await msg.edit_text("👻")
+                await asyncio.sleep(1.5)
+                await msg.edit_text("💕")
                 await asyncio.sleep(1)
                 await msg.edit_text("🌈")
                 await asyncio.sleep(1)
@@ -213,6 +212,9 @@ async def start_comm(client, message: Message, _):
                 )
                 await asyncio.sleep(1)
                 await msgg.delete()
+                new = await message.reply_video("https://telegra.ph/file/19b647a7c809c90192702.mp4")
+                await asyncio.sleep(6)
+                await new.delete()
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
