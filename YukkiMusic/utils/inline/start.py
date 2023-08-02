@@ -59,23 +59,39 @@ def start_pannel(_):
 
 
 def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
-    buttons = []
-
-    if OWNER:
-        buttons.append(
+    buttons = [
+        [
             InlineKeyboardButton(
-                text=_["S_B_7"],
-                user_id=OWNER
+                text=_["S_B_8"], callback_data="settings_back_helper"
             )
+        ]
+    ]
+    if GITHUB_REPO and OWNER:
+        buttons.append(
+            [
+                InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER),
+                InlineKeyboardButton(
+                    text=_["S_B_6"], url=f"{GITHUB_REPO}"
+                ),
+            ]
         )
-
-    buttons.append(
-        InlineKeyboardButton(
-            text=_["S_B_8"],
-            callback_data="settings_back_helper"
-        )
-    )
-    
+    else:
+        if GITHUB_REPO:
+            buttons.append(
+                [
+                    InlineKeyboardButton(
+                        text=_["S_B_6"], url=f"{GITHUB_REPO}"
+                    ),
+                ]
+            )
+        if OWNER:
+            buttons.append(
+                [
+                    InlineKeyboardButton(
+                        text=_["S_B_7"], user_id=OWNER
+                    ),
+                ]
+            )
     if SUPPORT_CHANNEL and SUPPORT_GROUP:
         buttons.append(
             [
@@ -111,23 +127,5 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ]
-    )
-    if GITHUB_REPO and OWNER:
-        buttons.append(
-            [
-                InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER),
-                InlineKeyboardButton(
-                    text=_["S_B_6"], url=f"{GITHUB_REPO}"
-                ),
-            ]
-        )
-    else:
-        if GITHUB_REPO:
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text=_["S_B_6"], url=f"{GITHUB_REPO}"
-                    ),
-                ]
-            )        
+    )        
     return buttons
