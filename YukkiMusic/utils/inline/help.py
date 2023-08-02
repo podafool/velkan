@@ -19,19 +19,19 @@ def help_pannel(_, START: Union[bool, int] = None):
         InlineKeyboardButton(
             text=_["CLOSEMENU_BUTTON"], 
             callback_data=f"close",
-            color=blue
+            color='blue'
         )
     ]
     second = [
         InlineKeyboardButton(
             text=_["BACK_BUTTON"],
             callback_data=f"settingsback_helper",
-            color=red
+            color='red'
         ),
         InlineKeyboardButton(
             text=_["CLOSEMENU_BUTTON"], 
             callback_data=f"close",
-            color=green
+            color='green'
         ),
     ]
     mark = second if START else first
