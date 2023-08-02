@@ -8,30 +8,34 @@
 # All rights reserved.
 
 from typing import Union
-
+from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from YukkiMusic import app
 
+class ColoredInlineKeyboardButton(InlineKeyboardButton):
+    def __init__(self, text, callback_data=None, color=None):
+        super().__init__(text, callback_data=callback_data)
+        self.color = color
 
 def help_pannel(_, START: Union[bool, int] = None):
     first = [
-        InlineKeyboardButton(
+        ColoredInlineKeyboardButton(
             text=_["CLOSEMENU_BUTTON"], 
             callback_data=f"close",
-            color='blue'
+            color="blue"
         )
     ]
     second = [
-        InlineKeyboardButton(
+        ColoredInlineKeyboardButton(
             text=_["BACK_BUTTON"],
             callback_data=f"settingsback_helper",
-            color='red'
+            color="red"
         ),
-        InlineKeyboardButton(
+        ColoredInlineKeyboardButton(
             text=_["CLOSEMENU_BUTTON"], 
             callback_data=f"close",
-            color='green'
+            color="green"
         ),
     ]
     mark = second if START else first
