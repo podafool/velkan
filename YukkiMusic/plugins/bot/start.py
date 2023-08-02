@@ -223,35 +223,51 @@ async def start_comm(client, message: Message, _):
                     reply_markup=InlineKeyboardMarkup(out),
                 )
             except:
-                msg = await message.reply_text(f"Hiii!❤️✨")
-                await asyncio.sleep(0.4)
-                await msg.edit_text("🦋")
-                await asyncio.sleep(0.5)
-                await msg.edit_text("⚡️")
-                await asyncio.sleep(0.3)
-                await msg.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
-                await asyncio.sleep(0.4)
+                await message.reply_text(f"Hiii! ❤️✨")                                
+                msg = await msg.edit_text("💃")
+                await asyncio.sleep(1)
+                await msg.edit_text("🎶")
+                await asyncio.sleep(1)
+                await msg.edit_text("❣️")
+                await asyncio.sleep(1.5)
+                await msg.edit_text("💕")
+                await asyncio.sleep(1)
+                await msg.edit_text("🌈")
+                await asyncio.sleep(1)
                 await msg.delete()
-                await message.reply_sticker(
-                "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
+                msgg = await message.reply_sticker(
+                "CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E"
                 )
+                await asyncio.sleep(1)
+                await msgg.delete()
+                new = await message.reply_video("https://telegra.ph/file/19b647a7c809c90192702.mp4")
+                await asyncio.sleep(6)
+                await new.delete()
                 await message.reply_text(
                     _["start_2"].format(config.MUSIC_BOT_NAME),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
         else:
-                msg = await message.reply_text(f"Hiii!❤️✨")
-                await asyncio.sleep(0.4)
-                await msg.edit_text("🦋")
-                await asyncio.sleep(0.5)
-                await msg.edit_text("⚡️")
-                await asyncio.sleep(0.3)
-                await msg.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
-                await asyncio.sleep(0.4)
+                await message.reply_text(f"Hiii! ❤️✨")                                
+                msg = await msg.edit_text("💃")
+                await asyncio.sleep(1)
+                await msg.edit_text("🎶")
+                await asyncio.sleep(1)
+                await msg.edit_text("❣️")
+                await asyncio.sleep(1.5)
+                await msg.edit_text("💕")
+                await asyncio.sleep(1)
+                await msg.edit_text("🌈")
+                await asyncio.sleep(1)
                 await msg.delete()
-                await message.reply_sticker(
-                "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
+                msgg = await message.reply_sticker(
+                "CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E"
                 )
+                await asyncio.sleep(1)
+                await msgg.delete()
+                new = await message.reply_video("https://telegra.ph/file/19b647a7c809c90192702.mp4")
+                await asyncio.sleep(6)
+                await new.delete()
                 await message.reply_text(
                 _["start_2"].format(config.MUSIC_BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(out),
