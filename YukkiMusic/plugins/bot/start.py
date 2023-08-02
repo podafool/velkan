@@ -195,17 +195,21 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                msg = await message.reply_text(f"Hello!")
+                msg = await message.reply_text(f"Hiii!❤️✨")
                 await asyncio.sleep(2)
-                await msg.edit_text("🦋")
+                await msg.edit_text("💃")
                 await asyncio.sleep(2)
-                await msg.edit_text("⚡️")
+                await msg.edit_text("🎶")
+                await asyncio.sleep(1)
+                await msg.edit_text("❣️")
                 await asyncio.sleep(2)
-                await msg.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
+                await msg.edit_text("👻")
                 await asyncio.sleep(2)
+                await msg.edit_text("🌈")
+                await asyncio.sleep(1)
                 await msg.delete()
                 await message.reply_sticker(
-                "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
+                "CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E"
                 )
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
@@ -215,15 +219,15 @@ async def start_comm(client, message: Message, _):
                     reply_markup=InlineKeyboardMarkup(out),
                 )
             except:
-                lol = await message.reply_text(f"Hello!")
+                msg = await message.reply_text(f"Hiii!❤️✨")
                 await asyncio.sleep(0.4)
-                await lol.edit_text("🦋")
+                await msg.edit_text("🦋")
                 await asyncio.sleep(0.5)
-                await lol.edit_text("⚡️")
+                await msg.edit_text("⚡️")
                 await asyncio.sleep(0.3)
-                await lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
+                await msg.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
                 await asyncio.sleep(0.4)
-                await lol.delete()
+                await msg.delete()
                 await message.reply_sticker(
                 "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
                 )
@@ -232,15 +236,15 @@ async def start_comm(client, message: Message, _):
                     reply_markup=InlineKeyboardMarkup(out),
                 )
         else:
-                lol = await message.reply_text(f"Hello!")
+                msg = await message.reply_text(f"Hiii!❤️✨")
                 await asyncio.sleep(0.4)
-                await lol.edit_text("🦋")
+                await msg.edit_text("🦋")
                 await asyncio.sleep(0.5)
-                await lol.edit_text("⚡️")
+                await msg.edit_text("⚡️")
                 await asyncio.sleep(0.3)
-                await lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
+                await msg.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
                 await asyncio.sleep(0.4)
-                await lol.delete()
+                await msg.delete()
                 await message.reply_sticker(
                 "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
                 )
