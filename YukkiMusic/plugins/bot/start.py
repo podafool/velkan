@@ -206,13 +206,12 @@ async def start_comm(client, message: Message, _):
                 await asyncio.sleep(1)
                 await msg.edit_text("🌈")
                 await asyncio.sleep(1)
-                await msg.delete()
-                msgg = await message.reply_sticker(
-                "CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E"
-                )
-                await asyncio.sleep(1)
-                await msgg.delete()
-                new = await message.reply_video("https://telegra.ph/file/19b647a7c809c90192702.mp4")
+                await msg.delete()                
+                new = await message.reply_video(
+                                "https://telegra.ph/file/19b647a7c809c90192702.mp4"
+                                caption=f"Nalama 😵‍💫 {message.from_user.mention}"
+                                supports_streaming=True
+                                )
                 await asyncio.sleep(6)
                 await new.delete()
                 await message.reply_photo(
@@ -229,19 +228,16 @@ async def start_comm(client, message: Message, _):
                 await msg.edit_text("🎶")
                 await asyncio.sleep(1)
                 await msg.edit_text("❣️")
-                await asyncio.sleep(1.5)
-                await msg.edit_text("💕")
-                await asyncio.sleep(1)
+                await asyncio.sleep(1.7)                
                 await msg.edit_text("🌈")
                 await asyncio.sleep(1)
-                await msg.delete()
-                msgg = await message.reply_sticker(
-                "CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E"
-                )
-                await asyncio.sleep(1)
-                await msgg.delete()
-                new = await message.reply_video("https://telegra.ph/file/19b647a7c809c90192702.mp4")
-                await asyncio.sleep(6)
+                await msg.delete()                
+                new = await message.reply_video(
+                                "https://telegra.ph/file/19b647a7c809c90192702.mp4"
+                                caption=f"Nalama 😵‍💫 {message.from_user.mention}"
+                                supports_streaming=True
+                                )
+                await asyncio.sleep(7)
                 await new.delete()
                 await message.reply_text(
                     _["start_2"].format(config.MUSIC_BOT_NAME),
@@ -259,14 +255,15 @@ async def start_comm(client, message: Message, _):
                 await asyncio.sleep(1)
                 await msg.edit_text("🌈")
                 await asyncio.sleep(1)
-                await msg.delete()
-                msgg = await message.reply_sticker(
-                "CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E"
-                )
+                await msg.delete()                
                 await asyncio.sleep(1)
                 await msgg.delete()
-                new = await message.reply_video("https://telegra.ph/file/19b647a7c809c90192702.mp4")
-                await asyncio.sleep(6)
+                new = await message.reply_video(
+                                "https://telegra.ph/file/19b647a7c809c90192702.mp4"
+                                caption=f"Nalama 😵‍💫 {message.from_user.mention}"
+                                supports_streaming=True
+                                )
+                await asyncio.sleep(7)
                 await new.delete()
                 await message.reply_text(
                 _["start_2"].format(config.MUSIC_BOT_NAME),
