@@ -196,7 +196,7 @@ async def start_comm(client, message: Message, _):
         if config.START_IMG_URL:
             try:
                 await message.reply_text(f"Hiii! ❤️✨")                                
-                msg = await msg.edit_text("💃")
+                msg = await message.reply_text("💃")
                 await asyncio.sleep(1)
                 await msg.edit_text("🎶")
                 await asyncio.sleep(1)
@@ -224,7 +224,7 @@ async def start_comm(client, message: Message, _):
                 )
             except:
                 await message.reply_text(f"Hiii! ❤️✨")                                
-                msg = await msg.edit_text("💃")
+                msg = await message.reply_text("💃")
                 await asyncio.sleep(1)
                 await msg.edit_text("🎶")
                 await asyncio.sleep(1)
@@ -249,7 +249,7 @@ async def start_comm(client, message: Message, _):
                 )
         else:
                 await message.reply_text(f"Hiii! ❤️✨")                                
-                msg = await msg.edit_text("💃")
+                msg = await message.reply_text("💃")
                 await asyncio.sleep(1)
                 await msg.edit_text("🎶")
                 await asyncio.sleep(1)
