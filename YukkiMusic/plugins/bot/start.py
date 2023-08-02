@@ -211,12 +211,12 @@ async def start_comm(client, message: Message, _):
                                 caption=f"Nalama 😵‍💫 {message.from_user.mention}",
                                 supports_streaming=True
                                 )
-                await asyncio.sleep(7)
+                await asyncio.sleep(6.5)
                 await new.delete()
                 dei = await message.reply_text("💞")
                 await asyncio.sleep(1.2)
-                await dei.delete()
                 await adei.delete()
+                await dei.delete()
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
@@ -241,12 +241,12 @@ async def start_comm(client, message: Message, _):
                                 caption=f"Nalama 😵‍💫 {message.from_user.mention}",
                                 supports_streaming=True
                                 )
-                await asyncio.sleep(7)
+                await asyncio.sleep(6.5)
                 await new.delete()
                 dei = await message.reply_text("💞")
                 await asyncio.sleep(1)
-                await dei.delete()
                 await adei.delete()
+                await dei.delete()
                 await message.reply_text(
                     _["start_2"].format(config.MUSIC_BOT_NAME),
                     reply_markup=InlineKeyboardMarkup(out),
@@ -268,12 +268,12 @@ async def start_comm(client, message: Message, _):
                                 caption=f"Nalama 😵‍💫 {message.from_user.mention}",
                                 supports_streaming=True
                                 )
-                await asyncio.sleep(7)
+                await asyncio.sleep(6.5)
                 await new.delete()
                 dei = await message.reply_text("💞")
                 await asyncio.sleep(1)
-                await dei.delete()
                 await adei.delete()
+                await dei.delete()
                 await message.reply_text(
                 _["start_2"].format(config.MUSIC_BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(out),
