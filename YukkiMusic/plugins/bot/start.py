@@ -211,7 +211,7 @@ async def start_comm(client, message: Message, _):
                                 caption=f"Nalama 😵‍💫 {message.from_user.mention}",
                                 supports_streaming=True
                                 )
-                await asyncio.sleep(8)
+                await asyncio.sleep(7)
                 await new.delete()
                 dei = await message.reply_text("💞")
                 await asyncio.sleep(1.2)
@@ -241,7 +241,7 @@ async def start_comm(client, message: Message, _):
                                 caption=f"Nalama 😵‍💫 {message.from_user.mention}",
                                 supports_streaming=True
                                 )
-                await asyncio.sleep(8)
+                await asyncio.sleep(7)
                 await new.delete()
                 dei = await message.reply_text("💞")
                 await asyncio.sleep(1)
@@ -268,7 +268,7 @@ async def start_comm(client, message: Message, _):
                                 caption=f"Nalama 😵‍💫 {message.from_user.mention}",
                                 supports_streaming=True
                                 )
-                await asyncio.sleep(8)
+                await asyncio.sleep(7)
                 await new.delete()
                 dei = await message.reply_text("💞")
                 await asyncio.sleep(1)
