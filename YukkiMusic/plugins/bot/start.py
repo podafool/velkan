@@ -202,15 +202,17 @@ async def start_comm(client, message: Message, _):
                 await msg.edit_text("🎶")
                 await asyncio.sleep(1)
                 await msg.edit_text("❣️")
-                await asyncio.sleep(1)
+                await asyncio.sleep(1.3)
                 await msg.edit_text("👻")
                 await asyncio.sleep(1)
                 await msg.edit_text("🌈")
                 await asyncio.sleep(1)
                 await msg.delete()
-                await message.reply_sticker(
+                msgg = await message.reply_sticker(
                 "CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E"
                 )
+                await asyncio.sleep(1)
+                await msgg.delete()
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
