@@ -82,14 +82,12 @@ HELP_4 = """⚙️ Settings commands
   **Options in Settings:**
 1️. Set Audio Quality.
 2️. Set Video Quality.
-3️. Auth Users:- You can change admin commands mode from here to everyone or admins only. If everyone, anyone present in you group will be able to use admin commands(like /skip, /stop etc)
+3️. Auth Users:- You can change admin commands (like /skip, /stop etc) mode from here to everyone or admins only.
 4️. Clean Mode: When enabled deletes the bot's messages after 5 mins from your group.
 5. Command Clean : When activated, Bot will delete its executed commands (/play, /pause, /shuffle, /stop etc) immediately.
 6️. Play Settings:
-
 /playmode - Get a complete play settings panel with buttons where you can set your group's play settings. 
-
-Options in playmode:
-1️. Search Mode [Direct or Inline] - Changes your search mode while you give /play mode. 
-2️. Admin Commands [Everyone or Admins] - If everyone, anyone present in you group will be able to use admin commands(like /skip, /stop etc)
-3️. Play Type [Everyone or Admins] - If admins, only admins present in group can play music on voice chat."""
+  Options in playmode:
+  1️. Search Mode [Direct or Inline] - Changes your search mode while you give /play mode. 
+  2️. Admin Commands [Everyone or Admins] - If everyone, anyone present in you group will be able to use admin commands(like /skip, /stop etc)
+  3️. Play Type [Everyone or Admins] - If admins, only admins present in group can play music on voice chat."""
