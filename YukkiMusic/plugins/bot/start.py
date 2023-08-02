@@ -208,8 +208,8 @@ async def start_comm(client, message: Message, _):
                 await asyncio.sleep(1)
                 await msg.delete()                
                 new = await message.reply_video(
-                                "https://telegra.ph/file/19b647a7c809c90192702.mp4"
-                                caption=f"Nalama 😵‍💫 {message.from_user.mention}"
+                                "https://telegra.ph/file/19b647a7c809c90192702.mp4",
+                                caption=f"Nalama 😵‍💫 {message.from_user.mention}",
                                 supports_streaming=True
                                 )
                 await asyncio.sleep(6)
@@ -233,8 +233,8 @@ async def start_comm(client, message: Message, _):
                 await asyncio.sleep(1)
                 await msg.delete()                
                 new = await message.reply_video(
-                                "https://telegra.ph/file/19b647a7c809c90192702.mp4"
-                                caption=f"Nalama 😵‍💫 {message.from_user.mention}"
+                                "https://telegra.ph/file/19b647a7c809c90192702.mp4",
+                                caption=f"Nalama 😵‍💫 {message.from_user.mention}",
                                 supports_streaming=True
                                 )
                 await asyncio.sleep(7)
@@ -259,8 +259,8 @@ async def start_comm(client, message: Message, _):
                 await asyncio.sleep(1)
                 await msgg.delete()
                 new = await message.reply_video(
-                                "https://telegra.ph/file/19b647a7c809c90192702.mp4"
-                                caption=f"Nalama 😵‍💫 {message.from_user.mention}"
+                                "https://telegra.ph/file/19b647a7c809c90192702.mp4",
+                                caption=f"Nalama 😵‍💫 {message.from_user.mention}",
                                 supports_streaming=True
                                 )
                 await asyncio.sleep(7)
