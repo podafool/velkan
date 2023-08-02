@@ -214,8 +214,9 @@ async def start_comm(client, message: Message, _):
                 await asyncio.sleep(6.5)
                 await new.delete()
                 dei = await message.reply_text("💞")
-                await asyncio.sleep(1.2)
+                await asyncio.sleep(0.6)
                 await adei.delete()
+                await asyncio.sleep(1.5)
                 await dei.delete()
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
@@ -244,8 +245,9 @@ async def start_comm(client, message: Message, _):
                 await asyncio.sleep(6.5)
                 await new.delete()
                 dei = await message.reply_text("💞")
-                await asyncio.sleep(1)
+                await asyncio.sleep(0.6)
                 await adei.delete()
+                await asyncio.sleep(1.5)
                 await dei.delete()
                 await message.reply_text(
                     _["start_2"].format(config.MUSIC_BOT_NAME),
@@ -271,8 +273,9 @@ async def start_comm(client, message: Message, _):
                 await asyncio.sleep(6.5)
                 await new.delete()
                 dei = await message.reply_text("💞")
-                await asyncio.sleep(1)
+                await asyncio.sleep(0.6)
                 await adei.delete()
+                await asyncio.sleep(1.5)
                 await dei.delete()
                 await message.reply_text(
                 _["start_2"].format(config.MUSIC_BOT_NAME),
