@@ -71,8 +71,11 @@ async def helper_private(
         language = await get_lang(chat_id)
         _ = get_string(language)
         keyboard = help_pannel(_)
-        await update.reply_text(_["help_1"], reply_markup=keyboard)
-
+        await update.reply_photo(
+            photo="https://telegra.ph/file/803ffb6adaeb83215a8d0.jpg",
+            caption=_["help_1"], 
+            reply_markup=keyboard
+            )
 @app.on_message(
     filters.command(HELP_COMMAND)
     & filters.group
