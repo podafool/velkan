@@ -205,8 +205,7 @@ async def start_comm(client, message: Message, _):
                 await msg.edit_text("🌈")
                 await asyncio.sleep(1)
                 await msg.delete()                
-                await asyncio.sleep(1)
-                await msgg.delete()
+                await asyncio.sleep(1)                
                 new = await message.reply_video(
                                 "https://telegra.ph/file/19b647a7c809c90192702.mp4",
                                 caption=f"Nalama 😵‍💫 {message.from_user.mention}",
@@ -236,8 +235,7 @@ async def start_comm(client, message: Message, _):
                 await msg.edit_text("🌈")
                 await asyncio.sleep(1)
                 await msg.delete()                
-                await asyncio.sleep(1)
-                await msgg.delete()
+                await asyncio.sleep(1)                
                 new = await message.reply_video(
                                 "https://telegra.ph/file/19b647a7c809c90192702.mp4",
                                 caption=f"Nalama 😵‍💫 {message.from_user.mention}",
@@ -264,8 +262,7 @@ async def start_comm(client, message: Message, _):
                 await msg.edit_text("🌈")
                 await asyncio.sleep(1)
                 await msg.delete()                
-                await asyncio.sleep(1)
-                await msgg.delete()
+                await asyncio.sleep(1)                
                 new = await message.reply_video(
                                 "https://telegra.ph/file/19b647a7c809c90192702.mp4",
                                 caption=f"Nalama 😵‍💫 {message.from_user.mention}",
