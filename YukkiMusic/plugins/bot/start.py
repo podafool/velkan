@@ -195,64 +195,13 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                await message.reply_text(f"Hiii! ❤️✨")                                
+                adei = await message.reply_text(f"Hiii! ❤️✨")                                
                 msg = await message.reply_text("💃")
                 await asyncio.sleep(1)
                 await msg.edit_text("🎶")
                 await asyncio.sleep(1)
                 await msg.edit_text("❣️")
-                await asyncio.sleep(1.5)
-                await msg.edit_text("💕")
-                await asyncio.sleep(1)
-                await msg.edit_text("🌈")
-                await asyncio.sleep(1)
-                await msg.delete()                
-                new = await message.reply_video(
-                                "https://telegra.ph/file/19b647a7c809c90192702.mp4",
-                                caption=f"Nalama 😵‍💫 {message.from_user.mention}",
-                                supports_streaming=True
-                                )
-                await asyncio.sleep(6)
-                await new.delete()
-                await message.reply_photo(
-                    photo=config.START_IMG_URL,
-                    caption=_["start_2"].format(
-                        config.MUSIC_BOT_NAME
-                    ),
-                    reply_markup=InlineKeyboardMarkup(out),
-                )
-            except:
-                await message.reply_text(f"Hiii! ❤️✨")                                
-                msg = await message.reply_text("💃")
-                await asyncio.sleep(1)
-                await msg.edit_text("🎶")
-                await asyncio.sleep(1)
-                await msg.edit_text("❣️")
-                await asyncio.sleep(1.7)                
-                await msg.edit_text("🌈")
-                await asyncio.sleep(1)
-                await msg.delete()                
-                new = await message.reply_video(
-                                "https://telegra.ph/file/19b647a7c809c90192702.mp4",
-                                caption=f"Nalama 😵‍💫 {message.from_user.mention}",
-                                supports_streaming=True
-                                )
-                await asyncio.sleep(7)
-                await new.delete()
-                await message.reply_text(
-                    _["start_2"].format(config.MUSIC_BOT_NAME),
-                    reply_markup=InlineKeyboardMarkup(out),
-                )
-        else:
-                await message.reply_text(f"Hiii! ❤️✨")                                
-                msg = await message.reply_text("💃")
-                await asyncio.sleep(1)
-                await msg.edit_text("🎶")
-                await asyncio.sleep(1)
-                await msg.edit_text("❣️")
-                await asyncio.sleep(1.5)
-                await msg.edit_text("💕")
-                await asyncio.sleep(1)
+                await asyncio.sleep(1.6)                
                 await msg.edit_text("🌈")
                 await asyncio.sleep(1)
                 await msg.delete()                
@@ -263,8 +212,71 @@ async def start_comm(client, message: Message, _):
                                 caption=f"Nalama 😵‍💫 {message.from_user.mention}",
                                 supports_streaming=True
                                 )
-                await asyncio.sleep(7)
+                await asyncio.sleep(8)
                 await new.delete()
+                dei = message.reply_text(💞)
+                await asyncio.sleep(1.2)
+                await dei.delete()
+                await adei.delete()
+                await message.reply_photo(
+                    photo=config.START_IMG_URL,
+                    caption=_["start_2"].format(
+                        config.MUSIC_BOT_NAME
+                    ),
+                    reply_markup=InlineKeyboardMarkup(out),
+                )
+            except:
+                adei = await message.reply_text(f"Hiii! ❤️✨")                                
+                msg = await message.reply_text("💃")
+                await asyncio.sleep(1)
+                await msg.edit_text("🎶")
+                await asyncio.sleep(1)
+                await msg.edit_text("❣️")
+                await asyncio.sleep(1.6)                
+                await msg.edit_text("🌈")
+                await asyncio.sleep(1)
+                await msg.delete()                
+                await asyncio.sleep(1)
+                await msgg.delete()
+                new = await message.reply_video(
+                                "https://telegra.ph/file/19b647a7c809c90192702.mp4",
+                                caption=f"Nalama 😵‍💫 {message.from_user.mention}",
+                                supports_streaming=True
+                                )
+                await asyncio.sleep(8)
+                await new.delete()
+                dei = message.reply_text(💞)
+                await asyncio.sleep(1)
+                await dei.delete()
+                await adei.delete()
+                await message.reply_text(
+                    _["start_2"].format(config.MUSIC_BOT_NAME),
+                    reply_markup=InlineKeyboardMarkup(out),
+                )
+        else:
+                adei = await message.reply_text(f"Hiii! ❤️✨")                                
+                msg = await message.reply_text("💃")
+                await asyncio.sleep(1)
+                await msg.edit_text("🎶")
+                await asyncio.sleep(1)
+                await msg.edit_text("❣️")
+                await asyncio.sleep(1.6)                
+                await msg.edit_text("🌈")
+                await asyncio.sleep(1)
+                await msg.delete()                
+                await asyncio.sleep(1)
+                await msgg.delete()
+                new = await message.reply_video(
+                                "https://telegra.ph/file/19b647a7c809c90192702.mp4",
+                                caption=f"Nalama 😵‍💫 {message.from_user.mention}",
+                                supports_streaming=True
+                                )
+                await asyncio.sleep(8)
+                await new.delete()
+                dei = message.reply_text(💞)
+                await asyncio.sleep(1)
+                await dei.delete()
+                await adei.delete()
                 await message.reply_text(
                 _["start_2"].format(config.MUSIC_BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(out),
