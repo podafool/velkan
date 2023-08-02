@@ -54,12 +54,13 @@ async def helper_private(
             await update.message.delete()
             await update.message.reply_photo(
                 photo="https://telegra.ph/file/803ffb6adaeb83215a8d0.jpg",
-                caption=_["help_1"],
+                #caption=_["help_1"],
                 reply_markup=keyboard
             )
         else:
             await update.edit_message_text(
-                _["help_1"], reply_markup=keyboard
+                #_["help_1"],
+                reply_markup=keyboard
             )
     else:
         chat_id = update.chat.id
@@ -73,7 +74,7 @@ async def helper_private(
         keyboard = help_pannel(_)
         await update.reply_photo(
             photo="https://telegra.ph/file/803ffb6adaeb83215a8d0.jpg",
-            caption=_["help_1"], 
+            #caption=_["help_1"], 
             reply_markup=keyboard
             )
 @app.on_message(
