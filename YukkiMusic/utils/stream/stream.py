@@ -187,12 +187,13 @@ async def stream(
                 caption=_["queue_4"].format(
                     position, title[:30], duration_min, user_name
                 ),
-            )
-            await asyncio.sleep(1)
-            await app.send_sticker(
+            )            
+            dei = await app.send_sticker(
                 original_chat_id,
-                "CAACAgUAAxkBAAEJ511ky3CVJRVZGvGXdQZ1pNJLbrE9VQACdAYAAiFP4VQEeuQWBclToC8E")                        
-            
+                "CAACAgUAAxkBAAEJ511ky3CVJRVZGvGXdQZ1pNJLbrE9VQACdAYAAiFP4VQEeuQWBclToC8E")
+            await asyncio.sleep(2)
+            await dei.delete()
+          
         else:
             if not forceplay:
                 db[chat_id] = []
