@@ -627,10 +627,10 @@ async def play_music(client, CallbackQuery, _):
             else _["general_3"].format(ex_type)
         )
         return await mystic.edit_text(err)
-    await mystic.edit_text("💫")
-    await asyncio.sleep(0.9)
-    await mystic.edit_text("🌟")
-    await asyncio.sleep(0.9)
+    #await mystic.edit_text("💫")
+    #await asyncio.sleep(0.9)
+    #await mystic.edit_text("🌟")
+    #await asyncio.sleep(0.9)
     return await mystic.delete()
 
 
@@ -741,10 +741,10 @@ async def play_playlists_command(client, CallbackQuery, _):
             else _["general_3"].format(ex_type)
         )
         return await mystic.edit_text(err)
-    await mystic.edit_text("💫")
-    await asyncio.sleep(0.9)
-    await mystic.edit_text("🌟")
-    await asyncio.sleep(0.9)
+    #await mystic.edit_text("💫")
+    #await asyncio.sleep(0.9)
+    #await mystic.edit_text("🌟")
+    #await asyncio.sleep(0.9)
     return await mystic.delete()
 
 
