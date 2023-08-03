@@ -53,7 +53,14 @@ async def start_comm(client, message: Message, _):
                 photo="https://telegra.ph/file/803ffb6adaeb83215a8d0.jpg",
                 reply_markup=keyboard
             )
-                    
+            if await is_on_off(config.LOG):
+                sender_id = message.from_user.id
+                sender_name = message.from_user.first_name
+                return await app.send_message(
+                    config.LOG_GROUP_ID,
+                    f"{message.from_user.mention} has just started bot to check <code>HELP INFORMATION</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
+                )
+                        
             return  
         if name[0:4] == "song":
             return await message.reply_text(_["song_2"])
