@@ -384,7 +384,7 @@ class Call(PyTgCalls):
                 img = await gen_thumb(videoid, chat_id)
                 button = telegram_markup(_, chat_id)
                 await app.send_sticker(
-                  original_chat_id, "CAACAgQAAxkBAAEJ5xdky1-TiTTLBrLsydm3FAoKkQxrUQACcQsAAo9SSVFFVmZZbQ1DPi8E"
+                    original_chat_id, "CAACAgQAAxkBAAEJ5xdky1-TiTTLBrLsydm3FAoKkQxrUQACcQsAAo9SSVFFVmZZbQ1DPi8E"
                 )
                 run = await app.send_photo(
                     original_chat_id,
@@ -438,6 +438,9 @@ class Call(PyTgCalls):
                 img = await gen_thumb(videoid, chat_id)
                 button = stream_markup(_, videoid, chat_id)
                 await mystic.delete()
+                await app.send_sticker(
+                    original_chat_id, "CAACAgEAAxkBAAEJ6Opky9z53akfrGWxYxvVWy0zrx4E4gAC_wADd2hJR-_RpYxPr1G6LwQ"
+                )
                 run = await app.send_photo(
                     original_chat_id,
                     photo=img,
@@ -525,6 +528,9 @@ class Call(PyTgCalls):
                 else:
                     img = await gen_thumb(videoid, chat_id)
                     button = stream_markup(_, videoid, chat_id)
+                    await app.send_sticker(
+                        original_chat_id, "CAACAgEAAxkBAAEJ6Opky9z53akfrGWxYxvVWy0zrx4E4gAC_wADd2hJR-_RpYxPr1G6LwQ"
+                    )
                     run = await app.send_photo(
                         original_chat_id,
                         photo=img,
