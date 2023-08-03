@@ -49,6 +49,7 @@ autoend = {}
 counter = {}
 AUTO_END_TIME = 3
 
+user_id = message.from_user.id
 
 async def _clear_(chat_id):
     db[chat_id] = []
