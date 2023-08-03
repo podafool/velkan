@@ -84,8 +84,10 @@ async def song_commad_private(client, message: Message, _):
                 )
             )
         buttons = song_markup(_, vidid)
-        await mystic.edit_text("💃")
-        await asyncio.sleep(0.9)        
+        await mystic.edit_text("💫")
+        await asyncio.sleep(0.9)
+        await mystic.edit_text("🌟")
+        await asyncio.sleep(0.9)
         await mystic.delete()
         return await message.reply_photo(
             thumbnail,
@@ -114,7 +116,9 @@ async def song_commad_private(client, message: Message, _):
             _["play_6"].format(SONG_DOWNLOAD_DURATION, duration_min)
         )
     buttons = song_markup(_, vidid)
-    await mystic.edit_text("💃")
+    await mystic.edit_text("💫")
+    await asyncio.sleep(0.9)
+    await mystic.edit_text("🌟")
     await asyncio.sleep(0.9)
     await mystic.delete()
     return await message.reply_photo(
