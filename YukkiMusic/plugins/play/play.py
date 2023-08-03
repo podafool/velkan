@@ -104,6 +104,7 @@ async def play_commnd(
                 "link": message_link,
                 "path": file_path,
                 "dur": dur,
+                "flood_wait_error": "Telegram Flood Wait: Please wait for '{0}' seconds.",
             }
 
             try:
@@ -120,12 +121,22 @@ async def play_commnd(
                 )
             except Exception as e:
                 ex_type = type(e).__name__
-                err = (
-                    e
-                    if ex_type == "AssistantErr"
-                    else _["general_3"].format(ex_type)
-                )
-                return await mystic.edit_text(err)
+                if ex_type == "AssistantErr":
+                    err = e
+                else:                    
+                    err = _["general_3"].format(ex_type)
+                # Check if the exception is caused by Flood Wait (Telegram API error 420)
+                if "FLOOD_WAIT_" in err:
+                    # Extract the wait time (X seconds) from the error message
+                    wait_time = int(err.split("FLOOD_WAIT_")[1].split("_")[0])
+                    err = _["flood_wait_error"].format(wait_time)
+                    # Generate the Flood Wait message with the wait time
+                    wait_msg = _["flood_wait_error"].format(wait_time)
+                    # Send the Flood Wait message immediately
+                    await mystic.edit_text(wait_msg)
+                else:
+                    # If it's not a Flood Wait error, send the regular error message
+                    return await mystic.edit_text(err)                
             await mystic.edit_text("💭")
             await asyncio.sleep(0.5)
             await mystic.edit_text("🆕")
