@@ -13,6 +13,7 @@ from typing import Union
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
+import config 
 from config import BANNED_USERS
 from strings import get_command, get_string, helpers
 from YukkiMusic import app
