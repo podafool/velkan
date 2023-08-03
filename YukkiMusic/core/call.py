@@ -240,6 +240,9 @@ class Call(PyTgCalls):
                         raise AssistantErr(_["call_4"])
                     except Exception as e:
                         raise AssistantErr(e)
+                    await app.send_sticker(
+                        original_chat_id, "CAACAgEAAxkBAAEJ6N5ky9pWPWdejufWs4V1HDdfbhoYzgACsAADUSkNOY_Zrf2npRxbLwQ"
+                    )
                     m = await app.send_message(
                         original_chat_id, _["call_5"]
                     )
@@ -380,6 +383,9 @@ class Call(PyTgCalls):
                     )
                 img = await gen_thumb(videoid, chat_id)
                 button = telegram_markup(_, chat_id)
+                await app.send_sticker(
+                  original_chat_id, "CAACAgQAAxkBAAEJ5xdky1-TiTTLBrLsydm3FAoKkQxrUQACcQsAAo9SSVFFVmZZbQ1DPi8E"
+                )
                 run = await app.send_photo(
                     original_chat_id,
                     photo=img,
