@@ -126,6 +126,10 @@ async def play_commnd(
                     else _["general_3"].format(ex_type)
                 )
                 return await mystic.edit_text(err)
+            await mystic.edit_text("💫")
+            await asyncio.sleep(0.9)
+            await mystic.edit_text("🌟")
+            await asyncio.sleep(0.9)
             return await mystic.delete()
         return
     elif video_telegram:
@@ -176,6 +180,10 @@ async def play_commnd(
                     else _["general_3"].format(ex_type)
                 )
                 return await mystic.edit_text(err)
+            await mystic.edit_text("💫")
+            await asyncio.sleep(0.9)
+            await mystic.edit_text("🌟")
+            await asyncio.sleep(0.9)
             return await mystic.delete()
         return
     elif url:
@@ -332,6 +340,10 @@ async def play_commnd(
                     else _["general_3"].format(ex_type)
                 )
                 return await mystic.edit_text(err)
+            await mystic.edit_text("💫")
+            await asyncio.sleep(0.9)
+            await mystic.edit_text("🌟")
+            await asyncio.sleep(0.9)
             return await mystic.delete()
         else:
             try:
@@ -437,6 +449,10 @@ async def play_commnd(
                 else _["general_3"].format(ex_type)
             )
             return await mystic.edit_text(err)
+        await mystic.edit_text("💫")
+        await asyncio.sleep(0.9)
+        await mystic.edit_text("🌟")
+        await asyncio.sleep(0.9)
         await mystic.delete()
         return await play_logs(message, streamtype=streamtype)
     else:
@@ -455,6 +471,10 @@ async def play_commnd(
                 "c" if channel else "g",
                 "f" if fplay else "d",
             )
+            await mystic.edit_text("💫")
+            await asyncio.sleep(0.9)
+            await mystic.edit_text("🌟")
+            await asyncio.sleep(0.9)
             await mystic.delete()
             await message.reply_photo(
                 photo=img,
@@ -475,6 +495,10 @@ async def play_commnd(
                     "c" if channel else "g",
                     "f" if fplay else "d",
                 )
+                await mystic.edit_text("💫")
+                await asyncio.sleep(0.9)
+                await mystic.edit_text("🌟")
+                await asyncio.sleep(0.9)                
                 await mystic.delete()
                 await message.reply_photo(
                     photo=details["thumb"],
@@ -582,6 +606,10 @@ async def play_music(client, CallbackQuery, _):
             else _["general_3"].format(ex_type)
         )
         return await mystic.edit_text(err)
+    await mystic.edit_text("💫")
+    await asyncio.sleep(0.9)
+    await mystic.edit_text("🌟")
+    await asyncio.sleep(0.9)
     return await mystic.delete()
 
 
@@ -692,6 +720,10 @@ async def play_playlists_command(client, CallbackQuery, _):
             else _["general_3"].format(ex_type)
         )
         return await mystic.edit_text(err)
+    await mystic.edit_text("💫")
+    await asyncio.sleep(0.9)
+    await mystic.edit_text("🌟")
+    await asyncio.sleep(0.9)
     return await mystic.delete()
 
 
