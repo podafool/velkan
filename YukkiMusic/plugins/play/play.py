@@ -138,9 +138,10 @@ async def play_commnd(
                 else:
                     # If it's not a Flood Wait error, send the regular error message
                     return await mystic.edit_text(err)                
-            await mystic.edit_text("💕")
+            await mystic.delete()
+            dei = await message.reply_sticker("CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ")
             await asyncio.sleep(5)            
-            return await mystic.delete()
+            return await dei.delete()
         return
     elif video_telegram:
         if not await is_video_allowed(message.chat.id):
