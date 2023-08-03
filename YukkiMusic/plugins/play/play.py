@@ -792,6 +792,7 @@ async def slider_queries(client, CallbackQuery, _):
                 duration_min,
             ),
         )
+        await CallbackQuery.reply_sticker("CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E")
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
         )
