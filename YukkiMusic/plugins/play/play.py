@@ -500,7 +500,7 @@ async def play_commnd(
                 caption=cap,
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
-            await message.reply_sticker("CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E")
+            await message.reply_sticker("CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ")
             return await play_logs(
                 message, streamtype=f"Playlist : {plist_type}"
             )
@@ -520,7 +520,7 @@ async def play_commnd(
                 #await mystic.edit_text("🌟")
                 #await asyncio.sleep(0.9)                
                 await mystic.delete()
-                await message.reply_sticker("CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E"),
+                await message.reply_sticker("CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ"),
                 await message.reply_photo(
                     photo=details["thumb"],
                     caption=_["play_11"].format(
@@ -792,7 +792,7 @@ async def slider_queries(client, CallbackQuery, _):
                 duration_min,
             ),
         )
-        await CallbackQuery.reply_sticker("CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E")
+        await CallbackQuery.reply_sticker("CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ")
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
         )
