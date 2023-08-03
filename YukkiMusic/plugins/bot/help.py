@@ -90,7 +90,7 @@ async def helper_private(
             sender_id = update.from_user.id
             sender_name = update.from_user.first_name
             log_message = (
-                f"{update.from_user.mention} has just started bot to check <code>HELP INFORMATION</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}"
+                f"{update.from_user.mention} has just started bot to check <code>HELP MENU</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}"
             )
             await app.send_message(config.LOG_GROUP_ID, log_message)
         
