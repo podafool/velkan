@@ -121,6 +121,7 @@ async def play_commnd(
                 )
             except Exception as e:
                 ex_type = type(e).__name__
+                err = str(e)  # Get the actual error message
                 #if ex_type == "AssistantErr":
                     #err = e
                 #else:                    
