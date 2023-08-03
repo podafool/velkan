@@ -9,6 +9,7 @@
 
 import os
 import re
+import asyncio
 import textwrap
 from random import randint
 from typing import Union
@@ -186,6 +187,8 @@ async def stream(
                 caption=_["queue_4"].format(
                     position, title[:30], duration_min, user_name
                 ),
+            asyncio.sleep(1)
+            await app.send_sticker("CAACAgUAAxkBAAEJ511ky3CVJRVZGvGXdQZ1pNJLbrE9VQACdAYAAiFP4VQEeuQWBclToC8E"),
             )
         else:
             if not forceplay:
