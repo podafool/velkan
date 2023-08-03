@@ -48,7 +48,7 @@ async def start_comm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            return await message.reply_photo(
+            await message.reply_photo(
                 #_["help_1"], 
                 photo="https://telegra.ph/file/803ffb6adaeb83215a8d0.jpg",
                 reply_markup=keyboard
