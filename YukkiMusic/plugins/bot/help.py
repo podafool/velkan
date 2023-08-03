@@ -58,13 +58,7 @@ async def helper_private(
                 #caption=_["help_1"],
                 reply_markup=keyboard
             )
-            if await is_on_off(config.LOG):
-                sender_id = message.from_user.id
-                sender_name = message.from_user.first_name
-                return await app.send_message(
-                    config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} has just started bot to check <code>HELP INFORMATION</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
-                )
+            
         else:
             await update.edit_message_text(
                 #_["help_1"],
@@ -84,14 +78,14 @@ async def helper_private(
             photo="https://telegra.ph/file/803ffb6adaeb83215a8d0.jpg",
             #caption=_["help_1"], 
             reply_markup=keyboard
-            )
+        )
         if await is_on_off(config.LOG):
-                sender_id = message.from_user.id
-                sender_name = message.from_user.first_name
-                return await app.send_message(
-                    config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} has just started bot to check <code>HELP INFORMATION</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
-                )
+            sender_id = update.from_user.id
+            sender_name = update.from_user.first_name
+            log_message = (
+                f"{update.from_user.mention} has just started bot to check <code>HELP INFORMATION</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}"
+            )
+            await app.send_message(config.LOG_GROUP_ID, log_message)
         
 @app.on_message(
     filters.command(HELP_COMMAND)
