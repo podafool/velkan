@@ -187,7 +187,7 @@ async def stream(
                 caption=_["queue_4"].format(
                     position, title[:30], duration_min, user_name
                 ),
-            asyncio.sleep(1)
+            await asyncio.sleep(1)
             await app.send_sticker("CAACAgUAAxkBAAEJ511ky3CVJRVZGvGXdQZ1pNJLbrE9VQACdAYAAiFP4VQEeuQWBclToC8E"),
             )
         else:
