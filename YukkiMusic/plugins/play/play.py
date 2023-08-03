@@ -35,6 +35,14 @@ from YukkiMusic.utils.inline.playlist import botplaylist_markup
 from YukkiMusic.utils.logger import play_logs
 from YukkiMusic.utils.stream.stream import stream
 
+STICKERS = [
+  "CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ",
+  "CAACAgQAAxkBAAEJ5xZky1-Tu7yq363wrmeLmGJoRIWbpAACVBIAAqbxcR4QG8jq0jLPPi8E",
+  "CAACAgQAAxkBAAEJ5xdky1-TiTTLBrLsydm3FAoKkQxrUQACcQsAAo9SSVFFVmZZbQ1DPi8E",
+  "CAACAgQAAxkBAAEJ5xhky1-TF8m78aRujl6gPpFoNH20KgACXgwAAghGuVOWomIaBycL7i8E",
+  "CAACAgEAAxkBAAEJ5xlky1-TeDV25iwlc5_-5q3ox3qy-gACNgEAAlEpDTkSG_gDZwABw6MvBA",
+]
+
 # Command
 PLAY_COMMAND = get_command("PLAY_COMMAND")
 
@@ -139,7 +147,7 @@ async def play_commnd(
                     # If it's not a Flood Wait error, send the regular error message
                     return await mystic.edit_text(err)                
             await mystic.delete()
-            dei = await message.reply_sticker("CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ")
+            dei = await message.reply_sticker(random.choice(STICKERS))
             await asyncio.sleep(5)            
             return await dei.delete()
         return
