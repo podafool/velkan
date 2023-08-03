@@ -138,26 +138,8 @@ async def play_commnd(
                 else:
                     # If it's not a Flood Wait error, send the regular error message
                     return await mystic.edit_text(err)                
-            await mystic.edit_text("💭")
-            await asyncio.sleep(0.5)
-            await mystic.edit_text("🆕")
-            await asyncio.sleep(1)
-            await mystic.edit_text("💝")
-            await asyncio.sleep(1)
-            await mystic.edit_text("🚀")
-            await asyncio.sleep(1)
-            await mystic.edit_text("🕺")
-            await asyncio.sleep(1)
-            await mystic.edit_text("❤️")
-            await asyncio.sleep(1)
-            await mystic.edit_text("💗")
-            await asyncio.sleep(1)
-            await mystic.edit_text("💣")
-            await asyncio.sleep(1)
             await mystic.edit_text("💕")
-            await asyncio.sleep(1)
-            await mystic.edit_text("💞")
-            await asyncio.sleep(1)
+            await asyncio.sleep(5)            
             return await mystic.delete()
         return
     elif video_telegram:
