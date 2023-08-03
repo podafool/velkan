@@ -121,10 +121,10 @@ async def play_commnd(
                 )
             except Exception as e:
                 ex_type = type(e).__name__
-                if ex_type == "AssistantErr":
-                    err = e
-                else:                    
-                    err = _["general_3"].format(ex_type)
+                #if ex_type == "AssistantErr":
+                    #err = e
+                #else:                    
+                    #err = _["general_3"].format(ex_type)
                 # Check if the exception is caused by Flood Wait (Telegram API error 420)
                 if "FLOOD_WAIT_" in err:
                     # Extract the wait time (X seconds) from the error message
