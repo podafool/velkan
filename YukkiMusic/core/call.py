@@ -391,12 +391,15 @@ class Call(PyTgCalls):
                         f"https://t.me/{app.username}?start=info_{videoid}",
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
-                )
+                )                
+                db[chat_id][0]["mystic"] = run
+                db[chat_id][0]["markup"] = "tg"
                 await app.send_sticker(
                     original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
                 )
-                db[chat_id][0]["mystic"] = run
-                db[chat_id][0]["markup"] = "tg"
+                await app.send_message(
+                    original_cht_id, "Playing the song!"
+                )
             elif "vid_" in queued:
                 await app.send_sticker(
                     original_chat_id, "CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ") #Earphone potutu music kekkura sticker
