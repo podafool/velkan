@@ -239,7 +239,7 @@ async def stream(
             db[chat_id][0]["markup"] = "stream"
             await asyncio.sleep(1)
             await app.send_sticker(
-                original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                original_chat_id, "CAACAgQAAxkBAAEJ7B1kzRHZ8-XDcyZNUE7Qyc7lsdwFMQACjggAA1VQUdoUwOeQzZqmLwQ" #meditation dance uh.. munnadi hearts thooki podura sticker
                 )
     elif streamtype == "soundcloud":
         file_path = result["filepath"]
@@ -412,7 +412,7 @@ async def stream(
             db[chat_id][0]["markup"] = "tg"
             await asyncio.sleep(1)
             await app.send_sticker(
-                original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                original_chat_id, "CAACAgQAAxkBAAEJ7BVkzRGwd_rAAVxxpkBiS6PrtWr5yQAC7AoAAr8i2VGALarwosnJIi8E" #box ulla ukkandhurukum.. munnadi hearts thooki podura sticker
                 )
     elif streamtype == "index":
         link = result
