@@ -381,7 +381,7 @@ class Call(PyTgCalls):
                         original_chat_id,
                         text=_["call_9"],
                     )
-                pic = await app.send_stiker(
+                pic = await app.send_sticker(
                     original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
                 )
                 img = await gen_thumb(videoid, chat_id)
@@ -394,7 +394,8 @@ class Call(PyTgCalls):
                         f"https://t.me/{app.username}?start=info_{videoid}",
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
-                )                
+                )
+                db[chat_id][0]["trialuh"] = pic
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
                               
