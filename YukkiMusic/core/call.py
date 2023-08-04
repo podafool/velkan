@@ -383,7 +383,7 @@ class Call(PyTgCalls):
                     )
                 img = await gen_thumb(videoid, chat_id)
                 button = telegram_markup(_, chat_id)
-                await app.send_sticker(
+                stic = await app.send_sticker(
                     original_chat_id, "CAACAgQAAxkBAAEJ6nRkzFQPl5iA7XIBmKP_x8erFjAnVAACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
                 )
                 run = await app.send_photo(
@@ -439,7 +439,7 @@ class Call(PyTgCalls):
                 button = stream_markup(_, videoid, chat_id)
                 await mystic.delete()
                 await app.send_sticker(
-                    original_chat_id, "CAACAgQAAxkBAAEJ6nhkzFXaTxXOQqvWMooJ4I47MmPNDwACVBIAAqbxcR4QG8jq0jLPPi8E" # Koala bear sticker uh aana munnadi Rendu bears - Onnu dancing, onnu drum vasikuthu
+                    original_chat_id, "CAACAgQAAxkBAAEJ6nhkzFXaTxXOQqvWMooJ4I47MmPNDwACVBIAAqbxcR4QG8jq0jLPPi8E" # Koala bear sticker uh
                 )
                 run = await app.send_photo(
                     original_chat_id,
