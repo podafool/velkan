@@ -45,6 +45,32 @@ from YukkiMusic.utils.inline.play import (stream_markup,
 from YukkiMusic.utils.stream.autoclear import auto_clean
 from YukkiMusic.utils.thumbnails import gen_thumb
 
+STICKERS = [
+  "CAACAgQAAxkBAAEJ6nhkzFXaTxXOQqvWMooJ4I47MmPNDwACVBIAAqbxcR4QG8jq0jLPPi8E",
+  "CAACAgQAAxkBAAEJ7AhkzQ7GZ7DrL3O4Q7eHVCAYz-N4nwACvQkAAnpcEVM6alQk5njq3y8E",
+  "CAACAgQAAxkBAAEJ7ARkzQ60YZZ7t4ivO7K8VR0LQifh9gACFQwAAtUjEFPkKwhxHG8_Ky8E",
+  "CAACAgQAAxkBAAEJ7B1kzRHZ8-XDcyZNUE7Qyc7lsdwFMQACjggAA1VQUdoUwOeQzZqmLwQ",
+  "CAACAgQAAxkBAAEJ7AJkzQ6yOkDOwj9r01b7fljN_Boh9wAC6gsAAmwiEVOtWUCotxfPAy8E",
+  "CAACAgQAAxkBAAEJ7AABZM0OsGD_J8puJTi9WkLqWQG-SAADuBEAAqbxcR57Dj3-S9mwaS8E",
+  "CAACAgQAAxkBAAEJ6_5kzQ6u16es2S8IVUSSQrA9hi_vkwACnxEAAqbxcR57wYUDyflSIS8E",
+  "CAACAgEAAxkBAAEJ6_xkzQ50xN3ytZjk5fTylx7DS2PDVgACNgEAAlEpDTkSG_gDZwABw6MvBA",
+  "CAACAgEAAxkBAAEJ6_pkzQ5lhNGO3pF1awcVfWxfBC_lQwACGQEAAlEpDTkG9n5mFbHKpy8E",
+  "CAACAgEAAxkBAAEJ6_hkzQ5jChDHyCPnrf-xuCQQtouztAACFQEAAlEpDTnRN1QlsQ8qLi8E",
+  "CAACAgUAAxkBAAEJ6_ZkzQ3ldTCPnhslPTxQUoirypK47wACowYAAkME2FZILCjifFdIUC8E",
+  "CAACAgQAAxkBAAEJ6_BkzQ2qVDgusETUthPZSJ0l4YyKyAACLwoAAgM8IFMao7hilxhkGi8E",
+  "CAACAgEAAxkBAAEJ6-5kzQ2UPyvOoBhBh55zDwnpxy2S2QAC8wQAAlEpDTmH9fRvHZACii8E",
+  "CAACAgQAAxkBAAEJ6-xkzQ1cU-Oxv0vMWC1Hy-uhlASEAwACpwoAAn-aOFAK54ox7NBRcC8E",
+  "CAACAgQAAxkBAAEJ6-pkzQ0mL58wlqP6tTloYWOxYbwFgQACXgwAAghGuVOWomIaBycL7i8E",
+  "CAACAgIAAxkBAAEJ66dkzPAnyyPwli7yRX1hpMMQb7PJTgACDQEAAladvQpG_UMdBUTXly8E",
+  "CAACAgEAAxkBAAEJ66FkzPARmsJrT_FfgYn1A7BumF3CnwACuwADUSkNOR12rpeAPL_kLwQ",
+  "CAACAgEAAxkBAAEJ655kzPANksJJTQXkWl1q1E729tegAgACuAADUSkNOeiAtZ8X-LsKLwQ",
+  "CAACAgEAAxkBAAEJ65tkzPAH_xsIpOKY3y6pugABWnGYHdsAArMAA1EpDTkH2Th_5u9jEy8E",
+  "CAACAgEAAxkBAAEJ65lkzO_5oUKK3Z5k8JTOjLW62Vr9gwACmgADUSkNOfUGBWVzkcCyLwQ",
+  "CAACAgEAAxkBAAEJ65VkzO_yfQABWNWzp75LTIFwfN4PhFsAApMAA1EpDTkdCAmv9TYB9i8E",
+  "CAACAgEAAxkBAAEJ65NkzO_qf0xu4BaRSEAEfKmVmYo9EAACjAADUSkNOaEz-mHfkE3aLwQ",
+  "CAACAgQAAxkBAAEJ64ZkzO7Je62eg3T6QZNxgvNXMxQYzAACpRYAAqbxcR7qDYebQsdZoi8E",
+]
+
 autoend = {}
 counter = {}
 AUTO_END_TIME = 3
@@ -391,12 +417,11 @@ class Call(PyTgCalls):
                         f"https://t.me/{app.username}?start=info_{videoid}",
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
-                )
-                db[chat_id][0]["trialuh"] = pic
+                )                
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
                 await asyncio.sleep(1)
-                pic = await app.send_sticker(
+                await app.send_sticker(
                     original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
                 )
                               
@@ -454,7 +479,7 @@ class Call(PyTgCalls):
                 db[chat_id][0]["markup"] = "stream"
                 await asyncio.sleep(1)
                 await app.send_sticker(
-                    original_chat_id, "CAACAgQAAxkBAAEJ6nhkzFXaTxXOQqvWMooJ4I47MmPNDwACVBIAAqbxcR4QG8jq0jLPPi8E" # Koala bear sticker uh
+                    original_chat_id, random.choice(STICKERS) # Koala bear sticker uh
                     )
             elif "index_" in queued:
                 stream = (
@@ -517,6 +542,10 @@ class Call(PyTgCalls):
                     )
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "tg"
+                    await asyncio.sleep(1)
+                    await app.send_sticker(
+                        original_chat_id, random.choice(STICKERS)
+                    )
                 elif videoid == "soundcloud":
                     button = telegram_markup(_, chat_id)
                     run = await app.send_photo(
@@ -545,7 +574,7 @@ class Call(PyTgCalls):
                     db[chat_id][0]["markup"] = "stream"
                     await asyncio.sleep(1)
                     await app.send_sticker(
-                        original_chat_id, "CAACAgQAAxkBAAEJ6qpkzH7Qm3RrjKGOxrH-JxCq0BpcpAACkAwAAtNwUVFZagxpFx204S8E" # Ippo hat pota shy ponnu.. munnadi Rendu bears - Onnu dancing, onnu drums vasikuthu
+                        original_chat_id, random.choice(STICKERS) # Hat pota shy ponnu sticker irundhuchi first uh.. 
                         )
 
     async def ping(self):
