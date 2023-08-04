@@ -137,7 +137,8 @@ async def stream(
                 )
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "stream"
-                #await app.send_sticker(
+                await asyncio.sleep(1)
+                await app.send_sticker(
                     original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
                     )
         if count == 0:
@@ -191,11 +192,11 @@ async def stream(
                     position, title[:30], duration_min, user_name
                 ),
             )            
-            dei = await app.send_sticker(
-                original_chat_id,
-                "CAACAgUAAxkBAAEJ511ky3CVJRVZGvGXdQZ1pNJLbrE9VQACdAYAAiFP4VQEeuQWBclToC8E")
-            await asyncio.sleep(1)
-            await dei.delete()
+            #dei = await app.send_sticker(
+                #original_chat_id,
+                #"CAACAgUAAxkBAAEJ511ky3CVJRVZGvGXdQZ1pNJLbrE9VQACdAYAAiFP4VQEeuQWBclToC8E")
+            #await asyncio.sleep(1)
+            #await dei.delete()
           
         else:
             if not forceplay:
@@ -228,6 +229,7 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "stream"
+            await asyncio.sleep(1)
             await app.send_sticker(
                 original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
                 )
@@ -400,6 +402,7 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
+            await asyncio.sleep(1)
             await app.send_sticker(
                 original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
                 )
