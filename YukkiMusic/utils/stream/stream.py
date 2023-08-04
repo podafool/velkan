@@ -125,6 +125,7 @@ async def stream(
                     "video" if video else "audio",
                     forceplay=forceplay,
                 )
+                try:
                 img = await gen_thumb(vidid, user_id)
                 button = stream_markup(_, vidid, chat_id)                
                 run = await app.send_photo(
