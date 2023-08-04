@@ -33,6 +33,7 @@ async def stop_music(cli, message: Message, _, chat_id):
         return await message.reply_text(_["general_2"])
     await Yukki.stop_stream(chat_id)
     await set_loop(chat_id, 0)
+    await message.reply_sticker("CAACAgQAAxkBAAEJ6pFkzHeFqLzq8avJ9DoXgUeICSX1PgACuwkAAuQGCVLowXK3fUF5SC8E")
     await message.reply_text(
         _["admin_9"].format(message.from_user.mention)
     )
