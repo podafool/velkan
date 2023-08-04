@@ -194,7 +194,7 @@ async def stream(
             dei = await app.send_sticker(
                 original_chat_id,
                 "CAACAgUAAxkBAAEJ511ky3CVJRVZGvGXdQZ1pNJLbrE9VQACdAYAAiFP4VQEeuQWBclToC8E")
-            await asyncio.sleep(2)
+            await asyncio.sleep(1)
             await dei.delete()
           
         else:
