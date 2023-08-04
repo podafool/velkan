@@ -10,6 +10,7 @@
 import os
 import re
 import asyncio
+import random
 import textwrap
 from random import randint
 from typing import Union
@@ -41,6 +42,12 @@ from YukkiMusic.utils.stream.queue import put_queue, put_queue_index
 from YukkiMusic.utils.thumbnails import gen_thumb
 
 from youtubesearchpython.__future__ import VideosSearch
+
+STICKERS = [
+  "CAACAgQAAxkBAAEJ7AhkzQ7GZ7DrL3O4Q7eHVCAYz-N4nwACvQkAAnpcEVM6alQk5njq3y8E",
+  "CAACAgQAAxkBAAEJ7BtkzRHVid9ZdE_YQIXGsTQuF9Ix-AACHwwAAjIjUFH2ury91jCCRS8E",
+  "CAACAgQAAxkBAAEJ7B1kzRHZ8-XDcyZNUE7Qyc7lsdwFMQACjggAA1VQUdoUwOeQzZqmLwQ",
+]
 
 async def stream(
     _,
@@ -239,7 +246,7 @@ async def stream(
             db[chat_id][0]["markup"] = "stream"
             await asyncio.sleep(1)
             await app.send_sticker(
-                original_chat_id, "CAACAgQAAxkBAAEJ7B1kzRHZ8-XDcyZNUE7Qyc7lsdwFMQACjggAA1VQUdoUwOeQzZqmLwQ" #meditation dance uh.. munnadi hearts thooki podura sticker
+                original_chat_id, random.choice(STICKERS)  #meditation dance uh.. munnadi hearts thooki podura sticker
                 )
     elif streamtype == "soundcloud":
         file_path = result["filepath"]
