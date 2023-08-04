@@ -158,7 +158,7 @@ async def skip(cli, message: Message, _, chat_id):
             return await mystic.edit_text(_["call_9"])
         button = stream_markup(_, videoid, chat_id)
         img = await gen_thumb(videoid, chat_id)
-        await message.reply_sticker("CAACAgQAAxkBAAEJ6pVkzHkvmfmavL8AAZO8Chh1WOJn7WYAAmcNAAKYxTlQbCCYZOix0kQvBA") # heart vechitu jumping
+        await message.reply_sticker("CAACAgQAAxkBAAEJ6pVkzHkvmfmavL8AAZO8Chh1WOJn7WYAAmcNAAKYxTlQbCCYZOix0kQvBA") # heart vechitu jumping : queue la video song ku skip pannum bothu
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
@@ -191,7 +191,7 @@ async def skip(cli, message: Message, _, chat_id):
             return await message.reply_text(_["call_9"])
         if videoid == "telegram":
             button = telegram_markup(_, chat_id)
-            await message.reply_sticker("CAACAgQAAxkBAAEJ6ptkzHoGfPr3wnuhsSowP3fin1iWhgACjggAAovV6FOaebAKJCO-5C8E") #giving big heart
+            await message.reply_sticker("CAACAgQAAxkBAAEJ6ptkzHoGfPr3wnuhsSowP3fin1iWhgACjggAAovV6FOaebAKJCO-5C8E") #giving big heart : queue la telegram audio file tag panni /play pannirundha
             run = await message.reply_photo(
                 photo=config.TELEGRAM_AUDIO_URL
                 if str(streamtype) == "audio"
@@ -219,7 +219,7 @@ async def skip(cli, message: Message, _, chat_id):
         else:
             button = stream_markup(_, videoid, chat_id)
             img = await gen_thumb(videoid, chat_id)
-            await message.reply_sticker("CAACAgIAAxkBAAEJ6p1kzHpCYgPd3ywh6YieMvwZB_oCfgACMAEAAsxUSQkLdSnCzPHMMS8E") #cute bunny girl 
+            await message.reply_sticker("CAACAgIAAxkBAAEJ6p1kzHpCYgPd3ywh6YieMvwZB_oCfgACMAEAAsxUSQkLdSnCzPHMMS8E") #cute bunny girl : normal ah /play pannirundha
             run = await message.reply_photo(
                 photo=img,
                 caption=_["stream_1"].format(
