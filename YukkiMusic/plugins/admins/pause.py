@@ -32,9 +32,11 @@ async def pause_admin(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
         return await message.reply_text(_["general_2"])
     if not await is_music_playing(chat_id):
+        await message.reply_sticker("CAACAgQAAxkBAAEJ6oJkzF3wQKdCyGC3d5ShVAn9R56VwwACpQoAAgXwqFAIT7lt7WkHqy8E")
         return await message.reply_text(_["admin_1"])
     await music_off(chat_id)
     await Yukki.pause_stream(chat_id)
+    await message.reply_sticker("CAACAgEAAxkBAAEJ6nxkzFywBJ_zMhOj0wc7AQgV9cLNXwAC3QQAAlEpDTmUHImRSVIUeS8E")
     await message.reply_photo(
         photo=PAUSE_IMG_URL,
         caption=_["admin_2"].format(message.from_user.mention)
