@@ -126,6 +126,9 @@ async def stream(
                 )
                 img = await gen_thumb(vidid, user_id)
                 button = stream_markup(_, vidid, chat_id)
+                await app.send_sticker(
+                    original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                    )
                 run = await app.send_photo(
                     original_chat_id,
                     photo=img,
@@ -214,6 +217,9 @@ async def stream(
             )
             img = await gen_thumb(vidid, user_id)
             button = stream_markup(_, vidid, chat_id)
+            await app.send_sticker(
+                original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                )
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,
@@ -383,6 +389,9 @@ async def stream(
             )
             img = await gen_thumb(vidid, user_id)
             button = telegram_markup(_, chat_id)
+            await app.send_sticker(
+                original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                )
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,
