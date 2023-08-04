@@ -351,6 +351,10 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
+            await asyncio.sleep(1)
+            await app.send_sticker(
+                original_chat_id, "CAACAgQAAxkBAAEJ7AZkzQ63doKK_7N7JwbqIJsuacZu8gACoBEAAqbxcR5O5UHja6tzTC8E" #box ulla ukkandhurukum.. munnadi hearts thooki podura sticker
+                )
     elif streamtype == "live":
         link = result["link"]
         vidid = result["vidid"]
