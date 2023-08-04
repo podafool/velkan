@@ -381,7 +381,7 @@ class Call(PyTgCalls):
                         original_chat_id,
                         text=_["call_9"],
                     )
-                pic = await app.send_sticker(
+                pic = await app.send_stiker(
                     original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
                 )
                 img = await gen_thumb(videoid, chat_id)
