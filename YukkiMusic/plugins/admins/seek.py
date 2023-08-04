@@ -64,6 +64,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
                 )
             )
         to_seek = duration_played + duration_to_skip + 1
+    stic = await message.reply_sticker("CAACAgIAAxkBAAEJ6otkzHLvGe7VcnrjOXEF4-mKiWtsUwACBgADwDZPE8fKovSybnB2LwQ")
     mystic = await message.reply_text(_["admin_32"])
     if "vid_" in file_path:
         n, file_path = await YouTube.video(playing[0]["vidid"], True)
@@ -83,6 +84,8 @@ async def seek_comm(cli, message: Message, _, chat_id):
         db[chat_id][0]["played"] -= duration_to_skip
     else:
         db[chat_id][0]["played"] += duration_to_skip
+    await stic.delete()
+    await message.reply_sticker("CAACAgQAAxkBAAEJ6o1kzHNO0IoEYDyituorTdaS8G_TgQACmg8AAkv70VDOndUYxlBOti8E")
     await mystic.edit_text(
         _["admin_33"].format(seconds_to_min(to_seek))
     )
