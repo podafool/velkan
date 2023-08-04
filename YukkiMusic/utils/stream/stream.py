@@ -146,6 +146,9 @@ async def stream(
                 except FloodWait as e:
                     # Sleep based on the recommended delay from the FloodWait exception
                     await asyncio.sleep(e.x)
+                    await app.send_text(
+                      original_chat_id, "Bot delayed due to flood wait"
+                    )
         if count == 0:
             return
         else:
