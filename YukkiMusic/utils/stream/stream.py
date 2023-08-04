@@ -125,10 +125,7 @@ async def stream(
                     forceplay=forceplay,
                 )
                 img = await gen_thumb(vidid, user_id)
-                button = stream_markup(_, vidid, chat_id)
-                await app.send_sticker(
-                    original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
-                    )
+                button = stream_markup(_, vidid, chat_id)                
                 run = await app.send_photo(
                     original_chat_id,
                     photo=img,
@@ -140,6 +137,9 @@ async def stream(
                 )
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "stream"
+                await app.send_sticker(
+                    original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                    )
         if count == 0:
             return
         else:
@@ -216,10 +216,7 @@ async def stream(
                 forceplay=forceplay,
             )
             img = await gen_thumb(vidid, user_id)
-            button = stream_markup(_, vidid, chat_id)
-            await app.send_sticker(
-                original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
-                )
+            button = stream_markup(_, vidid, chat_id)            
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,
@@ -231,6 +228,9 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "stream"
+            await app.send_sticker(
+                original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                )
     elif streamtype == "soundcloud":
         file_path = result["filepath"]
         title = result["title"]
@@ -388,10 +388,7 @@ async def stream(
                 forceplay=forceplay,
             )
             img = await gen_thumb(vidid, user_id)
-            button = telegram_markup(_, chat_id)
-            await app.send_sticker(
-                original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
-                )
+            button = telegram_markup(_, chat_id)            
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,
@@ -403,6 +400,9 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
+            await app.send_sticker(
+                original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                )
     elif streamtype == "index":
         link = result
         title = "Index or M3u8 Link"
