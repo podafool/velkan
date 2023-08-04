@@ -126,23 +126,23 @@ async def stream(
                     forceplay=forceplay,
                 )
                 try:
-                img = await gen_thumb(vidid, user_id)
-                button = stream_markup(_, vidid, chat_id)                
-                run = await app.send_photo(
-                    original_chat_id,
-                    photo=img,
-                    caption=_["stream_1"].format(
-                        user_name,
-                        f"https://t.me/{app.username}?start=info_{vidid}",
-                    ),
-                    reply_markup=InlineKeyboardMarkup(button),
-                )
-                db[chat_id][0]["mystic"] = run
-                db[chat_id][0]["markup"] = "stream"
-                await asyncio.sleep(1)
-                await app.send_sticker(
-                    original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                    img = await gen_thumb(vidid, user_id)
+                    button = stream_markup(_, vidid, chat_id)                
+                    run = await app.send_photo(
+                        original_chat_id,
+                        photo=img,
+                        caption=_["stream_1"].format(
+                            user_name,
+                            f"https://t.me/{app.username}?start=info_{vidid}",
+                        ),
+                        reply_markup=InlineKeyboardMarkup(button),
                     )
+                    db[chat_id][0]["mystic"] = run
+                    db[chat_id][0]["markup"] = "stream"
+                    await asyncio.sleep(1)
+                    await app.send_sticker(
+                        original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                        )
                 except FloodWait as e:
                     # Sleep based on the recommended delay from the FloodWait exception
                     await asyncio.sleep(e.x)
