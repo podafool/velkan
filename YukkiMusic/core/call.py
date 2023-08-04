@@ -380,10 +380,7 @@ class Call(PyTgCalls):
                     return await app.send_message(
                         original_chat_id,
                         text=_["call_9"],
-                    )
-                pic = await app.send_sticker(
-                    original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
-                )
+                    )                
                 img = await gen_thumb(videoid, chat_id)
                 button = telegram_markup(_, chat_id)                
                 run = await app.send_photo(
@@ -398,6 +395,10 @@ class Call(PyTgCalls):
                 db[chat_id][0]["trialuh"] = pic
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
+                await asyncio.sleep(1)
+                pic = await app.send_sticker(
+                    original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                )
                               
             elif "vid_" in queued:
                 await app.send_sticker(
@@ -439,10 +440,7 @@ class Call(PyTgCalls):
                     )
                 img = await gen_thumb(videoid, chat_id)
                 button = stream_markup(_, videoid, chat_id)
-                await mystic.delete()
-                await app.send_sticker(
-                    original_chat_id, "CAACAgQAAxkBAAEJ6nhkzFXaTxXOQqvWMooJ4I47MmPNDwACVBIAAqbxcR4QG8jq0jLPPi8E" # Koala bear sticker uh
-                )
+                await mystic.delete()                
                 run = await app.send_photo(
                     original_chat_id,
                     photo=img,
@@ -454,6 +452,10 @@ class Call(PyTgCalls):
                 )
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "stream"
+                await asyncio.sleep(1)
+                await app.send_sticker(
+                    original_chat_id, "CAACAgQAAxkBAAEJ6nhkzFXaTxXOQqvWMooJ4I47MmPNDwACVBIAAqbxcR4QG8jq0jLPPi8E" # Koala bear sticker uh
+                    )
             elif "index_" in queued:
                 stream = (
                     AudioVideoPiped(
@@ -529,10 +531,7 @@ class Call(PyTgCalls):
                     db[chat_id][0]["markup"] = "tg"
                 else:
                     img = await gen_thumb(videoid, chat_id)
-                    button = stream_markup(_, videoid, chat_id)
-                    await app.send_sticker(
-                        original_chat_id, "CAACAgQAAxkBAAEJ6qpkzH7Qm3RrjKGOxrH-JxCq0BpcpAACkAwAAtNwUVFZagxpFx204S8E" # Ippo hat pota shy ponnu.. munnadi Rendu bears - Onnu dancing, onnu drums vasikuthu
-                    )
+                    button = stream_markup(_, videoid, chat_id)                    
                     run = await app.send_photo(
                         original_chat_id,
                         photo=img,
@@ -544,6 +543,10 @@ class Call(PyTgCalls):
                     )
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "stream"
+                    await asyncio.sleep(1)
+                    await app.send_sticker(
+                        original_chat_id, "CAACAgQAAxkBAAEJ6qpkzH7Qm3RrjKGOxrH-JxCq0BpcpAACkAwAAtNwUVFZagxpFx204S8E" # Ippo hat pota shy ponnu.. munnadi Rendu bears - Onnu dancing, onnu drums vasikuthu
+                        )
 
     async def ping(self):
         pings = []
