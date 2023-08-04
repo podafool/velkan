@@ -67,7 +67,7 @@ async def skip(cli, message: Message, _, chat_id):
                                     await message.reply_sticker("CAACAgQAAxkBAAEJ6npkzFsSvhmTyXqaEeCOYjbM_OW5ZgACmgoAAjaOOFE-q1peUos2-S8E")
                                     await message.reply_text(
                                         _["admin_10"].format(
-                                            message.from_user.first_name
+                                            message.from_user.mention
                                         )
                                     )
                                     await Yukki.stop_stream(chat_id)
@@ -127,8 +127,7 @@ async def skip(cli, message: Message, _, chat_id):
         except Exception:
             return await message.reply_text(_["call_9"])
         button = telegram_markup(_, chat_id)
-        img = await gen_thumb(videoid, chat_id)
-        await message.reply_sticker("CAACAgEAAxkBAAEJ6pdkzHlCW4mw1JZrE-D4hPe4CWoZvgACFQMAAt5cIURnyX8sYRxXqi8E") #heart beat : queue la youtube live stream ku skip panna
+        img = await gen_thumb(videoid, chat_id)        
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
@@ -139,6 +138,8 @@ async def skip(cli, message: Message, _, chat_id):
         )
         db[chat_id][0]["mystic"] = run
         db[chat_id][0]["markup"] = "tg"
+        await asyncio.sleep(1)
+        await message.reply_sticker("CAACAgEAAxkBAAEJ6pdkzHlCW4mw1JZrE-D4hPe4CWoZvgACFQMAAt5cIURnyX8sYRxXqi8E") #heart beat : queue la youtube live stream ku skip panna
     elif "vid_" in queued:
         mystic = await message.reply_text(
             _["call_10"], disable_web_page_preview=True
@@ -157,8 +158,7 @@ async def skip(cli, message: Message, _, chat_id):
         except Exception:
             return await mystic.edit_text(_["call_9"])
         button = stream_markup(_, videoid, chat_id)
-        img = await gen_thumb(videoid, chat_id)
-        await message.reply_sticker("CAACAgQAAxkBAAEJ6pVkzHkvmfmavL8AAZO8Chh1WOJn7WYAAmcNAAKYxTlQbCCYZOix0kQvBA") # heart vechitu jumping : queue la video song ku skip pannum bothu
+        img = await gen_thumb(videoid, chat_id)        
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
@@ -169,7 +169,9 @@ async def skip(cli, message: Message, _, chat_id):
         )
         db[chat_id][0]["mystic"] = run
         db[chat_id][0]["markup"] = "stream"
+        await message.reply_sticker("CAACAgQAAxkBAAEJ6pVkzHkvmfmavL8AAZO8Chh1WOJn7WYAAmcNAAKYxTlQbCCYZOix0kQvBA") # heart vechitu jumping : queue la video song ku skip pannum bothu
         await mystic.delete()
+        
     elif "index_" in queued:
         try:
             await Yukki.skip_stream(chat_id, videoid, video=status)
@@ -190,8 +192,7 @@ async def skip(cli, message: Message, _, chat_id):
         except Exception:
             return await message.reply_text(_["call_9"])
         if videoid == "telegram":
-            button = telegram_markup(_, chat_id)
-            await message.reply_sticker("CAACAgQAAxkBAAEJ6ptkzHoGfPr3wnuhsSowP3fin1iWhgACjggAAovV6FOaebAKJCO-5C8E") #giving big heart : queue la telegram audio file tag panni /play pannirundha
+            button = telegram_markup(_, chat_id)            
             run = await message.reply_photo(
                 photo=config.TELEGRAM_AUDIO_URL
                 if str(streamtype) == "audio"
@@ -203,6 +204,8 @@ async def skip(cli, message: Message, _, chat_id):
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
+            await asyncio.sleep(1)
+            await message.reply_sticker("CAACAgQAAxkBAAEJ6ptkzHoGfPr3wnuhsSowP3fin1iWhgACjggAAovV6FOaebAKJCO-5C8E") #giving big heart : queue la telegram audio file tag panni /play pannirundha
         elif videoid == "soundcloud":
             button = telegram_markup(_, chat_id)
             run = await message.reply_photo(
