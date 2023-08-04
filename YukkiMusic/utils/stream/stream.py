@@ -21,6 +21,7 @@ from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
                  ImageFont, ImageOps)
 
 from pyrogram.types import InlineKeyboardMarkup
+from pyrogram.errors import FloodWait
 
 import config
 from config import QUEUE_IMG_URL, YOUTUBE_IMG_URL, MUSIC_BOT_NAME
@@ -141,6 +142,9 @@ async def stream(
                 await app.send_sticker(
                     original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
                     )
+                except FloodWait as e:
+                    # Sleep based on the recommended delay from the FloodWait exception
+                    await asyncio.sleep(e.x)
         if count == 0:
             return
         else:
