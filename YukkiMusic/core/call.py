@@ -422,7 +422,7 @@ class Call(PyTgCalls):
                 db[chat_id][0]["markup"] = "tg"
                 await asyncio.sleep(1)
                 await app.send_sticker(
-                    original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                    original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #Rendu kai vechi hearts thooki podura sticker
                 )
                               
             elif "vid_" in queued:
@@ -479,7 +479,7 @@ class Call(PyTgCalls):
                 db[chat_id][0]["markup"] = "stream"
                 await asyncio.sleep(1)
                 await app.send_sticker(
-                    original_chat_id, random.choice(STICKERS) # Koala bear sticker uh
+                    original_chat_id, random.choice(STICKERS) # Queue la /vplay song irundhuchu na.. Munnadi Koala bear sticker uh 
                     )
             elif "index_" in queued:
                 stream = (
