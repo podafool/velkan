@@ -529,7 +529,7 @@ class Call(PyTgCalls):
                     img = await gen_thumb(videoid, chat_id)
                     button = stream_markup(_, videoid, chat_id)
                     await app.send_sticker(
-                        original_chat_id, "CAACAgEAAxkBAAEJ6Opky9z53akfrGWxYxvVWy0zrx4E4gAC_wADd2hJR-_RpYxPr1G6LwQ" # Rendu bears - Onnu dancing, onnu drums vasikuthu
+                        original_chat_id, "CAACAgQAAxkBAAEJ6qpkzH7Qm3RrjKGOxrH-JxCq0BpcpAACkAwAAtNwUVFZagxpFx204S8E" # Ippo hat pota shy ponnu.. munnadi Rendu bears - Onnu dancing, onnu drums vasikuthu
                     )
                     run = await app.send_photo(
                         original_chat_id,
