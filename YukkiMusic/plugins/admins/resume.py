@@ -32,9 +32,11 @@ async def resume_com(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
         return await message.reply_text(_["general_2"])
     if await is_music_playing(chat_id):
+        await message.reply_sticker("CAACAgQAAxkBAAEJ6oJkzF3wQKdCyGC3d5ShVAn9R56VwwACpQoAAgXwqFAIT7lt7WkHqy8E")
         return await message.reply_text(_["admin_3"])
     await music_on(chat_id)
     await Yukki.resume_stream(chat_id)
+    awaut message.reply_sticker("CAACAgQAAxkBAAEJ6oBkzF1vz0A67_2_fNIAATlbvZrwWZgAAr8RAAKm8XEerbGHklFUk2svBA")
     await message.reply_photo(
         photo=RESUME_IMG_URL,
         caption=_["admin_4"].format(message.from_user.mention)
