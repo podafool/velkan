@@ -36,7 +36,7 @@ async def resume_com(cli, message: Message, _, chat_id):
         return await message.reply_text(_["admin_3"])
     await music_on(chat_id)
     await Yukki.resume_stream(chat_id)
-    awaut message.reply_sticker("CAACAgQAAxkBAAEJ6olkzG_ZZe1h-5HZZBrJqU_ZFunZpQACvxEAAqbxcR6tsYeSUVSTay8E") #rose kudukkurathu
+    await message.reply_sticker("CAACAgQAAxkBAAEJ6olkzG_ZZe1h-5HZZBrJqU_ZFunZpQACvxEAAqbxcR6tsYeSUVSTay8E") #rose kudukkurathu
     await message.reply_photo(
         photo=RESUME_IMG_URL,
         caption=_["admin_4"].format(message.from_user.mention)
