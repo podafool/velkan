@@ -128,7 +128,7 @@ async def skip(cli, message: Message, _, chat_id):
             return await message.reply_text(_["call_9"])
         button = telegram_markup(_, chat_id)
         img = await gen_thumb(videoid, chat_id)
-        await message.reply_sticker("CAACAgEAAxkBAAEJ6pdkzHlCW4mw1JZrE-D4hPe4CWoZvgACFQMAAt5cIURnyX8sYRxXqi8E") #heart beat
+        await message.reply_sticker("CAACAgEAAxkBAAEJ6pdkzHlCW4mw1JZrE-D4hPe4CWoZvgACFQMAAt5cIURnyX8sYRxXqi8E") #heart beat : queue la youtube live stream ku skip panna
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
