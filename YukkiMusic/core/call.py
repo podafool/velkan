@@ -384,7 +384,7 @@ class Call(PyTgCalls):
                 img = await gen_thumb(videoid, chat_id)
                 button = telegram_markup(_, chat_id)
                 stic = await app.send_sticker(
-                    original_chat_id, "CAACAgQAAxkBAAEJ6nRkzFQPl5iA7XIBmKP_x8erFjAnVAACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                    original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
                 )
                 run = await app.send_photo(
                     original_chat_id,
