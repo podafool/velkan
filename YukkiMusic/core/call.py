@@ -381,6 +381,9 @@ class Call(PyTgCalls):
                         original_chat_id,
                         text=_["call_9"],
                     )
+                pic = await app.send_sticker(
+                    original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
+                )
                 img = await gen_thumb(videoid, chat_id)
                 button = telegram_markup(_, chat_id)                
                 run = await app.send_photo(
@@ -394,12 +397,7 @@ class Call(PyTgCalls):
                 )                
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
-                await app.send_sticker(
-                    original_chat_id, "CAACAgQAAxkBAAEJ6sFkzJNMUnUYY2GplLCBILGOB2uANQACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
-                )
-                await app.send_message(
-                    original_cht_id, "Playing the song!"
-                )
+                              
             elif "vid_" in queued:
                 await app.send_sticker(
                     original_chat_id, "CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ") #Earphone potutu music kekkura sticker
