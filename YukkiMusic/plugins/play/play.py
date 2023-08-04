@@ -495,12 +495,12 @@ async def play_commnd(
             #await mystic.edit_text("🌟")
             #await asyncio.sleep(0.9)
             await mystic.delete()
+            await message.reply_sticker("CAACAgQAAxkBAAEJ6qNkzHzT_zcIn7bQYMRBZH0J1FOAfwACqgsAAt_piFHhNwot1ddG_S8E") # head la umma kudukura sticker
             await message.reply_photo(
                 photo=img,
                 caption=cap,
                 reply_markup=InlineKeyboardMarkup(buttons),
-            )
-            await message.reply_sticker("CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ")
+            )            
             return await play_logs(
                 message, streamtype=f"Playlist : {plist_type}"
             )
@@ -520,7 +520,7 @@ async def play_commnd(
                 #await mystic.edit_text("🌟")
                 #await asyncio.sleep(0.9)                
                 await mystic.delete()
-                await message.reply_sticker("CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ"),
+                await message.reply_sticker("CAACAgQAAxkBAAEJ6qFkzHyFwz2E1zSX61os9ivJ9uJuvQACDwkAAoeCSFEl2R065C6emi8E"), # thooki suththura sticker
                 await message.reply_photo(
                     photo=details["thumb"],
                     caption=_["play_11"].format(
