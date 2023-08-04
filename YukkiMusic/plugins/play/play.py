@@ -541,6 +541,7 @@ async def play_commnd(
                     "f" if fplay else "d",
                 )
                 await mystic.delete()
+                await message.reply_sticker("CAACAgQAAxkBAAEJ6p9kzHuxbckxKqBXUy7hCDNG5VlOQQACxAsAAtc2OFASKf_DRvI1By8E") #heart nose
                 await message.reply_photo(
                     photo=img,
                     caption=cap,
