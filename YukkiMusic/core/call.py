@@ -241,7 +241,7 @@ class Call(PyTgCalls):
                     except Exception as e:
                         raise AssistantErr(e)
                     await app.send_sticker(
-                        original_chat_id, "CAACAgEAAxkBAAEJ6N5ky9pWPWdejufWs4V1HDdfbhoYzgACsAADUSkNOY_Zrf2npRxbLwQ"
+                        original_chat_id, "CAACAgEAAxkBAAEJ6nZkzFUYfyEXhB971Kg7IO6d3MW_wQACsAADUSkNOY_Zrf2npRxbLwQ" #assistant join aaguthu - odi vara sticker 
                     )
                     m = await app.send_message(
                         original_chat_id, _["call_5"]
@@ -384,7 +384,7 @@ class Call(PyTgCalls):
                 img = await gen_thumb(videoid, chat_id)
                 button = telegram_markup(_, chat_id)
                 await app.send_sticker(
-                    original_chat_id, "CAACAgQAAxkBAAEJ5xdky1-TiTTLBrLsydm3FAoKkQxrUQACcQsAAo9SSVFFVmZZbQ1DPi8E"
+                    original_chat_id, "CAACAgQAAxkBAAEJ6nRkzFQPl5iA7XIBmKP_x8erFjAnVAACcQsAAo9SSVFFVmZZbQ1DPi8E" #hearts thooki podura sticker
                 )
                 run = await app.send_photo(
                     original_chat_id,
@@ -399,7 +399,7 @@ class Call(PyTgCalls):
                 db[chat_id][0]["markup"] = "tg"
             elif "vid_" in queued:
                 await app.send_sticker(
-                    original_chat_id, "CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ")
+                    original_chat_id, "CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ") #Earphone potutu music kekkura sticker
                 mystic = await app.send_message(
                     original_chat_id, _["call_10"]
                 )
@@ -439,7 +439,7 @@ class Call(PyTgCalls):
                 button = stream_markup(_, videoid, chat_id)
                 await mystic.delete()
                 await app.send_sticker(
-                    original_chat_id, "CAACAgEAAxkBAAEJ6Opky9z53akfrGWxYxvVWy0zrx4E4gAC_wADd2hJR-_RpYxPr1G6LwQ"
+                    original_chat_id, "CAACAgQAAxkBAAEJ6nhkzFXaTxXOQqvWMooJ4I47MmPNDwACVBIAAqbxcR4QG8jq0jLPPi8E" # Koala bear sticker uh aana munnadi Rendu bears - Onnu dancing, onnu drum vasikuthu
                 )
                 run = await app.send_photo(
                     original_chat_id,
@@ -529,7 +529,7 @@ class Call(PyTgCalls):
                     img = await gen_thumb(videoid, chat_id)
                     button = stream_markup(_, videoid, chat_id)
                     await app.send_sticker(
-                        original_chat_id, "CAACAgEAAxkBAAEJ6Opky9z53akfrGWxYxvVWy0zrx4E4gAC_wADd2hJR-_RpYxPr1G6LwQ"
+                        original_chat_id, "CAACAgEAAxkBAAEJ6Opky9z53akfrGWxYxvVWy0zrx4E4gAC_wADd2hJR-_RpYxPr1G6LwQ" # Rendu bears - Onnu dancing, onnu drums vasikuthu
                     )
                     run = await app.send_photo(
                         original_chat_id,
