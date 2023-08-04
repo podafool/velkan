@@ -95,7 +95,7 @@ async def skip(cli, message: Message, _, chat_id):
             if not check:
                 await message.reply_sticker("CAACAgQAAxkBAAEJ6npkzFsSvhmTyXqaEeCOYjbM_OW5ZgACmgoAAjaOOFE-q1peUos2-S8E")
                 await message.reply_text(
-                    _["admin_10"].format(message.from_user.first_name)
+                    _["admin_10"].format(message.from_user.mention)
                 )
                 try:
                     return await Yukki.stop_stream(chat_id)
@@ -128,6 +128,7 @@ async def skip(cli, message: Message, _, chat_id):
             return await message.reply_text(_["call_9"])
         button = telegram_markup(_, chat_id)
         img = await gen_thumb(videoid, chat_id)
+        await message.reply_sticker("CAACAgEAAxkBAAEJ6pdkzHlCW4mw1JZrE-D4hPe4CWoZvgACFQMAAt5cIURnyX8sYRxXqi8E") #heart beat
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
@@ -157,6 +158,7 @@ async def skip(cli, message: Message, _, chat_id):
             return await mystic.edit_text(_["call_9"])
         button = stream_markup(_, videoid, chat_id)
         img = await gen_thumb(videoid, chat_id)
+        await message.reply_sticker("CAACAgQAAxkBAAEJ6pVkzHkvmfmavL8AAZO8Chh1WOJn7WYAAmcNAAKYxTlQbCCYZOix0kQvBA") # heart vechitu jumping
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
@@ -174,6 +176,7 @@ async def skip(cli, message: Message, _, chat_id):
         except Exception:
             return await message.reply_text(_["call_9"])
         button = telegram_markup(_, chat_id)
+        await message.reply_sticker("CAACAgQAAxkBAAEJ6plkzHmxI62tjrxsXGCfFY7YmFGiLAACPgsAAsCwiFHs4-FX1TKh4S8E") #blowing heart
         run = await message.reply_photo(
             photo=config.STREAM_IMG_URL,
             caption=_["stream_2"].format(user),
@@ -188,6 +191,7 @@ async def skip(cli, message: Message, _, chat_id):
             return await message.reply_text(_["call_9"])
         if videoid == "telegram":
             button = telegram_markup(_, chat_id)
+            await message.reply_sticker("CAACAgQAAxkBAAEJ6ptkzHoGfPr3wnuhsSowP3fin1iWhgACjggAAovV6FOaebAKJCO-5C8E") #giving big heart
             run = await message.reply_photo(
                 photo=config.TELEGRAM_AUDIO_URL
                 if str(streamtype) == "audio"
@@ -215,6 +219,7 @@ async def skip(cli, message: Message, _, chat_id):
         else:
             button = stream_markup(_, videoid, chat_id)
             img = await gen_thumb(videoid, chat_id)
+            await message.reply_sticker("CAACAgIAAxkBAAEJ6p1kzHpCYgPd3ywh6YieMvwZB_oCfgACMAEAAsxUSQkLdSnCzPHMMS8E") #cute bunny girl 
             run = await message.reply_photo(
                 photo=img,
                 caption=_["stream_1"].format(
