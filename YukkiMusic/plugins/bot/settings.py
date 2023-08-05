@@ -99,7 +99,7 @@ async def settings_back_markup(
         buttons = private_panel(_, app.username, OWNER)
         return await CallbackQuery.edit_message_text(
             _["start_2"].format(
-              message.from_user.mention,
+              CallbackQuery.from_user.mention,
               MUSIC_BOT_NAME),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
