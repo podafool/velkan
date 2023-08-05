@@ -41,6 +41,28 @@ STICKERS = [
   "CAACAgQAAxkBAAEJ5xdky1-TiTTLBrLsydm3FAoKkQxrUQACcQsAAo9SSVFFVmZZbQ1DPi8E",
   "CAACAgQAAxkBAAEJ5xhky1-TF8m78aRujl6gPpFoNH20KgACXgwAAghGuVOWomIaBycL7i8E",
   "CAACAgEAAxkBAAEJ5xlky1-TeDV25iwlc5_-5q3ox3qy-gACNgEAAlEpDTkSG_gDZwABw6MvBA",
+  "CAACAgQAAxkBAAEJ7AhkzQ7GZ7DrL3O4Q7eHVCAYz-N4nwACvQkAAnpcEVM6alQk5njq3y8E",
+  "CAACAgQAAxkBAAEJ7ARkzQ60YZZ7t4ivO7K8VR0LQifh9gACFQwAAtUjEFPkKwhxHG8_Ky8E",
+  "CAACAgQAAxkBAAEJ7B1kzRHZ8-XDcyZNUE7Qyc7lsdwFMQACjggAA1VQUdoUwOeQzZqmLwQ",
+  "CAACAgQAAxkBAAEJ7AJkzQ6yOkDOwj9r01b7fljN_Boh9wAC6gsAAmwiEVOtWUCotxfPAy8E",
+  "CAACAgQAAxkBAAEJ7AABZM0OsGD_J8puJTi9WkLqWQG-SAADuBEAAqbxcR57Dj3-S9mwaS8E",
+  "CAACAgQAAxkBAAEJ6_5kzQ6u16es2S8IVUSSQrA9hi_vkwACnxEAAqbxcR57wYUDyflSIS8E",
+  "CAACAgEAAxkBAAEJ6_xkzQ50xN3ytZjk5fTylx7DS2PDVgACNgEAAlEpDTkSG_gDZwABw6MvBA",
+  "CAACAgEAAxkBAAEJ6_pkzQ5lhNGO3pF1awcVfWxfBC_lQwACGQEAAlEpDTkG9n5mFbHKpy8E",
+  "CAACAgEAAxkBAAEJ6_hkzQ5jChDHyCPnrf-xuCQQtouztAACFQEAAlEpDTnRN1QlsQ8qLi8E",
+  "CAACAgUAAxkBAAEJ6_ZkzQ3ldTCPnhslPTxQUoirypK47wACowYAAkME2FZILCjifFdIUC8E",
+  "CAACAgQAAxkBAAEJ6_BkzQ2qVDgusETUthPZSJ0l4YyKyAACLwoAAgM8IFMao7hilxhkGi8E",
+  "CAACAgEAAxkBAAEJ6-5kzQ2UPyvOoBhBh55zDwnpxy2S2QAC8wQAAlEpDTmH9fRvHZACii8E",
+  "CAACAgQAAxkBAAEJ6-xkzQ1cU-Oxv0vMWC1Hy-uhlASEAwACpwoAAn-aOFAK54ox7NBRcC8E",
+  "CAACAgQAAxkBAAEJ6-pkzQ0mL58wlqP6tTloYWOxYbwFgQACXgwAAghGuVOWomIaBycL7i8E",
+  "CAACAgIAAxkBAAEJ66dkzPAnyyPwli7yRX1hpMMQb7PJTgACDQEAAladvQpG_UMdBUTXly8E",
+  "CAACAgEAAxkBAAEJ66FkzPARmsJrT_FfgYn1A7BumF3CnwACuwADUSkNOR12rpeAPL_kLwQ",
+  "CAACAgEAAxkBAAEJ655kzPANksJJTQXkWl1q1E729tegAgACuAADUSkNOeiAtZ8X-LsKLwQ",
+  "CAACAgEAAxkBAAEJ65tkzPAH_xsIpOKY3y6pugABWnGYHdsAArMAA1EpDTkH2Th_5u9jEy8E",
+  "CAACAgEAAxkBAAEJ65lkzO_5oUKK3Z5k8JTOjLW62Vr9gwACmgADUSkNOfUGBWVzkcCyLwQ",
+  "CAACAgEAAxkBAAEJ65VkzO_yfQABWNWzp75LTIFwfN4PhFsAApMAA1EpDTkdCAmv9TYB9i8E",
+  "CAACAgEAAxkBAAEJ65NkzO_qf0xu4BaRSEAEfKmVmYo9EAACjAADUSkNOaEz-mHfkE3aLwQ",
+  "CAACAgQAAxkBAAEJ64ZkzO7Je62eg3T6QZNxgvNXMxQYzAACpRYAAqbxcR7qDYebQsdZoi8E",
 ]
 
 # Command
@@ -111,8 +133,7 @@ async def play_commnd(
                 "title": file_name,
                 "link": message_link,
                 "path": file_path,
-                "dur": dur,
-                "flood_wait_error": "Telegram Flood Wait: Please wait for '{0}' seconds.",
+                "dur": dur,                
             }
 
             try:
@@ -129,27 +150,15 @@ async def play_commnd(
                 )
             except Exception as e:
                 ex_type = type(e).__name__
-                err = str(e)  # Get the actual error message
-                #if ex_type == "AssistantErr":
-                    #err = e
-                #else:                    
-                    #err = _["general_3"].format(ex_type)
-                # Check if the exception is caused by Flood Wait (Telegram API error 420)
-                if "FLOOD_WAIT_" in err:
-                    # Extract the wait time (X seconds) from the error message
-                    wait_time = int(err.split("FLOOD_WAIT_")[1].split("_")[0])
-                    err = _["flood_wait_error"].format(wait_time)
-                    # Generate the Flood Wait message with the wait time
-                    wait_msg = _["flood_wait_error"].format(wait_time)
-                    # Send the Flood Wait message immediately
-                    await mystic.edit_text(wait_msg)
-                else:
-                    # If it's not a Flood Wait error, send the regular error message
-                    return await mystic.edit_text(err)                
-            #await mystic.delete()
-            #dei = await message.reply_sticker(random.choice(STICKERS))
-            #await asyncio.sleep(5)            
-            #return await dei.delete()
+                err = (
+                    e
+                    if ex_type == "AssistantErr"
+                    else _["general_3"].format(ex_type)
+                )              
+                return await mystic.edit_text(err)                
+            await mystic.delete()
+            await asyncio.sleep({dur})
+            return await message.reply_sticker(random.choice(STICKERS))           
         return
     elif video_telegram:
         if not await is_video_allowed(message.chat.id):
