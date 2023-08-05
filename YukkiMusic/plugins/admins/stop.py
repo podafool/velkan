@@ -34,6 +34,7 @@ async def stop_music(cli, message: Message, _, chat_id):
     await Yukki.stop_stream(chat_id)
     await set_loop(chat_id, 0)
     await message.reply_sticker("CAACAgQAAxkBAAEJ6pFkzHeFqLzq8avJ9DoXgUeICSX1PgACuwkAAuQGCVLowXK3fUF5SC8E")
-    await message.reply_text(
-        _["admin_9"].format(message.from_user.mention)
+    await message.reply_photo(
+        photo="https://te.legra.ph/file/218a2e7560a152c03db69.jpg",
+        caption=_["admin_9"].format(message.from_user.mention)
     )
