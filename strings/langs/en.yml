@@ -249,14 +249,14 @@ UNBAN_BUTTON : "🗑 Unban Assistant"
 L_B_1 : "𝒮𝑒𝑒 𝓎𝑜𝓊𝓇 𝓁𝓎𝓇𝒾𝒸𝓈 𝒽𝑒𝓇𝑒 🏃‍♀️"
 
 # Start
-S_B_1 : "🗒 𝓒𝓸𝓶𝓶𝓪𝓷𝓭𝓼"
-S_B_2 : "🔧 𝓢𝓮𝓽𝓽𝓲𝓷𝓰𝓼"
-S_B_3 : "𝓢𝓾𝓹𝓹𝓸𝓻𝓽 🤝"
-S_B_4 : "🙌 𝓒𝓱𝓪𝓷𝓷𝓮𝓵"
-S_B_5 : "↗️ 𝓐𝓭𝓭 𝓶𝓮 𝓽𝓸 𝔂𝓸𝓾𝓻 𝓖𝓻𝓸𝓾𝓹 ↗️"
+S_B_1 : "ᴄᴏᴍᴍᴀɴᴅꜱ"
+S_B_2 : "ꜱᴇᴛᴛɪɴɢꜱ"
+S_B_3 : "ꜱᴜᴘᴘᴏʀᴛ"
+S_B_4 : "ᴄʜᴀɴɴᴇʟ"
+S_B_5 : "↗️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ↗️"
 S_B_6 : "⚙️ Git Repo"
-S_B_7 : "❤️ 𝐌𝐲 𝐌𝐨𝐭𝐡𝐞𝐫"
-S_B_8 : "☠️ 𝓗𝓮𝓵𝓹"
+S_B_7 : "❤️ 𝗠𝘆 𝗔𝗺𝗺𝗮"
+S_B_8 : "ʜᴇʟᴘ"
 
 #Help 
 H_B_1 : "▶️"
@@ -320,7 +320,7 @@ ST_B_26 : "🗑 Command Clean"
 ST_B_27 : "🧑‍🚀 Suggestion Mode"
 
 #Song
-SG_B_1 : "↗️ Open Private Chat"
+SG_B_1 : "Open in PM! ↗️"
 SG_B_2 : "🔊 Audio"
 SG_B_3 : "🎥 Video"
 
@@ -335,7 +335,7 @@ SA_B_7 : "🔢 Global Top 10 Stats"
 SA_B_8 : "🤖 Bot Stats"
 
 #Queue
-QU_B_1 : "📑 Queued List"
+QU_B_1 : "Queue! 🚶‍♀️🚶‍♀️🚶‍♀️"
 QU_B_2 : "Played {0} out of {1} Mins"
 
 # Sudo Users [ If you are translating this to some other language .. you can leave all these strings in english language]
@@ -413,7 +413,7 @@ heroku_11 : "Only for Heroku Apps"
 heroku_12 : "Checking Heroku Usage. Please Wait"
 heroku_13 : "Checking for available updates..."
 heroku_14 : "Git Command Error"
-heroku_15 : "Invalid Git Repsitory"
+heroku_15 : "Invalid Git Repository"
 
 #Private bot mode
 pbot_1 : "**Usage:**\n/authorize [CHAT_ID]"
