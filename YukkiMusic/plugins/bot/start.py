@@ -232,6 +232,7 @@ async def start_comm(client, message: Message, _):
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
+                        message.from_user.mention,
                         config.MUSIC_BOT_NAME
                     ),
                     reply_markup=InlineKeyboardMarkup(out),
