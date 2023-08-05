@@ -103,7 +103,7 @@ async def ping_com(client, message: Message, _):
     )
     cap = f"""**{config.MUSIC_BOT_NAME} Player**
 
-🎥**Playing:** {title}
+🎥**Song:** {title}
 
 🔗**Stream Type:** {typo}
 🙍‍♂️**Played By:** {user}
