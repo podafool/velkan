@@ -157,8 +157,8 @@ async def play_commnd(
                 )              
                 return await mystic.edit_text(err)                
             await mystic.delete()
-            #await asyncio.sleep(1)
-            #return await message.reply_sticker(random.choice(STICKERS))           
+            await asyncio.sleep(1)
+            return await message.reply_sticker("CAACAgUAAxkBAAEJ4rdkybaS8jOHPFTYj29SUIL98GXQ4gACuQMAAqs_oFWZjJKNo4-uPS8E")   # Thango sticker         
         return
     elif video_telegram:
         if not await is_video_allowed(message.chat.id):
