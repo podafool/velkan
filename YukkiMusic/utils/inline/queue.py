@@ -20,6 +20,30 @@ def queue_markup(
     played: Union[bool, int] = None,
     dur: Union[bool, int] = None,
 ):
+    played_sec = time_to_seconds(played)
+    duration_sec = time_to_seconds(dur)
+    percentage = (played_sec / duration_sec) * 100
+    anon = math.floor(percentage)
+    if 0 < anon <= 10:
+        bar = "👨‍🦰❤️ ▃ ▃ ▃ ▃ ▃ ▃ ▃ ▃ ▃ 👩‍🦰"
+    elif 10 < anon < 20:
+        bar = " ▃ 👨‍🦰❤️ ▃ ▃ ▃ ▃ ▃ ▃ ▃ ▃ 👩‍🦰"
+    elif 20 <= anon < 30:
+        bar = " ▃ ▃ 👨‍🦰❤️ ▃ ▃ ▃ ▃ ▃ ▃ ▃ 👩‍🦰"
+    elif 30 <= anon < 40:
+        bar = " ▃ ▃ ▃ 👨‍🦰❤️ ▃ ▃ ▃ ▃ ▃ ▃ 👩‍🦰"
+    elif 40 <= anon < 50:
+        bar = " ▃ ▃ ▃ ▃ 👨‍🦰❤️ ▃ ▃ ▃ ▃ ▃ 👩‍🦰"
+    elif 50 <= anon < 60:
+        bar = " ▃ ▃ ▃ ▃ ▃ 👨‍🦰❤️ ▃ ▃ ▃ ▃ 👩‍🦰"
+    elif 60 <= anon < 70:
+        bar = "▃ ▃ ▃ ▃ ▃ ▃ 👨‍🦰❤️ ▃ ▃ ▃ 👩‍🦰"
+    elif 70 <= anon < 80:
+        bar = "▃ ▃ ▃ ▃ ▃ ▃ ▃ 👨‍🦰❤️ ▃ ▃ 👩‍🦰"
+    elif 80 <= anon < 95:
+        bar = "▃ ▃ ▃ ▃ ▃ ▃ ▃ ▃ 👨‍🦰❤️ ▃ 👩‍🦰"
+    else:
+        bar = "▃ ▃ ▃ ▃ ▃ ▃ ▃ ▃ ▃ ▃ ▃ 👩‍❤️‍👨"
     not_dur = [
         [
             InlineKeyboardButton(
@@ -36,6 +60,10 @@ def queue_markup(
         [
             InlineKeyboardButton(
                 text=_["QU_B_2"].format(played, dur),
+                callback_data="GetTimer",
+            )
+            InlineKeyboardButton(
+                text=f"{played}  {bar}  {dur}",
                 callback_data="GetTimer",
             )
         ],
