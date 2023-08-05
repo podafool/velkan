@@ -58,11 +58,7 @@ def queue_markup(
         ]
     ]
     dur = [
-        [
-            InlineKeyboardButton(
-                text=_["QU_B_2"].format(played, dur),
-                callback_data="GetTimer",
-            ),
+        [            
             InlineKeyboardButton(
                 text=f"{played}  {bar}  {dur}",
                 callback_data="GetTimer",
