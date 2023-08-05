@@ -109,4 +109,4 @@ ACTIVEVIDEO_COMMAND : ["activevideo"]
 #Gban Commands
 GBAN_COMMAND : ["byee"]
 UNGBAN_COMMAND : ["hii"]
-GBANNED_COMMAND : ["jeevarasi"]
+GBANNED_COMMAND : ["velakenna"]
