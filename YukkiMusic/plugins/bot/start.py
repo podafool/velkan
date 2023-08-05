@@ -207,28 +207,28 @@ async def start_comm(client, message: Message, _):
         if config.START_IMG_URL:
             try:
                 adei = await message.reply_text(f"Hiii! ❤️✨")                                
-                #msg = await message.reply_text("💃")
-                #await asyncio.sleep(1)
-                #await msg.edit_text("🎶")
-                #await asyncio.sleep(1)
-                #await msg.edit_text("❣️")
-                #await asyncio.sleep(1.6)                
-                #await msg.edit_text("🌈")
-                #await asyncio.sleep(1)
-                #await msg.delete()                
-                #await asyncio.sleep(1)                
-                #new = await message.reply_video(
-                                #"https://telegra.ph/file/19b647a7c809c90192702.mp4",
-                                #caption=f"Nalama 😵‍💫 {message.from_user.mention}",
-                                #supports_streaming=True
-                                #)
-                #await asyncio.sleep(6.5)
-                #await new.delete()
-                #dei = await message.reply_text("💞")
+                msg = await message.reply_text("💃")
+                await asyncio.sleep(1)
+                await msg.edit_text("🎶")
+                await asyncio.sleep(1)
+                await msg.edit_text("❣️")
+                await asyncio.sleep(1.6)                
+                await msg.edit_text("🌈")
+                await asyncio.sleep(1)
+                await msg.delete()                
+                await asyncio.sleep(1)                
+                new = await message.reply_video(
+                                "https://telegra.ph/file/19b647a7c809c90192702.mp4",
+                                caption=f"Nalama 😵‍💫 {message.from_user.mention}",
+                                supports_streaming=True
+                                )
+                await asyncio.sleep(6.5)
+                await new.delete()
+                dei = await message.reply_text("💞")
                 await asyncio.sleep(0.6)
                 await adei.delete()
                 await asyncio.sleep(1.5)
-                #await dei.delete()
+                await dei.delete()
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
