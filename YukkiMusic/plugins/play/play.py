@@ -527,7 +527,7 @@ async def play_commnd(
                 #await mystic.edit_text("🌟")
                 #await asyncio.sleep(0.9)                
                 await mystic.delete()
-                #await message.reply_sticker("CAACAgQAAxkBAAEJ6qFkzHyFwz2E1zSX61os9ivJ9uJuvQACDwkAAoeCSFEl2R065C6emi8E"), # thooki suththura sticker
+                #await message.reply_sticker("CAACAgQAAxkBAAEJ6qFkzHyFwz2E1zSX61os9ivJ9uJuvQACDwkAAoeCSFEl2R065C6emi8E"), # thooki suththura sticker : inline mode la normal ah song /play panna
                 await message.reply_photo(
                     photo=details["thumb"],
                     caption=_["play_11"].format(
@@ -548,7 +548,7 @@ async def play_commnd(
                     "f" if fplay else "d",
                 )
                 await mystic.delete()
-                #await message.reply_sticker("CAACAgQAAxkBAAEJ6p9kzHuxbckxKqBXUy7hCDNG5VlOQQACxAsAAtc2OFASKf_DRvI1By8E") #heart nose
+                #await message.reply_sticker("CAACAgQAAxkBAAEJ6p9kzHuxbckxKqBXUy7hCDNG5VlOQQACxAsAAtc2OFASKf_DRvI1By8E") #heart nose : Inline mode la.. link vechi play panna
                 await message.reply_photo(
                     photo=img,
                     caption=cap,
@@ -800,7 +800,7 @@ async def slider_queries(client, CallbackQuery, _):
                 duration_min,
             ),
         )
-        #await CallbackQuery.reply_sticker("CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ")
+        #await CallbackQuery.reply_sticker("CAACAgEAAxkBAAEJ5wtky1y3tcSwBZfeDDQD8DInrgQWDQAC-gADUSkNORIJSVEUKRrhLwQ") #adutha song download aaguthu sticker: earphone potu song kekkurathu
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
         )
