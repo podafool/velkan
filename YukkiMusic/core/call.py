@@ -8,6 +8,7 @@
 # All rights reserved.
 
 import asyncio
+import random
 from datetime import datetime, timedelta
 from typing import Union
 
@@ -573,7 +574,7 @@ class Call(PyTgCalls):
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "stream"
                     await asyncio.sleep(1)
-                    await app.send_sticker(
+                    await app.send_stick(
                         original_chat_id, random.choice(STICKERS) # Hat pota shy ponnu sticker irundhuchi first uh.. 
                         )
 
