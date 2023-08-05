@@ -10,6 +10,7 @@
 from typing import Union
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from YukkiMusic.utils.formatters import time_to_seconds
 
 
 def queue_markup(
