@@ -102,7 +102,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons.append(
         [
             InlineKeyboardButton(
-                    text=("VPS"), url=("https://t.me/we_are_universee")
+                    text=("V̲P̲S̲"), url=("https://t.me/we_are_universee")
                 )
         ]
     )
