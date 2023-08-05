@@ -65,8 +65,9 @@ async def skip(cli, message: Message, _, chat_id):
                             if not check:
                                 try:
                                     await message.reply_sticker("CAACAgQAAxkBAAEJ6npkzFsSvhmTyXqaEeCOYjbM_OW5ZgACmgoAAjaOOFE-q1peUos2-S8E")
-                                    await message.reply_text(
-                                        _["admin_10"].format(
+                                    await message.reply_photo(
+                                        photo="https://te.legra.ph/file/7801e08b59a0943cc9038.jpg",
+                                        caption=_["admin_10"].format(
                                             message.from_user.mention
                                         )
                                     )
@@ -94,8 +95,9 @@ async def skip(cli, message: Message, _, chat_id):
                     await auto_clean(popped)
             if not check:
                 await message.reply_sticker("CAACAgQAAxkBAAEJ6npkzFsSvhmTyXqaEeCOYjbM_OW5ZgACmgoAAjaOOFE-q1peUos2-S8E")
-                await message.reply_text(
-                    _["admin_10"].format(message.from_user.mention)
+                await message.reply_photo(
+                    photo="https://te.legra.ph/file/7801e08b59a0943cc9038.jpg",
+                    caption=_["admin_10"].format(message.from_user.mention)
                 )
                 try:
                     return await Yukki.stop_stream(chat_id)
@@ -104,8 +106,9 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             try:
                 await message.reply_sticker("CAACAgQAAxkBAAEJ6npkzFsSvhmTyXqaEeCOYjbM_OW5ZgACmgoAAjaOOFE-q1peUos2-S8E")
-                await message.reply_text(
-                    _["admin_10"].format(message.from_user.first_name)
+                await message.reply_photo(
+                    photo="https://te.legra.ph/file/7801e08b59a0943cc9038.jpg",
+                    caption=_["admin_10"].format(message.from_user.first_name)
                 )
                 return await Yukki.stop_stream(chat_id)
             except:
