@@ -6,7 +6,7 @@
 # Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
 #
 # All rights reserved.
-
+import asyncio
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -35,9 +35,10 @@ async def resume_com(cli, message: Message, _, chat_id):
         await message.reply_sticker("CAACAgQAAxkBAAEJ6oJkzF3wQKdCyGC3d5ShVAn9R56VwwACpQoAAgXwqFAIT7lt7WkHqy8E")
         return await message.reply_text(_["admin_3"])
     await music_on(chat_id)
-    await Yukki.resume_stream(chat_id)
-    await message.reply_sticker("CAACAgQAAxkBAAEJ6olkzG_ZZe1h-5HZZBrJqU_ZFunZpQACvxEAAqbxcR6tsYeSUVSTay8E") #rose kudukkurathu
+    await Yukki.resume_stream(chat_id)    
     await message.reply_photo(
         photo=RESUME_IMG_URL,
         caption=_["admin_4"].format(message.from_user.mention)
     )
+    await asyncio.sleep(1)
+    await message.reply_sticker("CAACAgQAAxkBAAEJ6olkzG_ZZe1h-5HZZBrJqU_ZFunZpQACvxEAAqbxcR6tsYeSUVSTay8E") #rose kudukkurathu
