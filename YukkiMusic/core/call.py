@@ -574,7 +574,7 @@ class Call(PyTgCalls):
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "stream"
                     await asyncio.sleep(1)
-                    await app.send_stick(
+                    await app.send_sticker(
                         original_chat_id, random.choice(STICKERS) # Hat pota shy ponnu sticker irundhuchi first uh.. 
                         )
 
