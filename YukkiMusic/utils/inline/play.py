@@ -7,7 +7,6 @@
 #
 # All rights reserved.
 
-import random
 import math
 from pyrogram.types import InlineKeyboardButton
 from config import SUPPORT_GROUP, SUPPORT_CHANNEL
