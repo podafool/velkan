@@ -80,6 +80,9 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 InlineKeyboardButton(
                     text=_["S_B_3"], url=f"{SUPPORT_GROUP}"
                 ),
+                InlineKeyboardButton(
+                    text=("VPS"), url=("https://t.me/we_are_universee")
+                )
             ]
         )
     else:
