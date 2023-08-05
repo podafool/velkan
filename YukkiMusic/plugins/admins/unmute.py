@@ -6,6 +6,7 @@
 # Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
 #
 # All rights reserved.
+import asyncio
 
 from pyrogram import filters
 from pyrogram.types import Message
@@ -32,9 +33,12 @@ async def unmute_admin(Client, message: Message, _, chat_id):
     if not len(message.command) == 1 or message.reply_to_message:
         return await message.reply_text(_["general_2"])
     if not await is_muted(chat_id):
+        await asyncio.sleep(2)
+        await message.reply_sticker("CAACAgQAAxkBAAEJ6oJkzF3wQKdCyGC3d5ShVAn9R56VwwACpQoAAgXwqFAIT7lt7WkHqy8E")
         return await message.reply_text(_["admin_7"])
     await mute_off(chat_id)
     await Yukki.unmute_stream(chat_id)
     await message.reply_text(
         _["admin_8"].format(message.from_user.mention)
     )
+    await message.reply_sticker("CAACAgQAAxkBAAEJ7VlkziKwzuKFTOdRZih8wwtozSL6bwAC5QoAAhg_qFG36OJMC9Wo0C8E")
