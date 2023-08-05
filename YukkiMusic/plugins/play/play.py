@@ -157,7 +157,7 @@ async def play_commnd(
                 )              
                 return await mystic.edit_text(err)                
             await mystic.delete()
-            await asyncio.sleep(dur)
+            await asyncio.sleep(1)
             return await message.reply_sticker(random.choice(STICKERS))           
         return
     elif video_telegram:
