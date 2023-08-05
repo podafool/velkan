@@ -97,12 +97,14 @@ async def settings_back_markup(
         except:
             OWNER = None
         buttons = private_panel(_, app.username, OWNER)
-        return await CallbackQuery.edit_message_media(
-            media="START_IMG_URL",
+        await CallbackQuery.edit_message_media(
+            media="START_IMG_URL",            
+            reply_markup=InlineKeyboardMarkup(buttons),
+        )
+        return await CallbackQuery.edit_message_caption(
             caption=_["start_2"].format(
               CallbackQuery.from_user.mention,
               MUSIC_BOT_NAME),
-            reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
         buttons = setting_markup(_)
