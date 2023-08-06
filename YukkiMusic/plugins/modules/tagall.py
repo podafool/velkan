@@ -220,18 +220,21 @@ async def tagme_handler(client, message):
                               )
                        ]
                 )
-                return markup
-                #blast_button = InlineKeyboardButton("Blast!", callback_data="blast")
-                #markup.insert(blast_button)
+                return markup                
                 await client.send_message(chat_id, txt, reply_markup=markup)
             elif mode == "text_on_reply":
-                markup = InlineKeyboardMarkup()
-                blast_button = InlineKeyboardButton("Blast!", callback_data="blast")
-                markup.insert(blast_button)
+                markup = InlineKeyboardMarkup(
+                       [
+                              InlineKeyboardButton(
+                                        text=("Blast!"),
+                                        callback_data="blast"
+                              )
+                       ]
+                )
                 await msg.reply(f"{random.choice(EMOJI)} {usrtxt}", reply_markup=markup)
 
-            # Generate a random sleep time between 10 and 30 seconds
-            sleep_time = random.randint(10, 30)
+            # Generate a random sleep time between 10 and 30 seconds(0 and 5 seconds)
+            sleep_time = random.randint(0, 5)
             await asyncio.sleep(sleep_time)
 
             usrnum = 0
