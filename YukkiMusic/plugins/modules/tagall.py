@@ -220,6 +220,7 @@ async def tagme_handler(client, message):
                               )
                        ]
                 )
+                return markup
                 #blast_button = InlineKeyboardButton("Blast!", callback_data="blast")
                 #markup.insert(blast_button)
                 await client.send_message(chat_id, txt, reply_markup=markup)
