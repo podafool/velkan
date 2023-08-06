@@ -179,7 +179,7 @@ EMOJI = ["😊", "👋", "🌞", "🌙","❤️", "💚", "💙", "💜", "🖤"
 async def tagme_handler(client, message):
     chat_id = message.chat.id
     if chat_id in spam_chats:
-        await msg.reply("The tagme command is already running in this chat.")
+        await message.reply("The tagme command is already running in this chat.")
         return
 
     if message.reply_to_message and message.text:
