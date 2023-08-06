@@ -220,7 +220,7 @@ async def tagme_handler(msg, mode):
     except:
         pass
 
-@client.on_callback_query()
+@Client.on_callback_query()
 async def on_callback_query(event):
     if event.data == "blast":
         morning_quote = "Good morning! Here's a beautiful quote to start your day:\n\n" \
