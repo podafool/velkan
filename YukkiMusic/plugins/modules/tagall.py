@@ -212,9 +212,16 @@ async def tagme_handler(client, message):
         if usrnum == 1:
             if mode == "text_on_cmd":
                 txt = f"{usrtxt} {random.choice(TAGMES)}"
-                markup = InlineKeyboardMarkup()
-                blast_button = InlineKeyboardButton("Blast!", callback_data="blast")
-                markup.insert(blast_button)
+                markup = InlineKeyboardMarkup(
+                       [
+                              InlineKeyboardButton(
+                                        text=("Blast!"),
+                                        callback_data="blast"
+                              )
+                       ]
+                )
+                #blast_button = InlineKeyboardButton("Blast!", callback_data="blast")
+                #markup.insert(blast_button)
                 await client.send_message(chat_id, txt, reply_markup=markup)
             elif mode == "text_on_reply":
                 markup = InlineKeyboardMarkup()
