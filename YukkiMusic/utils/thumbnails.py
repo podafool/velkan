@@ -15,7 +15,7 @@ from config import YOUTUBE_IMG_URL, MUSIC_BOT_NAME
 from YukkiMusic import app
 
 BACKGROUND = [
-    "https://telegra.ph/file/952af705ee8ceee735415.jpg",
+    "https://telegra.ph/file/66969e848effd83d95c87.jpg",
     "https://telegra.ph/file/9f3b78e7c34b39b2d7bb4.jpg",
 ]
 
@@ -95,8 +95,8 @@ async def gen_thumb(videoid, user_id):
         enhancer = ImageEnhance.Brightness(image2)
         background = enhancer.enhance(1)
 
-        #bg = Image.open(f"assets/rose2.png")
-        bg = random.choice(BACKGROUND)
+        bg = Image.open(f"assets/rose2.png")
+        #bg = random.choice(BACKGROUND)
         image3 = changeImageSize(1280, 720, bg)
         image5 = image3.convert("RGBA")
         Image.alpha_composite(background, image5).save(f"cache/temp{videoid}.png")
