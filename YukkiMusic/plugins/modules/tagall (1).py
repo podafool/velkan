@@ -1,4 +1,4 @@
-from ShizukaXMusic import app
+from YukkiMusic import app
 import asyncio
 import random
 from pyrogram import Client, filters
