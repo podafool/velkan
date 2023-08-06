@@ -175,6 +175,7 @@ spam_chats = []
 TAGMES = ["hi", "hello", "good morning", "good evening", "good night", "yellarum yenna pandringa","vetiya iruntha vc ku vanga work la irrunthalum vanga😉"]
 EMOJI = ["😊", "👋", "🌞", "🌙","❤️", "💚", "💙", "💜", "🖤"]
 
+@app.on_message(filters.command(["tagme"], prefixes=["/", "@", "!"]))
 async def tagme_handler(msg, mode):
     chat_id = msg.chat.id
     if chat_id in spam_chats:
