@@ -182,6 +182,19 @@ async def tagme_handler(client, msg):
         await msg.reply("The tagme command is already running in this chat.")
         return
 
+    if message.reply_to_message and message.text:
+        return await message.reply("/tagme ** ᴛʀʏ ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ ғᴏʀ ᴛᴀɢɢɪɴɢ...*")
+    elif message.text:
+        mode = "text_on_cmd"
+        msg = message.text
+    elif message.reply_to_message:
+        mode = "text_on_reply"
+        msg = message.reply_to_message
+        if not msg:
+            return await message.reply("/tagme **ᴛʀʏ ᴛʜɪs ᴏʀ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ...**")
+    else:
+        return await message.reply("/tagme **ᴛʀʏ ᴛʜɪs ᴏʀ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ...**")
+              
     spam_chats.append(chat_id)
     usrnum = 0
     usrtxt = ""
