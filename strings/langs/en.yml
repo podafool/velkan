@@ -225,28 +225,38 @@ song_10 : "Failed to upload on telegram from servers."
 song_11 : "Uploading Started\n\nPlease hold on.."
 
 # Tools - Queue
-queue_1 : "𝒫𝓁𝑒𝒶𝓈𝑒 𝒲𝒶𝒾𝓉..𝐹𝑒𝓉𝒸𝒽𝒾𝓃𝑔 𝒬𝓊𝑒𝓊𝑒.."
+queue_1 : "ᴜɴɢᴀ ʟɪꜱᴛ ᴠᴀɴᴅʜᴜᴛᴇʏ ɪʀᴜᴋᴋᴜ!"
 queue_2 : "Queued List is empty. No tracks found"
 queue_3 : "<u>**Queued Tracks:</u>**  [Checkout More Queued Tracks From Here]({0})"
-queue_4 : "💃 𝓐𝓭𝓭𝓮𝓭 𝓽𝓸 𝓠𝓾𝓮𝓾𝓮 𝓪𝓽 **#**{0}\n\n💙 𝓣𝓲𝓽𝓵𝓮: {1}\n⏰ 𝓓𝓾𝓻𝓪𝓽𝓲𝓸𝓷: {2}\n👥 𝓐𝓭𝓭𝓮𝓭 𝓑𝔂: {3}\n\n🥳🥳You can also use /divu [song name] instead of /play 🙈❤️✨"
-queue_5 : "𝒪𝓃𝓁𝓎 𝑜𝓃𝑒 𝓉𝓇𝒶𝒸𝓀 𝒾𝓃𝓈𝒾𝒹𝑒 𝓆𝓊𝑒𝓊𝑒, 𝒫𝓁𝑒𝒶𝓈𝑒 𝒶𝒹𝒹 𝓈𝑜𝓂𝑒 𝓂𝑜𝓇𝑒 𝓉𝑜 𝒸𝒽𝑒𝒸𝓀 𝓁𝒾𝓈𝓉."
+queue_4 : """
+╭━━━━━━━━━❤️━━━━━━━━          
+┃
+┣━• ᴜɴɢᴀ ꜱᴏɴɢ @{0} ᴘᴏꜱɪᴛɪᴏɴ ʟᴀ ɪʀᴜᴋᴋᴜ!
+┃
+┣━• ➢ꜱᴏɴɢ : {1}
+┃
+┣━• ➢ᴛɪᴍᴇ: {2}
+┃
+┣━• ➢ᴜꜱᴇʀ: {3}
+╰━━━━━━━━━❤️━━━━━━━━"""
+queue_5 : "ᴏʀᴇʏ ᴏʀᴜ ꜱᴏɴɢ ᴍᴀᴛᴛᴜᴍ ᴘʟᴀʏ ᴘᴀɴɴɪᴛᴜ, Qᴜᴇᴜᴇ ᴠᴀʜ ᴄʜᴇᴄᴋ ᴘᴀɴɴᴀ ᴇᴘᴅɪ? ɪɴɴᴜᴍ ᴋᴏɴᴊᴀᴍ ꜱᴏɴɢꜱ ᴘʟᴀʏ ᴘᴀɴɴᴜɴɢᴀ ᴅᴜᴅᴇ!"
 
 # All Streaming Lines
-stream_1 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {0}\n\nℹ️ 𝑰𝒏𝒇𝒐𝒓𝒎𝒂𝒕𝒊𝒐𝒏: [Click Here]({1})\n\n🥳🥳You can also use /divu [song name] instead of /play 🙈❤️✨"
-stream_2 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈 𝒗𝒊𝒂 𝒖𝒓𝒍!\n\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {0}\n\n🥳🥳You can also use /divu [song name] instead of /play 🙈❤️✨"
-stream_3 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n🔎 𝑻𝒊𝒕𝒍𝒆: {0}\n⏱ 𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏: {1}\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {2}\n\n🥳🥳You can also use /divu [song name] instead of /play 🙈❤️✨"
-stream_4 : "🧚 𝑷𝒍𝒂𝒚𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒔𝒐𝒏𝒈!\n\n🔎 𝑻𝒊𝒕𝒍𝒆: [{0}]({1})\n⏱ 𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏: {2}\n👀 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚: {3}\n\n🥳🥳You can also use /divu [song name] instead of /play 🙈❤️✨"
+stream_1 : "ミ★ 𝘏𝘦𝘺 {0} ! 𝘕𝘦𝘦𝘯𝘨𝘢 𝘬𝘦𝘵𝘵𝘢 [𝘴𝘰𝘯𝘨]({1}) 𝘱𝘭𝘢𝘺 𝘢𝘢𝘨𝘪𝘵𝘶 𝘪𝘳𝘶𝘬𝘬𝘶! ★彡"
+stream_2 : "ミ★ 𝘏𝘦𝘺 {0} ! 𝘕𝘦𝘦𝘯𝘨𝘢 𝘬𝘦𝘵𝘵𝘢 𝘴𝘰𝘯𝘨 𝘱𝘭𝘢𝘺 𝘢𝘢𝘨𝘪𝘵𝘶 𝘪𝘳𝘶𝘬𝘬𝘶! ★彡"
+stream_3 : "ミ★ 𝘏𝘦𝘺 {2} ! 𝘕𝘦𝘦𝘯𝘨𝘢 𝘬𝘦𝘵𝘵𝘢 𝘴𝘰𝘯𝘨:\n{0}\n𝘱𝘭𝘢𝘺 𝘢𝘢𝘨𝘪𝘵𝘶 𝘪𝘳𝘶𝘬𝘬𝘶! ★彡\nミ★ 𝘋𝘶𝘳𝘢𝘵𝘪𝘰𝘯 ★彡: {1} ✨"
+stream_4 : "ミ★ 𝘏𝘦𝘺 {3} ! 𝘕𝘦𝘦𝘯𝘨𝘢 𝘬𝘦𝘵𝘵𝘢 𝘴𝘰𝘯𝘨:\n[{0}]({1})\n𝘱𝘭𝘢𝘺 𝘢𝘢𝘨𝘪𝘵𝘶 𝘪𝘳𝘶𝘬𝘬𝘶! ★彡\nミ★ 𝘋𝘶𝘳𝘢𝘵𝘪𝘰𝘯 ★彡: {2} ✨"
 
 # Inline Buttons
 
 #General Buttons
-CLOSE_BUTTON  : "𝓒𝓵𝓸𝓼𝓮 ❌"
-CLOSEMENU_BUTTON  : "𝓒𝓵𝓸𝓼𝓮 𝓜𝓮𝓷𝓾 ❌"
-BACK_BUTTON : "◀️𝓑𝓪𝓬𝓴 🚶‍♀️"
-UNBAN_BUTTON : "🗑 Unban Assistant"
+CLOSE_BUTTON  : "ᴄʟᴏꜱᴇ ❌"
+CLOSEMENU_BUTTON  : "ᴄʟᴏꜱᴇ ❌"
+BACK_BUTTON : "◀️ ʙᴀᴄᴋ"
+UNBAN_BUTTON : "ᴜɴʙᴀɴ ᴀꜱꜱɪꜱᴛᴀɴᴛ"
 
 #Lyrics
-L_B_1 : "𝒮𝑒𝑒 𝓎𝑜𝓊𝓇 𝓁𝓎𝓇𝒾𝒸𝓈 𝒽𝑒𝓇𝑒 🏃‍♀️"
+L_B_1 : "ᴄᴏᴍᴇ ʜᴇʀᴇ ꜰᴏʀ ʟʏʀɪᴄꜱ🏃‍♀️"
 
 # Start
 S_B_1 : "ᴄᴏᴍᴍᴀɴᴅꜱ"
@@ -272,16 +282,16 @@ PM_B_2 : "InlineMarkup"
 PM_B_3 : "ChannelPlay"
 
 #Play
-P_B_1 : "🎵 Play Audio"
-P_B_2 : "🎥 Play Video"
-P_B_3 : "🏮 Start Live Stream"
-P_B_4 : "🎵 Play Playlist"
+P_B_1 : "ᴘʟᴀʏ ᴀᴜᴅɪᴏ 🎵 "
+P_B_2 : "🎥 ᴘʟᴀʏ ᴠɪᴅᴇᴏ"
+P_B_3 : "🏮 ꜱᴛᴀʀᴛ ʟɪᴠᴇ ꜱᴛʀᴇᴀᴍ"
+P_B_4 : "🎵 ᴘʟᴀʏ ᴘʟᴀʏʟɪꜱᴛ"
 
 #Playlist
-PL_B_1 : "🚀 𝓟𝓵𝓪𝔂 𝓟𝓵𝓪𝔂𝓵𝓲𝓼𝓽"
-PL_B_2 : "𝓟𝓵𝓪𝔂𝓵𝓲𝓼𝓽 📋"
-PL_B_3 : "🕹 𝓒𝓸𝓷𝓽𝓻𝓸𝓵𝓼"
-PL_B_4 : "📡 𝓟𝓵𝓪𝔂 𝓜𝓸𝓭𝓮"
+PL_B_1 : "ᴘʟᴀʏ ᴘʟᴀʏʟɪꜱᴛ"
+PL_B_2 : "ʏᴏᴜʀ ᴘʟᴀʏʟɪꜱᴛ"
+PL_B_3 : "ᴄᴏɴᴛʀᴏʟꜱ 🕹"
+PL_B_4 : "📡 ᴘʟᴀʏ ᴍᴏᴅᴇ"
 PL_B_5 : "🔄 Del Whole Playlist"
 PL_B_6 : "↗️ Delete Playlist"
 PL_B_7 : "❗️ Yes, I'm sure. Delete it"
