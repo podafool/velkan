@@ -217,7 +217,7 @@ async def tagme_handler(client, message):
                               [InlineKeyboardButton(text="Blast!",callback_data="blast")]
                        ]
                 )                              
-                await client.send_message(chat_id, txt, reply_markup=markup)
+                await client.reply_text(chat_id, txt, reply_markup=markup)
             elif mode == "text_on_reply":
                 markup = InlineKeyboardMarkup(
                        [
