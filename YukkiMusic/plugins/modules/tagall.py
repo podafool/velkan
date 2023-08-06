@@ -214,21 +214,14 @@ async def tagme_handler(client, message):
                 txt = f"{usrtxt} {random.choice(TAGMES)}"
                 markup = InlineKeyboardMarkup(
                        [
-                              InlineKeyboardButton(
-                                        text=("Blast!"),
-                                        callback_data="blast"
-                              )
+                              [InlineKeyboardButton(text="Blast!",callback_data="blast")]
                        ]
-                )
-                return markup                
+                )                              
                 await client.send_message(chat_id, txt, reply_markup=markup)
             elif mode == "text_on_reply":
                 markup = InlineKeyboardMarkup(
                        [
-                              InlineKeyboardButton(
-                                        text=("Blast!"),
-                                        callback_data="blast"
-                              )
+                              [InlineKeyboardButton(text="Blast!",callback_data="blast")]
                        ]
                 )
                 await msg.reply(f"{random.choice(EMOJI)} {usrtxt}", reply_markup=markup)
