@@ -187,7 +187,7 @@ async def blast_markup():
             ]
         ]
     )
-    await return upl
+    return await upl
 
 @app.on_message(filters.command(["tagme"], prefixes=["/", "@", "!"]))
 async def tagme_handler(client, message: Message):
