@@ -23,8 +23,9 @@ def get_random_quote():
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
     quote = soup.find("span", class_="text").text.strip()
-    author = soup.find("span", class_="author").text.strip()
-    return f"{quote}\n- {author}"
+    #author = soup.find("span", class_="author").text.strip()
+    #return f"{quote}\n- {author}"
+    retrun f"{quote}"
 
 def get_random_joke():
     url = "https://official-joke-api.appspot.com/random_joke"
