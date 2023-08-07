@@ -141,7 +141,7 @@ async def mentionall(client, message):
                 txt = f"{usrtxt} {random.choice(TAGMES)}"
                 await client.send_message(chat_id, txt)
             else:
-                mode == "text_on_reply":
+                mode == "text_on_reply"
                 print("text on reply mode")
                 await msg.reply(f"[{random.choice(ALONE)}](tg://user?id={usr.user.id})")
             await asyncio.sleep(10)
