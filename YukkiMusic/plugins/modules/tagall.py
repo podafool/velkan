@@ -197,7 +197,7 @@ async def tagme_handler(client, message: Message):
         mode = "text_on_reply"
         msg = message.reply_to_message
         if not msg:
-            return await message.reply("/tagme **ᴛʀʏ ᴛʜɪs ᴏʀ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ...**")
+            return await message.reply("/tagme **ᴛʀʏ ᴛʜɪs**")
     else:
         return await message.reply("/tagme **ᴛʀʏ ᴛʜɪs ᴏʀ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ...**")
               
