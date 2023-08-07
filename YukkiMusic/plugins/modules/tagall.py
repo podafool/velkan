@@ -241,7 +241,7 @@ async def tagme_handler(client, message: Message):
         pass
 
 @app.on_callback_query()
-async def on_callback_query(client, chat_id, event):
+async def on_callback_query(client, event):
     print("Callback query received:", event.data)
     if event.data == "blast":
               print("Blast button clicked!")
