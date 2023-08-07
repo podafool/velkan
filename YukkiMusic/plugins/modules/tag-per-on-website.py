@@ -6,7 +6,7 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 # Assuming you have defined the bot and dispatcher objects for the Telegram bot
-bot = Bot(token="6348947600:AAG17P5yhPUhU89E_4o-mZRoaD7F8_XFkbk")
+bot = Bot(token="5327660504:AAHPaqv8Z-_nFAAlkSLF-1_oE6i2g-gJ6JI")
 dp = Dispatcher(bot)
 
 spam_chats = []
@@ -28,7 +28,7 @@ def get_random_joke():
     data = response.json()
     return f"{data['setup']}\n{data['punchline']}"
 
-@dp.message_handler(commands=["/tagme"])
+@dp.message_handler(commands=["/tagu"])
 async def tagme_handler(msg: types.Message):
     chat_id = msg.chat.id
     if chat_id in spam_chats:
@@ -47,16 +47,15 @@ async def tagme_handler(msg: types.Message):
             continue
 
         usrnum += 1
-        usrtxt += f"[{usr.user.first_name}](tg://user?id={usr.user.id}) "
+        #usrtxt += f"[{usr.user.first_name}](tg://user?id={usr.user.id})"
+        usrtxt += f"{usr.user.mention}"
 
         if usrnum == 1:
-            markup = InlineKeyboardMarkup()
-            open_me_button = InlineKeyboardButton("Open Me", callback_data="open_me")
-            markup.insert(open_me_button)
-            await msg.reply(f"{usrtxt} {random.choice(TAGMES)}", reply_markup=markup)
+            markup = open_me_markup()            
+            await msg.reply_text(f"{usrtxt} {random.choice(TAGMES)}", reply_markup=markup)
 
             # Generate a random sleep time between 10 and 30 seconds
-            sleep_time = random.randint(10, 30)
+            sleep_time = random.randint(0, 5)
             await asyncio.sleep(sleep_time)
 
             usrnum = 0
