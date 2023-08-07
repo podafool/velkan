@@ -76,7 +76,7 @@ async def tagme_handler(client, message: Message):
 
 @app.on_callback_query()
 async def on_open_me_button_click(client, callback_query):
-    print("Callback query received:", callback_query.message.text)
+    print("Callback query received:", callback_query.message.text, callback_query.message.date)
     chat_id = callback_query.message.chat.id
     time_of_day = "evening" if "good evening" in callback_query.message.text.lower() else "morning"
     if time_of_day == "morning":
