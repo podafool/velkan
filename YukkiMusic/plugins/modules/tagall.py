@@ -245,7 +245,7 @@ async def on_callback_query(client, event):
     print("Callback query received:", event.data)
     if event.data == "blast":
               print("Blast button clicked!")
-              morning_quote = f"Good morning {event.user.mention}! Here's a beautiful quote to start your day:\n\n""Life is what happens when you're busy making other plans. - John Lennon"                             
+              morning_quote = f"Good morning {event.from_user.mention}! Here's a beautiful quote to start your day:\n\n""Life is what happens when you're busy making other plans. - John Lennon"                             
               await event.answer()
               await event.message.edit_text(morning_quote)              
              
