@@ -27,3 +27,4 @@ def open_me_markup():
             ]
         ]
     )
+    return dei
