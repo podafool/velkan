@@ -2,6 +2,8 @@ from YukkiMusic import app
 import random
 import asyncio
 import requests
+from pyrogram import Client, filters
+from pyrogram.types import Message 
 from bs4 import BeautifulSoup
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
@@ -30,18 +32,18 @@ def get_random_joke():
     data = response.json()
     return f"{data['setup']}\n{data['punchline']}"
 
-@app.on_message(filters.command(["tagu"], prefixes=["/","#","@"]))
-async def tagme_handler(msg: types.Message):
-    chat_id = msg.chat.id
+@app.on_message(filters.command(["tagu"], prefixes=["/", "#", "@"]))
+async def tagme_handler(Client, message: Message):
+    chat_id = message.chat.id
     if chat_id in spam_chats:
-        await msg.reply("The tagme command is already running in this chat.")
+        await message.reply("The tagme command is already running in this chat.")
         return
 
     spam_chats.append(chat_id)
     usrnum = 0
     usrtxt = ""
 
-    async for usr in bot.iter_chat_members(chat_id):
+    async for usr in client.iter_chat_members(chat_id):
         if not chat_id in spam_chats:
             break
 
@@ -54,7 +56,7 @@ async def tagme_handler(msg: types.Message):
 
         if usrnum == 1:
             markup = open_me_markup()            
-            await msg.reply_text(f"{usrtxt} {random.choice(TAGMES)}", reply_markup=markup)
+            await message.reply_text(f"{usrtxt} {random.choice(TAGMES)}", reply_markup=markup)
 
             # Generate a random sleep time between 10 and 30 seconds
             sleep_time = random.randint(0, 5)
@@ -68,19 +70,18 @@ async def tagme_handler(msg: types.Message):
     except:
         pass
 
-@app.callback_query_handler(lambda c: c.data == 'open_me')
-async def on_open_me_button_click(callback_query: types.CallbackQuery):
+@app.on_callback_query()
+async def on_open_me_button_click(client, callback_query):
+    print("Callback query received:", callback_query.data)
     chat_id = callback_query.message.chat.id
     time_of_day = "evening" if "good evening" in callback_query.message.text.lower() else "morning"
     if time_of_day == "morning":
+        print("Morning button clicked!")
         quote = get_random_quote()
-        await bot.send_message(chat_id, f"Good morning! Here's a random quote:\n\n{quote}")
+        await client.send_message(chat_id, f"Good morning! Here's a random quote:\n\n{quote}")
     else:
+        print("Evening button clicked!")
         joke = get_random_joke()
-        await bot.send_message(chat_id, f"Good evening! Here's a random joke:\n\n{joke}")
+        await client.send_message(chat_id, f"Good evening! Here's a random joke:\n\n{joke}")
 
     await callback_query.answer()
-
-if __name__ == "__main__":
-    from aiogram import executor
-    executor.start_polling(app, skip_updates=True)
