@@ -241,8 +241,9 @@ async def tagme_handler(client, message: Message):
         pass
 
 @app.on_callback_query()
-async def on_callback_query(client, event):
+async def on_callback_query(client, chat_id, event):
     print("Callback query received:", event.data)
+    for usr in client.iter_chat_members(chat_id):
     if event.data == "blast":
         print("Blast button clicked!")
         morning_quote = f"Good morning {usr.user.mention}! Here's a beautiful quote to start your day:\n\n" \
