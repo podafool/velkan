@@ -5,6 +5,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import ChatPermissions
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from YukkiMusic.utils.inline.blast import blast_markup
 
 spam_chats = []
 
@@ -212,11 +213,7 @@ async def tagme_handler(client, message):
         if usrnum == 1:
             if mode == "text_on_cmd":
                 txt = f"{usrtxt} {random.choice(TAGMES)}"
-                markup = InlineKeyboardMarkup(
-                       [
-                              [InlineKeyboardButton(text="Blast!",callback_data="blast")]
-                       ]
-                )                              
+                markup = blast_markup(_, True)                    
                 await client.reply_text(chat_id, txt, reply_markup=markup)
             elif mode == "text_on_reply":
                 markup = InlineKeyboardMarkup(
