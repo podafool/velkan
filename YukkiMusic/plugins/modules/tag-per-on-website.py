@@ -33,7 +33,7 @@ def get_random_joke():
     return f"{data['setup']}\n{data['punchline']}"
 
 @app.on_message(filters.command(["tagu"], prefixes=["/", "#", "@"]))
-async def tagme_handler(Client, message: Message):
+async def tagme_handler(client, message: Message):
     chat_id = message.chat.id
     if chat_id in spam_chats:
         await message.reply("The tagme command is already running in this chat.")
