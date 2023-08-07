@@ -1,3 +1,4 @@
+from YukkiMusic import app
 import random
 import asyncio
 import requests
@@ -29,7 +30,7 @@ def get_random_joke():
     data = response.json()
     return f"{data['setup']}\n{data['punchline']}"
 
-@dp.message_handler(commands=["/tagu"])
+@app.message_handler(commands=["/tagu"])
 async def tagme_handler(msg: types.Message):
     chat_id = msg.chat.id
     if chat_id in spam_chats:
@@ -67,7 +68,7 @@ async def tagme_handler(msg: types.Message):
     except:
         pass
 
-@dp.callback_query_handler(lambda c: c.data == 'open_me')
+@app.callback_query_handler(lambda c: c.data == 'open_me')
 async def on_open_me_button_click(callback_query: types.CallbackQuery):
     chat_id = callback_query.message.chat.id
     time_of_day = "evening" if "good evening" in callback_query.message.text.lower() else "morning"
@@ -82,4 +83,4 @@ async def on_open_me_button_click(callback_query: types.CallbackQuery):
 
 if __name__ == "__main__":
     from aiogram import executor
-    executor.start_polling(dp, skip_updates=True)
+    executor.start_polling(app, skip_updates=True)
