@@ -15,3 +15,15 @@ def blast_markup():
         ]
     )
     return upl
+
+def open_me_markup():
+    dei = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text=(Open me!),
+                    callback_data=f"open_me",
+                )
+            ]
+        ]
+    )
