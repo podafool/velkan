@@ -15,7 +15,8 @@ dp = Dispatcher(bot)
 
 spam_chats = []
 
-TAGMES = ["hi", "hello", "good morning", "good evening", "good night"]
+#TAGMES = ["hi", "hello", "good morning", "good evening", "good night"]
+TAGMES = ["good morning", "good evening", "good night"]
 EMOJI = ["😊", "👋", "🌞", "🌙"]
 
 def get_random_quote():
