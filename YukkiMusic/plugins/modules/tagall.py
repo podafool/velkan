@@ -238,9 +238,11 @@ async def tagme_handler(client, message: Message):
     except:
         pass
 
-@Client.on_callback_query()
+@app.on_callback_query()
 async def on_callback_query(event):
+    print("Callback query received:", event.data)
     if event.data == "blast":
+        print("Blast button clicked!")
         morning_quote = "Good morning! Here's a beautiful quote to start your day:\n\n" \
                         "Life is what happens when you're busy making other plans. - John Lennon"
         await event.answer()
