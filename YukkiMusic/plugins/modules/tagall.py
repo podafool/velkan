@@ -175,7 +175,7 @@ spam_chats = []
 
 TAGMES = ["hi", "hello", "good morning", "good evening", "good night", "yellarum yenna pandringa","vetiya iruntha vc ku vanga work la irrunthalum vanga😉"]
 EMOJI = ["😊", "👋", "🌞", "🌙","❤️", "💚", "💙", "💜", "🖤"]
-async def blast_markup():
+def blast_markup():
     upl = InlineKeyboardMarkup(
         [
             [
@@ -187,7 +187,7 @@ async def blast_markup():
             ]
         ]
     )
-    return await upl
+    return upl
 
 @app.on_message(filters.command(["tagme"], prefixes=["/", "@", "!"]))
 async def tagme_handler(client, message: Message):
