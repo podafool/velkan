@@ -177,7 +177,7 @@ TAGMES = ["hi", "hello", "good morning", "good evening", "good night", "yellarum
 EMOJI = ["😊", "👋", "🌞", "🌙","❤️", "💚", "💙", "💜", "🖤"]
 
 @app.on_message(filters.command(["tagme"], prefixes=["/", "@", "!"]))
-async def tagme_handler(client, message):
+async def tagme_handler(client, message: Message, _, chat_id):
     chat_id = message.chat.id
     if chat_id in spam_chats:
         await message.reply("The tagme command is already running in this chat.")
@@ -214,7 +214,10 @@ async def tagme_handler(client, message):
             if mode == "text_on_cmd":
                 txt = f"{usrtxt} {random.choice(TAGMES)}"
                 markup = blast_markup()                    
-                await client.reply_text(chat_id, txt, reply_markup=markup)
+                await message.reply_text(
+                          txt, 
+                          reply_markup=markup
+                )
             elif mode == "text_on_reply":
                 markup = InlineKeyboardMarkup(
                        [
