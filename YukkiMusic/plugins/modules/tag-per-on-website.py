@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from YukkiMusic.plugins.modules.blast import open_me_markup
 
 # Assuming you have defined the bot and dispatcher objects for the Telegram bot
 bot = Bot(token="5327660504:AAHPaqv8Z-_nFAAlkSLF-1_oE6i2g-gJ6JI")
