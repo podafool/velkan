@@ -213,7 +213,7 @@ async def tagme_handler(client, message):
         if usrnum == 1:
             if mode == "text_on_cmd":
                 txt = f"{usrtxt} {random.choice(TAGMES)}"
-                markup = blast_markup(None, True)                    
+                markup = blast_markup()                    
                 await client.reply_text(chat_id, txt, reply_markup=markup)
             elif mode == "text_on_reply":
                 markup = InlineKeyboardMarkup(
