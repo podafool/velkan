@@ -56,8 +56,10 @@ async def tagme_handler(client, message: Message):
 
         if usrnum == 1:
             markup = open_me_markup()            
-            await message.reply_text(f"{usrtxt} {random.choice(TAGMES)}", reply_markup=markup)
-
+            await message.reply_text(
+                f"{usrtxt} {random.choice(TAGMES)}", 
+                reply_markup=markup
+            )
             # Generate a random sleep time between 10 and 30 seconds
             sleep_time = random.randint(0, 5)
             await asyncio.sleep(sleep_time)
