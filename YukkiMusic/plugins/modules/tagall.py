@@ -3,7 +3,7 @@ import asyncio
 import random
 from pyrogram import Client, filters
 from pyrogram.errors import UserNotParticipant
-from pyrogram.types import ChatPermissions
+from pyrogram.types import ChatPermissions, Message
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from YukkiMusic.utils.inline.blast import blast_markup
 
