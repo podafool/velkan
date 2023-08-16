@@ -27,8 +27,7 @@ def time_formatter(milliseconds):
 #@Client.on_message(filters.command("status"))
 @app.on_message(
     filters.command("uyir")
-    & filters.private
-    & ~filters.edited
+    & filters.private    
     & ~BANNED_USERS
 )
 async def activevc(_, message: Message):
