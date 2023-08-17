@@ -64,10 +64,11 @@ async def gen_thumb(videoid, user_id):
                         duration = result["duration"]
                     except:
                         duration = "Unknown"
-                    thumbnail = result["thumbnails"][0]["url"].split("?")[0]                    
+                    #thumbnail = result["thumbnails"][0]["url"].split("?")[0]                    
                 
         async with aiohttp.ClientSession() as session:
             async with session.get(thumbnail) as resp:
+                thumbnail = result["thumbnails"][0]["url"].split("?")[0]
                 if resp.status == 200:
                     f = await aiofiles.open(f"cache/thumb{videoid}.png", mode="wb")
                     await f.write(await resp.read())
