@@ -50,7 +50,7 @@ async def gen_thumb(videoid, user_id):
             async with session.get(url) as response:
                 html = await response.text()
 
-                results = VideosSearch(url, limit=1, custom_html=html)
+                results = VideosSearch(url, limit=1).result()
                 video_results = await results.next()
     
                 for result in video_results["result"]:
