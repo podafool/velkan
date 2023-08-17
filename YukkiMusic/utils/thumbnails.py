@@ -51,9 +51,9 @@ async def gen_thumb(videoid, user_id):
                 html = await response.text()
 
                 results = VideosSearch(url, limit=1).result()
-                video_results = await results.next()
+                #video_results = await results.next()
     
-                for result in video_results["result"]:
+                for result in results["result"]:
                     try:
                         title = result["title"]
                         title = re.sub("\W+", " ", title)
