@@ -48,7 +48,7 @@ async def gen_thumb(videoid, user_id):
     try:
         results = VideosSearch(url, limit=1)
         #results = asyncio.coroutine(VideosSearch(url, limit=1))
-        #for result in (await results.next())["result"]:        
+        for result in (await results.next())["result"]:        
         #async for result in event_loop.run_until_complete(VideosSearch(url, limit=1)):
             try:
                 title = result["title"]
