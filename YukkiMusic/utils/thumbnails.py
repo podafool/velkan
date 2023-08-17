@@ -51,7 +51,7 @@ async def gen_thumb(videoid, user_id):
 
             results = VideosSearch(url, limit=1, custom_html=html)
             video_results = await results.next()
-
+    try:
             for result in video_results["result"]:
                 try:
                     title = result["title"]
