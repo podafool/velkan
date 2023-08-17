@@ -64,7 +64,10 @@ async def gen_thumb(videoid, user_id):
                         duration = result["duration"]
                     except:
                         duration = "Unknown"
-                    #thumbnail = result["thumbnails"][0]["url"].split("?")[0]                    
+                    #thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+                    if "thumbnails" in result and len(result["thumbnails"]) > 0:
+                        thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+                        break  # Break the loop after finding a thumbnail                    
                 
         async with aiohttp.ClientSession() as session:
             async with session.get(thumbnail) as resp:                
@@ -72,7 +75,7 @@ async def gen_thumb(videoid, user_id):
                     f = await aiofiles.open(f"cache/thumb{videoid}.png", mode="wb")
                     await f.write(await resp.read())
                     await f.close()
-                thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+                
 
         try:
             wxyz = await app.get_chat_photos(user_id)
