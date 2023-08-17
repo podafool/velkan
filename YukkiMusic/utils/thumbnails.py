@@ -67,12 +67,12 @@ async def gen_thumb(videoid, user_id):
                     #thumbnail = result["thumbnails"][0]["url"].split("?")[0]                    
                 
         async with aiohttp.ClientSession() as session:
-            async with session.get(thumbnail) as resp:
-                #thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+            async with session.get(thumbnail) as resp:                
                 if resp.status == 200:
                     f = await aiofiles.open(f"cache/thumb{videoid}.png", mode="wb")
                     await f.write(await resp.read())
                     await f.close()
+                thumbnail = result["thumbnails"][0]["url"].split("?")[0]
 
         try:
             wxyz = await app.get_chat_photos(user_id)
