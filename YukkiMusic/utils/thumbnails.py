@@ -39,18 +39,20 @@ def add_corners(im):
     im.putalpha(mask)
 
 
-#@asyncio.coroutine
 async def gen_thumb(videoid, user_id):
     if os.path.isfile(f"cache/{videoid}_{user_id}.png"):
         return f"cache/{videoid}_{user_id}.png"
+
     url = f"https://www.youtube.com/watch?v={videoid}"
-    #event_loop = asyncio.get_event_loop()
-    try:
-        results = VideosSearch(url, limit=1)
-        #results = asyncio.coroutine(VideosSearch(url, limit=1))
-        for result in (results.next())["result"]:        
-        #async for result in event_loop.run_until_complete(VideosSearch(url, limit=1)):
-            try:
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            html = await response.text()
+
+            results = VideosSearch(url, limit=1, custom_html=html)
+            video_results = await results.next()
+
+            for result in video_results["result"]:
                 title = result["title"]
                 title = re.sub("\W+", " ", title)
                 title = title.title()
