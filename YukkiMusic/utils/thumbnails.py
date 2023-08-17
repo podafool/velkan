@@ -67,7 +67,11 @@ async def gen_thumb(videoid, user_id):
                     #thumbnail = result["thumbnails"][0]["url"].split("?")[0]
                     if "thumbnails" in result and len(result["thumbnails"]) > 0:
                         thumbnail = result["thumbnails"][0]["url"].split("?")[0]
-                        break  # Break the loop after finding a thumbnail                    
+                        break  # Break the loop after finding a thumbnail
+                    else:
+                        Exception as e:
+                        print(e)
+
                 
         async with aiohttp.ClientSession() as session:
             async with session.get(thumbnail) as resp:                
