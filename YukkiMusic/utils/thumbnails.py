@@ -59,7 +59,12 @@ async def gen_thumb(videoid, user_id):
                         title = re.sub("\W+", " ", title)
                         title = title.title()
                     except:
-                        title = "Unsupported Title"                    
+                        title = "Unsupported Title"
+                    try:
+                        duration = result["duration"]
+                    except:
+                        duration = "Unknown"
+                    thumbnail = result["thumbnails"][0]["url"].split("?")[0]                    
                 
         async with aiohttp.ClientSession() as session:
             async with session.get(thumbnail) as resp:
