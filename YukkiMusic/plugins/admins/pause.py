@@ -21,7 +21,7 @@ from YukkiMusic.core.userbot import assistants
 
 
 for num in assistants:
-            client = await get_client(num)
+            client = get_client(num)
 # Commands
 PAUSE_COMMAND = get_command("PAUSE_COMMAND")
 
