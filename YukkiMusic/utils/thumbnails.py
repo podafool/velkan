@@ -39,7 +39,7 @@ async def gen_thumb(videoid, user_id):
         return f"cache/{videoid}_{user_id}.png"
     url = f"https://www.youtube.com/watch?v={videoid}"
     try:
-        results = await VideosSearch(url)
+        results = VideosSearch(url, limit=1)
         for result in (await results.next())["result"]:
             try:
                 title = result["title"]
