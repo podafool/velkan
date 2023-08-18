@@ -20,8 +20,6 @@ from YukkiMusic.utils.database import get_client
 from YukkiMusic.core.userbot import assistants
 
 
-for num in assistants:
-            client = get_client(num)
 # Commands
 PAUSE_COMMAND = get_command("PAUSE_COMMAND")
 
