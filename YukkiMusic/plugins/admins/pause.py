@@ -17,9 +17,11 @@ from YukkiMusic.core.call import Yukki
 from YukkiMusic.utils.database import is_music_playing, music_off
 from YukkiMusic.utils.decorators import AdminRightsCheck
 from YukkiMusic.utils.database import get_client
+from YukkiMusic.core.userbot import assistants
 
 
-client = get_client()
+for num in assistants:
+            client = await get_client(num)
 # Commands
 PAUSE_COMMAND = get_command("PAUSE_COMMAND")
 
