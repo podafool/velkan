@@ -19,7 +19,7 @@ from YukkiMusic.utils.decorators import AdminRightsCheck
 from YukkiMusic.utils.database import get_client
 
 
-client = await get_client()
+client = get_client()
 # Commands
 PAUSE_COMMAND = get_command("PAUSE_COMMAND")
 
