@@ -49,6 +49,9 @@ async def pause_admin(cli, message: Message, _, chat_id):
     #await client.reply_sticker("CAACAgEAAxkBAAEJ6nxkzFywBJ_zMhOj0wc7AQgV9cLNXwAC3QQAAlEpDTmUHImRSVIUeS8E")
     for num in assistants:
             client = await get_client(num)
-            await client.reply_sticker("CAACAgEAAxkBAAEJ6nxkzFywBJ_zMhOj0wc7AQgV9cLNXwAC3QQAAlEpDTmUHImRSVIUeS8E")
+            await client.send_message(
+                        message.chat.id,
+                        text="✨"
+            )
     
     
