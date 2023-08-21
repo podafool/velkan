@@ -14,10 +14,6 @@ from youtubesearchpython.__future__ import VideosSearch
 from config import YOUTUBE_IMG_URL, MUSIC_BOT_NAME
 from YukkiMusic import app
 
-BACKGROUND = [
-    "https://telegra.ph/file/66969e848effd83d95c87.jpg",
-    "https://telegra.ph/file/9f3b78e7c34b39b2d7bb4.jpg",
-]
 
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
@@ -36,6 +32,26 @@ def add_corners(im):
     mask = mask.resize(im.size, Image.LANCZOS)
     mask = ImageChops.darker(mask, im.split()[-1])
     im.putalpha(mask)
+
+async def process_user_profile(app, user_id):
+    try:
+        wxyz = await app.get_chat_photos(user_id)
+        wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+    except:
+        hehe = await app.get_chat_photos(app.id)
+        wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
+
+    xy = Image.open(wxy)
+    a = Image.new('L', [640, 640], 0)
+    b = ImageDraw.Draw(a)
+    b.pieslice([(0, 0), (640, 640)], 0, 360, fill=255, outline="white")
+    c = np.array(xy)
+    d = np.array(a)
+    e = np.dstack((c, d))
+    f = Image.fromarray(e)
+    x = f.resize((245, 245))
+    
+    return x
 
 
 async def gen_thumb(videoid, user_id):
@@ -71,22 +87,7 @@ async def gen_thumb(videoid, user_id):
                     f = await aiofiles.open(f"cache/thumb{videoid}.png", mode="wb")
                     await f.write(await resp.read())
                     await f.close()
-
-        try:
-            wxyz = await app.get_profile_photos(user_id)
-            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
-        except:
-            hehe = await app.get_profile_photos(app.id)
-            wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
-        xy = Image.open(wxy)
-        a = Image.new('L', [640, 640], 0)
-        b = ImageDraw.Draw(a)
-        b.pieslice([(0, 0), (640,640)], 0, 360, fill = 255, outline = "white")                
-        c = np.array(xy)
-        d = np.array(a)
-        e = np.dstack((c, d))
-        f = Image.fromarray(e)
-        x = f.resize((245, 245))        
+                
         
         youtube = Image.open(f"cache/thumb{videoid}.png")        
         image1 = changeImageSize(1280, 720, youtube)
@@ -120,6 +121,7 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((400, 400), Image.LANCZOS)
         #logo = ImageOps.expand(logo, border=10, fill="orange")
         background = Image.open(f"cache/temp{videoid}.png")
+        x = await process_user_profile(app, user_id)
         background.paste(logo, (110, 265), mask=logo)
         background.paste(x, (947, 118), mask=x)        
 
