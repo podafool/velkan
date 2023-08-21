@@ -125,8 +125,9 @@ async def gen_thumb(videoid, user_id):
             f = Image.fromarray(e)
             x = f.resize((245, 245))
     
-            #return x
-        background.paste(x, (947, 118), mask=x)
+            return x
+        abc = await process_user_profile(app, user_id)
+        background.paste(abc, (947, 118), mask=x)
         print("Success!")
 
         draw = ImageDraw.Draw(background)
