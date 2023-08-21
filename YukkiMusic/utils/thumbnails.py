@@ -146,7 +146,7 @@ async def gen_thumb(videoid, user_id):
         print("Crossed abc line")
         background.paste(logo, (110, 265), mask=logo)
         print("line 128")
-        background.paste(abc, (947, 118), mask=x)
+        background.paste(x, (947, 118), mask=x)
         print("Success!")
 
         draw = ImageDraw.Draw(background)
