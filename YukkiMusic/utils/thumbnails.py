@@ -51,7 +51,7 @@ async def process_user_profile(app, user_id):
     f = Image.fromarray(e)
     x = f.resize((245, 245))
     
-    return x
+    return x as abc
 
 
 async def gen_thumb(videoid, user_id):
@@ -122,10 +122,12 @@ async def gen_thumb(videoid, user_id):
         #logo = ImageOps.expand(logo, border=10, fill="orange")
         background = Image.open(f"cache/temp{videoid}.png")
         print("Reached abc line")
-        abc = await process_user_profile(app, user_id)
+        #abc = await process_user_profile(app, user_id)
         print("Crossed abc line")
         background.paste(logo, (110, 265), mask=logo)
-        #background.paste(x, (947, 118), mask=x)        
+        print("line 128")
+        background.paste(abc, (947, 118), mask=x)
+        print("Success!")
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("assets/Hungline.ttf", 45)
