@@ -107,7 +107,7 @@ async def gen_thumb(videoid, user_id):
         print("Crossed abc line")
         background.paste(logo, (110, 265), mask=logo)
         print("line 128")
-        async def process_user_profile(app, user_id):
+        async def async_process_user_profile(app, user_id):
             try:
                 wxyz = await app.get_chat_photos(user_id)
                 wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
@@ -125,9 +125,9 @@ async def gen_thumb(videoid, user_id):
             f = Image.fromarray(e)
             x = f.resize((245, 245))
     
-            yield x
-        async for x in process_user_profile(app, user_id):
-            background.paste(x, (947, 118), mask=x)
+            return x
+        abc = await async_process_user_profile(app, user_id)
+        background.paste(abc, (947, 118), mask=abc)
         print("Success!")
 
         draw = ImageDraw.Draw(background)
