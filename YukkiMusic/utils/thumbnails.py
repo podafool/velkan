@@ -33,25 +33,6 @@ def add_corners(im):
     mask = ImageChops.darker(mask, im.split()[-1])
     im.putalpha(mask)
 
-async def process_user_profile(app, user_id):
-    try:
-        wxyz = await app.get_chat_photos(user_id)
-        wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
-    except:
-        hehe = await app.get_chat_photos(app.id)
-        wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
-
-    xy = Image.open(wxy)
-    a = Image.new('L', [640, 640], 0)
-    b = ImageDraw.Draw(a)
-    b.pieslice([(0, 0), (640, 640)], 0, 360, fill=255, outline="white")
-    c = np.array(xy)
-    d = np.array(a)
-    e = np.dstack((c, d))
-    f = Image.fromarray(e)
-    x = f.resize((245, 245))
-    
-    return x
 
 
 async def gen_thumb(videoid, user_id):
