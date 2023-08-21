@@ -14,10 +14,6 @@ from youtubesearchpython.__future__ import VideosSearch
 from config import YOUTUBE_IMG_URL, MUSIC_BOT_NAME
 from YukkiMusic import app
 
-BACKGROUND = [
-    "https://telegra.ph/file/66969e848effd83d95c87.jpg",
-    "https://telegra.ph/file/9f3b78e7c34b39b2d7bb4.jpg",
-]
 
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
@@ -123,6 +119,7 @@ async def gen_thumb(videoid, user_id):
         logo = crop_img.convert("RGBA")
         logo.thumbnail((400, 400), Image.LANCZOS)
         #logo = ImageOps.expand(logo, border=10, fill="orange")
+        x = process_user_profile(app, user_id)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (110, 265), mask=logo)
         background.paste(x, (947, 118), mask=x)        
