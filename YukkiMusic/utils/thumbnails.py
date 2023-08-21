@@ -126,7 +126,7 @@ async def gen_thumb(videoid, user_id):
             x = f.resize((245, 245))
     
             yield x
-        async for x in async_process_user_profile(app, user_id):
+        async for x in process_user_profile(app, user_id):
             background.paste(x, (947, 118), mask=x)
         print("Success!")
 
