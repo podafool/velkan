@@ -67,11 +67,11 @@ async def gen_thumb(videoid, user_id):
                     await f.close()
 
         try:
-            wxyz = await app.get_chat_photos(user_id)
-            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+            wxyz = app.get_chat_photos(user_id)
+            wxy = app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
         except:
-            hehe = await app.get_chat_photos(app.id)
-            wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
+            hehe = app.get_chat_photos(app.id)
+            wxy = app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
         xy = Image.open(wxy)
         a = Image.new('L', [640, 640], 0)
         b = ImageDraw.Draw(a)
