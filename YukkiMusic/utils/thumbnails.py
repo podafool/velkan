@@ -121,7 +121,9 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((400, 400), Image.LANCZOS)
         #logo = ImageOps.expand(logo, border=10, fill="orange")
         background = Image.open(f"cache/temp{videoid}.png")
+        print("Reached abc line")
         abc = await process_user_profile(app, user_id)
+        print("Crossed abc line")
         background.paste(logo, (110, 265), mask=logo)
         #background.paste(x, (947, 118), mask=x)        
 
