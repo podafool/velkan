@@ -127,8 +127,8 @@ async def gen_thumb(videoid, user_id):
     
             return x
         #abc = await user_profile(app, user_id)
-        background.paste(abc, (947, 118), mask=abc)
-        print("Success!")
+        #background.paste(abc, (947, 118), mask=abc)
+        #print("Success!")
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("assets/Hungline.ttf", 45)
