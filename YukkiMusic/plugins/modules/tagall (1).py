@@ -6,6 +6,7 @@ from pyrogram.errors import UserNotParticipant
 from pyrogram.types import ChatPermissions
 from YukkiMusic.utils.database import get_client
 from YukkiMusic.core.userbot import assistants
+from pyrogram.enums import ChatMemberStatus
 
 
 spam_chats = []
