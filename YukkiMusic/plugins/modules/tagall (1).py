@@ -152,7 +152,7 @@ async def mentionall(client, message):
         is_admin = False
     else:
         #if participant.status in ("administrator", "creator"):
-        if participant.status = ChatMemberStatus.ADMINISTRATOR:
+        if participant.status == ChatMemberStatus.ADMINISTRATOR:
             is_admin = True
     if not is_admin:
         return await message.reply("**ᴏɴʟʏ ᴀᴅᴍɪɴ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!**")
