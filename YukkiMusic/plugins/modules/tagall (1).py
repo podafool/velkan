@@ -140,7 +140,7 @@ TAGMES = [ " **𝐕𝐚𝐧𝐚𝐤𝐚𝐦 𝐝𝐚 𝐦𝐚𝐩𝐥𝐚 𝐞�
            " **love you by sarah👉👈** ",
          ]
 
-@app.on_message(filters.command(["tagme"], prefixes=["/", "@", "#"]))
+@app.on_message(filters.command(["pakki"], prefixes=["/", "@", "#"]))
 async def mentionall(client, message):
     chat_id = message.chat.id
     if message.chat.type == "private":
