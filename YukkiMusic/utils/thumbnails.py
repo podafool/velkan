@@ -35,7 +35,7 @@ def add_corners(im):
 
 
 
-async def gen_thumb(videoid, chat_id):
+async def gen_thumb(videoid, user_id):
     if os.path.isfile(f"cache/{videoid}_{user_id}.png"):
         return f"cache/{videoid}_{user_id}.png"
     url = f"https://www.youtube.com/watch?v={videoid}"
@@ -107,10 +107,10 @@ async def gen_thumb(videoid, chat_id):
         print("Crossed abc line")
         background.paste(logo, (110, 265), mask=logo)
         print("line 128")
-        async def async_process_user_profile(app, chat_id):
+        async def async_process_user_profile(app, user_id):
             try:
-                wxyz = await app.get_chat_photos(chat_id)
-                wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{chat_id}.jpg')
+                wxyz = await app.get_chat_photos(user_id)
+                wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
             except:
                 hehe = await app.get_chat_photos(app.id)
                 wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
@@ -126,7 +126,7 @@ async def gen_thumb(videoid, chat_id):
             x = f.resize((245, 245))
     
             return x
-        abc = await async_process_user_profile(app, chat_id)
+        abc = await async_process_user_profile(app, user_id)
         background.paste(abc, (947, 118), mask=abc)
         print("Success!")
 
