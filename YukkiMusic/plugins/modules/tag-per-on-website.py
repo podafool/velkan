@@ -107,7 +107,7 @@ async def tagu_handler(client, message: Message):
     usrnum = 0
     usrtxt = ""
 
-    async for usr in client.iter_chat_members(chat_id):
+    async for usr in client.get_chat_members(chat_id):
         if not chat_id in spam_chats:
             break
 
