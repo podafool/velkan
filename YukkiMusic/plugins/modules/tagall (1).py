@@ -4,6 +4,9 @@ import random
 from pyrogram import Client, filters
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import ChatPermissions
+from YukkiMusic.utils.database import get_client
+from YukkiMusic.core.userbot import assistants
+
 
 spam_chats = []
 
@@ -136,7 +139,7 @@ TAGMES = [ " **𝐕𝐚𝐧𝐚𝐤𝐚𝐦 𝐝𝐚 𝐦𝐚𝐩𝐥𝐚 𝐞�
            " **love you by sarah👉👈** ",
          ]
 
-@app.on_message(filters.command(["ellarum"], prefixes=["/", "@", "#"]))
+@app.on_message(filters.command(["tagme"], prefixes=["/", "@", "#"]))
 async def mentionall(client, message):
     chat_id = message.chat.id
     if message.chat.type == "private":
@@ -169,7 +172,7 @@ async def mentionall(client, message):
     spam_chats.append(chat_id)
     usrnum = 0
     usrtxt = ""
-    async for usr in client.iter_chat_members(chat_id):
+    async for usr in client.get_chat_members(chat_id):
         if not chat_id in spam_chats:
             break
         if usr.user.is_bot:
@@ -179,8 +182,10 @@ async def mentionall(client, message):
 
         if usrnum == 1:
             if mode == "text_on_cmd":
+                for num in assistants:
+                      app = await get_client(num)
                 txt = f"{usrtxt} {random.choice(TAGMES)}"
-                await client.send_message(chat_id, txt)
+                await app.send_message(chat_id, txt)
             elif mode == "text_on_reply":
                 await msg.reply(f"[{random.choice(EMOJI)}](tg://user?id={usr.user.id})")
             await asyncio.sleep(4)
