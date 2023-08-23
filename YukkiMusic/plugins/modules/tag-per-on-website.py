@@ -122,7 +122,7 @@ async def tagu_handler(client, message: Message):
             tag_message = f"{msg}\n[{usr.user.first_name}](tg://user?id={usr.user.id})"
             for num in assistants:
                 app = await get_client(num)
-            await app.send_message(chat_id, tag_message, reply_markup=markup)
+            await client.send_message(chat_id, tag_message, reply_markup=markup)
             
             
             # Generate a random sleep time between 10 and 30 seconds
