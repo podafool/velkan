@@ -4,7 +4,7 @@ import string
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
-from pytgcalls import exceptions*
+from pytgcalls import exceptions
 import config
 from YukkiMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 from YukkiMusic.core.call import Yukki
