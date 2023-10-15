@@ -24,5 +24,5 @@ async with aiohttp.ClientSession() as session:
         d = np.array(a)
         e = np.dstack((c, d))
         f = Image.fromarray(e)
-        x = f.resize((245, 245))
-return x
+        dps = f.resize((245, 245))
+return dps
