@@ -6,7 +6,7 @@ from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
 from YukkiMusic import app
-from YukkiMusic.core.call import Anony
+from YukkiMusic.core.call import Yukki
 from YukkiMusic.misc import db
 from YukkiMusic.utils.database import get_assistant, get_authuser_names, get_cmode
 from YukkiMusic.utils.decorators import ActualAdminCB, AdminActual, language
