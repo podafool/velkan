@@ -155,7 +155,7 @@ async def gen_thumb(videoid, user_id):
             font=font2,
         )
         draw.text(
-            (1020, 255),
+            (1030, 260),
             "the",
             fill="white",
             stroke_width=2,
