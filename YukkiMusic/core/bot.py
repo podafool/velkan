@@ -41,13 +41,12 @@ class YukkiBot(Client):
             )
             sys.exit()
         a = await self.get_chat_member(config.LOG_GROUP_ID, self.id)
-        #if a.status != "administrator":
-            #LOGGER(__name__).error(
-                #"Please promote Bot as Admin in Logger Group"
-            #)
-            #sys.exit()
-        if get_me.last_name:
-            self.name = get_me.first_name + " " + get_me.last_name
-        else:
-            self.name = get_me.first_name
+        if a.status != ChatMemberStatus.ADMINISTRATOR:
+            LOGGER(__name__).error(
+                "Please promote Bot as Admin in Logger Group"
+            )
+            exit()        
         LOGGER(__name__).info(f"MusicBot Started as {self.name}")
+        
+    async def stop(self):
+        await super().stop()
