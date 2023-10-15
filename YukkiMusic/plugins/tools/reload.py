@@ -9,6 +9,7 @@
 import asyncio
 
 from pyrogram import filters
+from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
 from config import BANNED_USERS, MUSIC_BOT_NAME, adminlist, lyrical
