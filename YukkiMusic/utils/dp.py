@@ -3,7 +3,7 @@ import aiofiles
 from YukkiMusic import app
 
 
-async for aiohttp.ClientSession() as session:
+async def aiohttp.ClientSession() as session:
     async with session.get(thumbnail) as resp:
         if resp.status == 200:
             f = await aiofiles.open(f"cache/thumb{videoid}.png", mode="wb")
