@@ -143,7 +143,7 @@ async def gen_thumb(videoid, user_id):
             f"with {MUSIC_BOT_NAME}", 
             fill="black",
             stroke_width=1,
-            stroke_fill="orange", 
+            stroke_fill="yellow", 
             font=name_font
         )
         draw.text(
@@ -155,7 +155,7 @@ async def gen_thumb(videoid, user_id):
             font=font2,
         )
         draw.text(
-            (1000, 205),
+            (1020, 255),
             "the",
             fill="white",
             stroke_width=2,
