@@ -13,7 +13,7 @@ from youtubesearchpython.__future__ import VideosSearch
 
 from config import YOUTUBE_IMG_URL, MUSIC_BOT_NAME
 from YukkiMusic import app
-from YukkiMusic.utils.dp import dps
+
 
 
 def changeImageSize(maxWidth, maxHeight, image):
