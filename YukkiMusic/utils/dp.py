@@ -1,3 +1,8 @@
+import aiohttp
+import aiofiles
+from YukkiMusic import app
+
+
 async with aiohttp.ClientSession() as session:
             async with session.get(thumbnail) as resp:
                 if resp.status == 200:
