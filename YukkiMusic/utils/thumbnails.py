@@ -103,11 +103,11 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((400, 400), Image.LANCZOS)
         #logo = ImageOps.expand(logo, border=10, fill="orange")
         background = Image.open(f"cache/temp{videoid}.png")
-        print("Reached abc line")
+        #print("Reached abc line")
         #abc = await process_user_profile(app, user_id)
-        print("Crossed abc line")
+        #print("Crossed abc line")
         background.paste(logo, (50, 365), mask=logo)
-        print("line 128")
+        #print("line 128")
         async def user_profile(app, user_id):
             try:
                 wxyz = await app.get_chat_photos(user_id)
