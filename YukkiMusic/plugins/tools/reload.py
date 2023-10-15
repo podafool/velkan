@@ -89,13 +89,12 @@ async def restartbot(client, message: Message, _):
 @app.on_callback_query(filters.regex("close") & ~BANNED_USERS)
 async def close_menu(_, CallbackQuery):
     try:
-        await CallbackQuery.answer()
         await CallbackQuery.message.delete()
-        await CallbackQuery.message.reply_text(
-            f"Cʟᴏsᴇᴅ ʙʏ : {CallbackQuery.from_user.mention}"
-        )
+        await CallbackQuery.answer()
+        
+        
     except:
-        pass
+        return
 
 
 @app.on_callback_query(filters.regex("stop_downloading") & ~BANNED_USERS)
