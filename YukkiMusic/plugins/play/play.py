@@ -165,7 +165,7 @@ async def play_commnd(
                     )
                 except Exception as e:
                     print (e)
-                    return await mystic.edit_text(_["play_3"])
+                    return await mystic.edit_text(_["admin_1"]) #play_3
                 streamtype = "playlist"
                 plist_type = "yt"
                 if "&" in url:
@@ -180,7 +180,7 @@ async def play_commnd(
                 except Exception as e:
                     print ("error in 2nd")
                     print (e)
-                    return await mystic.edit_text(_["play_3"])
+                    return await mystic.edit_text(_["admin_2"]) #play_3
                 streamtype = "youtube"
                 img = details["thumb"]
                 cap = _["play_10"].format(
@@ -333,7 +333,7 @@ async def play_commnd(
         try:
             details, track_id = await YouTube.track(query)
         except:
-            return await mystic.edit_text(_["play_3"])
+            return await mystic.edit_text(_["admin_3"]) #play_3
         streamtype = "youtube"
     if str(playmode) == "Direct":
         if not plist_type:
@@ -462,7 +462,7 @@ async def play_music(client, CallbackQuery, _):
     try:
         details, track_id = await YouTube.track(vidid, True)
     except:
-        return await mystic.edit_text(_["play_3"])
+        return await mystic.edit_text(_["admin_4"]) #play_3
     if details["duration_min"]:
         duration_sec = time_to_seconds(details["duration_min"])
         if duration_sec > config.DURATION_LIMIT:
@@ -560,7 +560,7 @@ async def play_playlists_command(client, CallbackQuery, _):
                 True,
             )
         except:
-            return await mystic.edit_text(_["play_3"])
+            return await mystic.edit_text(_["admin_5"]) #play_3
     if ptype == "spplay":
         try:
             result, spotify_id = await Spotify.playlist(videoid)
