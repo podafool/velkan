@@ -4,7 +4,7 @@ import string
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
-
+from pytgcalls import exceptions*
 import config
 from YukkiMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 from YukkiMusic.core.call import Yukki
@@ -332,7 +332,8 @@ async def play_commnd(
             query = query.replace("-v", "")
         try:
             details, track_id = await YouTube.track(query)
-        except:
+        except Exception as e:
+            print (e)
             return await mystic.edit_text(_["admin_3"]) #play_3
         streamtype = "youtube"
     if str(playmode) == "Direct":
