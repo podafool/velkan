@@ -135,7 +135,7 @@ async def gen_thumb(videoid, user_id):
         font = ImageFont.truetype("assets/Hungline.ttf", 45)
         font2 = ImageFont.truetype("assets/Hawaii.otf", 150)
         arial = ImageFont.truetype("assets/font2.ttf", 30)
-        name_font = ImageFont.truetype("assets/font2.ttf", 30)
+        name_font = ImageFont.truetype("assets/font2.ttf", 35)
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
@@ -155,7 +155,7 @@ async def gen_thumb(videoid, user_id):
             font=font2,
         )
         draw.text(
-            (1100, 155),
+            (1000, 205),
             "the",
             fill="white",
             stroke_width=2,
