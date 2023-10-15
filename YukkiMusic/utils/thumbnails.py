@@ -106,7 +106,7 @@ async def gen_thumb(videoid, user_id):
         print("Reached abc line")
         #abc = await process_user_profile(app, user_id)
         print("Crossed abc line")
-        background.paste(logo, (110, 265), mask=logo)
+        background.paste(logo, (90, 365), mask=logo)
         print("line 128")
         async def user_profile(app, user_id):
             try:
@@ -139,15 +139,15 @@ async def gen_thumb(videoid, user_id):
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (950, 650), 
+            (955, 655), 
             f"with {MUSIC_BOT_NAME}", 
             fill="black",
             stroke_width=1,
-            stroke_fill="yellow", 
+            stroke_fill="white", 
             font=name_font
         )
         draw.text(
-            (640, 370),
+            (945, 115),
             "Enjoyie",
             fill="white",
             stroke_width=2,
@@ -174,7 +174,7 @@ async def gen_thumb(videoid, user_id):
             if j == 1:
                 j += 1
                 draw.text(
-                    (100, 75),
+                    (100, 65),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
@@ -184,7 +184,7 @@ async def gen_thumb(videoid, user_id):
             if j == 0:
                 j += 1
                 draw.text(
-                    (150, 115),
+                    (150, 105),
                     f"{line}",
                     fill="white",
                     stroke_width=1,
