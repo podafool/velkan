@@ -334,6 +334,26 @@ async def play_commnd(
             details, track_id = await YouTube.track(query)
         except Exception as e:
             print (e)
+            if await is_on_off(LOG):
+                if message.chat.username:
+                    chatusername = f"@{message.chat.username}"
+                else:
+                    chatusername = "Private Group"
+                logger_text = f"""
+        #ERROR
+        Error : {e}
+        Chat name : {message.chat.title}
+        Chat Link : {chatusername}
+        Chat i'd :  {message.chat.id}"""
+                if message.chat.id != LOG_GROUP_ID:
+                    try:
+                        await app.send_message(
+                            LOG_GROUP_ID,
+                            f"{logger_text}",
+                            disable_web_page_preview=True,
+                        )
+                    except:
+                        pass
             return await mystic.edit_text(_["admin_3"]) #play_3
         streamtype = "youtube"
     if str(playmode) == "Direct":
