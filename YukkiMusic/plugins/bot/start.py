@@ -337,7 +337,7 @@ async def welcome(client, message: Message):
             _ = get_string(language)
             if member.id == app.id:
                 chat_type = message.chat.type
-                if chat_type != "supergroup":
+                if chat_type != ChatType.SUPERGROUP:
                     await message.reply_photo(
                       photo="https://telegra.ph/file/7fe3e103fa1ecd151b7a5.jpg",
                       caption=_["start_6"])
