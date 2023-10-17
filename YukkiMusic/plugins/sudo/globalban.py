@@ -84,6 +84,7 @@ async def gbanuser(client, message: Message, _):
         logger_text = f"""
     #GBAN
     User : {mention}
+    User i'd : {user_id}
     Gbanned by : {message.from_user.mention}
     Chats : {number_of_chats}"""
         if message.chat.id != LOG_GROUP_ID:
@@ -138,6 +139,22 @@ async def gungabn(client, message: Message, _):
     await message.reply_text(
         _["gban_9"].format(mention, number_of_chats)
     )
+    if await is_on_off(LOG):
+        logger_text = f"""
+    #UNGBAN
+    User : {mention}
+    User i'd : {user_id}
+    UnGbanned by : {message.from_user.mention}
+    Chats : {number_of_chats}"""
+        if message.chat.id != LOG_GROUP_ID:
+            try:
+                await app.send_message(
+                    LOG_GROUP_ID,
+                    f"{logger_text}",
+                    disable_web_page_preview=True,
+                )
+            except:
+                pass
     await mystic.delete()
 
 
