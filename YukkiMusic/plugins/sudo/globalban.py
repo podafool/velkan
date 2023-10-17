@@ -93,7 +93,7 @@ async def gbanuser(client, message: Message, _):
                     f"{logger_text}",
                     disable_web_page_preview=True,
                 )
-            except
+            except:
                 pass
     await mystic.delete()
 
