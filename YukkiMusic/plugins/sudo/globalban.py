@@ -23,8 +23,10 @@ from YukkiMusic.utils.database import (add_banned_user,
                                        get_banned_users,
                                        get_served_chats,
                                        is_banned_user,
-                                       remove_banned_user)
+                                       remove_banned_user,is_on_off)
 from YukkiMusic.utils.decorators.language import language
+
+from config import LOG, LOG_GROUP_ID
 
 # Command
 GBAN_COMMAND = get_command("GBAN_COMMAND")
@@ -78,6 +80,21 @@ async def gbanuser(client, message: Message, _):
     await message.reply_text(
         _["gban_6"].format(mention, number_of_chats)
     )
+    if await is_on_off(LOG):
+        logger_text = f"""
+    #GBAN
+    User : {mention}
+    Gbanned by : {message.from_user.mention}
+    Chats : {number_of_chats}"""
+        if message.chat.id != LOG_GROUP_ID:
+            try:
+                await app.send_message(
+                    LOG_GROUP_ID,
+                    f"{logger_text}",
+                    disable_web_page_preview=True,
+                )
+            except
+                pass
     await mystic.delete()
 
 
