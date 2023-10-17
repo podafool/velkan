@@ -22,7 +22,8 @@ from YukkiMusic.utils.inline import (
 )
 from YukkiMusic.utils.logger import play_logs
 from YukkiMusic.utils.stream.stream import stream
-from config import BANNED_USERS, lyrical
+from config import BANNED_USERS, lyrical, LOG, LOG_GROUP_ID
+from YukkiMusic.utils.database import is_on_off
 
 
 @app.on_message(
