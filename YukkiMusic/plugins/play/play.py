@@ -210,7 +210,7 @@ async def play_commnd(
                 streamtype = "youtube"
                 img = details["thumb"]
                 cap = _["play_10"].format(
-                    details["title"],
+                    #details["title"],
                     details["duration_min"],
                 )
         elif await Spotify.valid(url):
@@ -226,7 +226,8 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
                 img = details["thumb"]
-                cap = _["play_10"].format(details["title"], details["duration_min"])
+                #cap = _["play_10"].format(details["title"], details["duration_min"])
+                cap = _["play_10"].format(details["duration_min"])
             elif "playlist" in url:
                 try:
                     details, plist_id = await Spotify.playlist(url)
@@ -284,7 +285,8 @@ async def play_commnd(
                 return await mystic.edit_text(_["play_3"])
             streamtype = "youtube"
             img = details["thumb"]
-            cap = _["play_10"].format(details["title"], details["duration_min"])
+            #cap = _["play_10"].format(details["title"], details["duration_min"])
+            cap = _["play_10"].format(details["duration_min"])
         elif await SoundCloud.valid(url):
             try:
                 details, track_path = await SoundCloud.download(url)
