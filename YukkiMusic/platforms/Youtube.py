@@ -353,11 +353,11 @@ class YouTubeAPI:
             x.download([link])
 
         if songvideo:
-            await loop.run_in_executor(None, song_video_dl)
+            await loop.run_in_executor(None, song_video_dl, title, link, format_id)
             fpath = f"downloads/{title}.mp4"
             return fpath
         elif songaudio:
-            await loop.run_in_executor(None, song_audio_dl)
+            await loop.run_in_executor(None, song_audio_dl, title, link, format_id)
             fpath = f"downloads/{title}.mp3"
             return fpath
         elif video:
