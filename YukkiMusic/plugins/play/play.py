@@ -25,6 +25,9 @@ from YukkiMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical, LOG, LOG_GROUP_ID
 from YukkiMusic.utils.database import is_on_off
 
+
+from typing import Union
+
 async def title(
         self, link: str, videoid: Union[bool, str] = None
     ):
