@@ -66,9 +66,19 @@ async def play_commnd(
     channel,
     playmode,
     url,
-    fplay,
-    title,
+    fplay,    
 ):
+    async def title(
+        self, link: str, videoid: Union[bool, str] = None
+    ):
+        if videoid:
+            link = self.base + link
+        if "&" in link:
+            link = link.split("&")[0]
+        results = VideosSearch(link, limit=1)
+        for result in (await results.next())["result"]:
+            title = result["title"]
+        return title
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
     )
