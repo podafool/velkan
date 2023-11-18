@@ -24,8 +24,18 @@ from YukkiMusic.utils.logger import play_logs
 from YukkiMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical, LOG, LOG_GROUP_ID
 from YukkiMusic.utils.database import is_on_off
-from YukkiMusic.platforms.Youtube import title
 
+async def title(
+        self, link: str, videoid: Union[bool, str] = None
+    ):
+        if videoid:
+            link = self.base + link
+        if "&" in link:
+            link = link.split("&")[0]
+        results = VideosSearch(link, limit=1)
+        for result in (await results.next())["result"]:
+            title = result["title"]
+        return title
 
 @app.on_message(
     filters.command(
