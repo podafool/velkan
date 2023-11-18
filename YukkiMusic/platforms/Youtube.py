@@ -98,12 +98,12 @@ class YouTubeAPI:
             #title = result["title"]
             duration_min = result["duration"]
             thumbnail = result["thumbnails"][0]["url"].split("?")[0]
-            vidid = result["id"]
+            #vidid = result["id"]
             if str(duration_min) == "None":
                 duration_sec = 0
             else:
                 duration_sec = int(time_to_seconds(duration_min))
-        return duration_min, duration_sec, thumbnail, vidid    
+        return duration_min, duration_sec, thumbnail
 
     async def duration(
         self, link: str, videoid: Union[bool, str] = None
@@ -181,17 +181,17 @@ class YouTubeAPI:
         for result in (await results.next())["result"]:
             #title = result["title"]
             duration_min = result["duration"]
-            vidid = result["id"]
+            #vidid = result["id"]
             #yturl = result["link"]
             thumbnail = result["thumbnails"][0]["url"].split("?")[0]
         track_details = {
             #"title": title,
             #"link": yturl,
-            "vidid": vidid,
+            #"vidid": vidid,
             "duration_min": duration_min,
             "thumb": thumbnail,
         }
-        return track_details, vidid
+        return track_details
 
     async def formats(
         self, link: str, videoid: Union[bool, str] = None
@@ -245,11 +245,11 @@ class YouTubeAPI:
         result = (await a.next()).get("result")
         #title = result[query_type]["title"]
         duration_min = result[query_type]["duration"]
-        vidid = result[query_type]["id"]
+        #vidid = result[query_type]["id"]
         thumbnail = result[query_type]["thumbnails"][0]["url"].split(
             "?"
         )[0]
-        return duration_min, thumbnail, vidid
+        return duration_min, thumbnail
 
     async def download(
         self,
