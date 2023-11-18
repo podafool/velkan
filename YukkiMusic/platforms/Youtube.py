@@ -85,18 +85,7 @@ class YouTubeAPI:
             return None
         return text[offset : offset + length]
 
-    async def title(
-        self, link: str, videoid: Union[bool, str] = None
-    ):
-        if videoid:
-            link = self.base + link
-        if "&" in link:
-            link = link.split("&")[0]
-        results = VideosSearch(link, limit=1)
-        for result in (await results.next())["result"]:
-            title = result["title"]
-        return title
-
+    
     async def details(
         self, link: str, videoid: Union[bool, str] = None
     ):
@@ -106,7 +95,7 @@ class YouTubeAPI:
             link = link.split("&")[0]
         results = VideosSearch(link, limit=1)
         for result in (await results.next())["result"]:
-            title = result["title"]
+            #title = result["title"]
             duration_min = result["duration"]
             thumbnail = result["thumbnails"][0]["url"].split("?")[0]
             vidid = result["id"]
@@ -114,7 +103,7 @@ class YouTubeAPI:
                 duration_sec = 0
             else:
                 duration_sec = int(time_to_seconds(duration_min))
-        return title, duration_min, duration_sec, thumbnail, vidid    
+        return duration_min, duration_sec, thumbnail, vidid    
 
     async def duration(
         self, link: str, videoid: Union[bool, str] = None
@@ -190,13 +179,13 @@ class YouTubeAPI:
             link = link.split("&")[0]
         results = VideosSearch(link, limit=1)
         for result in (await results.next())["result"]:
-            title = result["title"]
+            #title = result["title"]
             duration_min = result["duration"]
             vidid = result["id"]
             yturl = result["link"]
             thumbnail = result["thumbnails"][0]["url"].split("?")[0]
         track_details = {
-            "title": title,
+            #"title": title,
             "link": yturl,
             "vidid": vidid,
             "duration_min": duration_min,
@@ -254,13 +243,13 @@ class YouTubeAPI:
             link = link.split("&")[0]
         a = VideosSearch(link, limit=10)
         result = (await a.next()).get("result")
-        title = result[query_type]["title"]
+        #title = result[query_type]["title"]
         duration_min = result[query_type]["duration"]
         vidid = result[query_type]["id"]
         thumbnail = result[query_type]["thumbnails"][0]["url"].split(
             "?"
         )[0]
-        return title, duration_min, thumbnail, vidid
+        return duration_min, thumbnail, vidid
 
     async def download(
         self,
@@ -271,7 +260,7 @@ class YouTubeAPI:
         songaudio: Union[bool, str] = None,
         songvideo: Union[bool, str] = None,
         format_id: Union[bool, str] = None,
-        title: Union[bool, str] = None,
+        #title: Union[bool, str] = None,
     ) -> str:
         if videoid:
             link = self.base + link
