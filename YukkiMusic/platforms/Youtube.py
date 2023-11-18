@@ -182,11 +182,11 @@ class YouTubeAPI:
             #title = result["title"]
             duration_min = result["duration"]
             vidid = result["id"]
-            yturl = result["link"]
+            #yturl = result["link"]
             thumbnail = result["thumbnails"][0]["url"].split("?")[0]
         track_details = {
             #"title": title,
-            "link": yturl,
+            #"link": yturl,
             "vidid": vidid,
             "duration_min": duration_min,
             "thumb": thumbnail,
