@@ -212,7 +212,7 @@ async def play_commnd(
                 streamtype = "playlist"
                 plist_type = "spplay"
                 img = config.SPOTIFY_PLAYLIST_IMG_URL
-                cap = _["play_11"].format(app.mention, message.from_user.mention)
+                cap = _["play_11"].format(app.id, message.from_user.mention)
             elif "album" in url:
                 try:
                     details, plist_id = await Spotify.album(url)
@@ -221,7 +221,7 @@ async def play_commnd(
                 streamtype = "playlist"
                 plist_type = "spalbum"
                 img = config.SPOTIFY_ALBUM_IMG_URL
-                cap = _["play_11"].format(app.mention, message.from_user.mention)
+                cap = _["play_11"].format(app.id, message.from_user.mention)
             elif "artist" in url:
                 try:
                     details, plist_id = await Spotify.artist(url)
@@ -273,7 +273,7 @@ async def play_commnd(
                 return await mystic.edit_text(
                     _["play_6"].format(
                         config.DURATION_LIMIT_MIN,
-                        app.mention,
+                        app.id,
                     )
                 )
             try:
