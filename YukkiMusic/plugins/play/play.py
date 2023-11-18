@@ -26,19 +26,6 @@ from config import BANNED_USERS, lyrical, LOG, LOG_GROUP_ID
 from YukkiMusic.utils.database import is_on_off
 
 
-from typing import Union
-
-async def title(
-        self, link: str, videoid: Union[bool, str] = None
-    ):
-        if videoid:
-            link = self.base + link
-        if "&" in link:
-            link = link.split("&")[0]
-        results = VideosSearch(link, limit=1)
-        for result in (await results.next())["result"]:
-            title = result["title"]
-        return title
 
 @app.on_message(
     filters.command(
@@ -67,18 +54,7 @@ async def play_commnd(
     playmode,
     url,
     fplay,    
-):
-    async def title(
-        self, link: str, videoid: Union[bool, str] = None
-    ):
-        if videoid:
-            link = self.base + link
-        if "&" in link:
-            link = link.split("&")[0]
-        results = VideosSearch(link, limit=1)
-        for result in (await results.next())["result"]:
-            title = result["title"]
-        return title
+):    
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
     )
@@ -112,7 +88,7 @@ async def play_commnd(
             file_name = await Telegram.get_filename(audio_telegram, audio=True)
             dur = await Telegram.get_duration(audio_telegram, file_path)
             details = {
-                "title": file_name,
+                #"title": file_name,
                 "link": message_link,
                 "path": file_path,
                 "dur": dur,
@@ -156,7 +132,7 @@ async def play_commnd(
             file_name = await Telegram.get_filename(video_telegram)
             dur = await Telegram.get_duration(video_telegram, file_path)
             details = {
-                "title": file_name,
+                #"title": file_name,
                 "link": message_link,
                 "path": file_path,
                 "dur": dur,
@@ -265,7 +241,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
                 img = details["thumb"]
-                cap = _["play_10"].format(details["title"], details["duration_min"])
+                #cap = _["play_10"].format(details["title"], details["duration_min"])
             elif "playlist" in url:
                 spotify = True
                 try:
@@ -461,7 +437,7 @@ async def play_commnd(
                 await message.reply_photo(
                     photo=details["thumb"],
                     caption=_["play_10"].format(
-                        details["title"].title(),
+                        #details["title"].title(),
                         details["duration_min"],
                     ),
                     reply_markup=InlineKeyboardMarkup(buttons),
@@ -685,7 +661,7 @@ async def slider_queries(client, CallbackQuery, _):
         med = InputMediaPhoto(
             media=thumbnail,
             caption=_["play_10"].format(
-                title.title(),
+                #title.title(),
                 duration_min,
             ),
         )
@@ -706,7 +682,7 @@ async def slider_queries(client, CallbackQuery, _):
         med = InputMediaPhoto(
             media=thumbnail,
             caption=_["play_10"].format(
-                title.title(),
+                #title.title(),
                 duration_min,
             ),
         )
