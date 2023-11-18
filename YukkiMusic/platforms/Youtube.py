@@ -226,7 +226,7 @@ class YouTubeAPI:
                             "format_id": format["format_id"],
                             "ext": format["ext"],
                             "format_note": format["format_note"],
-                            "yturl": link,
+                            #"yturl": link,
                         }
                     )
         return formats_available, link
