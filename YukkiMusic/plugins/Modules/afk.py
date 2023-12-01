@@ -3,7 +3,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler
 
 logging.basicConfig(level=logging.INFO)
 
-TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
+TOKEN = '5327660504:AAG-G9ZJoyD9Oos_4SxXiA1o7Ibk1GcraIE'
 chat_id = None
 user_afk = {}
 
