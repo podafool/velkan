@@ -58,6 +58,8 @@ Config vars are basically the variables which configure or modify bot to functio
 - You can play tracks or playlists from spotify from Yukki Music bot
 - You'll need these two vars to make spotify play working. This is not essential , you can leave them blank if you want.
 
+- HEROKU - https://dashboard.heroku.com/new?template=https://github.com/podafool/velkan
+
 ### How to get these? [Read from here](https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/spotify)
 
 
